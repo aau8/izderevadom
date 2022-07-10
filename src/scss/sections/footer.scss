@@ -1,0 +1,565 @@
+.footer {
+	background: $frame-dark;
+	color: $text-light;
+}
+
+// Верхняя часть подвала
+.footer-up {
+	padding: 70px 0 50px 0;
+
+	@media (max-width: $laptop) {
+		padding-top: 0;
+	}
+
+	@media (max-width: $mobile-l) {
+		padding-bottom: 34px;
+	}
+}
+
+.footer-up__container {
+}
+
+.footer-up__wrap {
+	display: flex;
+
+	@media (max-width: $laptop) {
+		flex-direction: column;
+	}
+}
+
+.footer-up__tablet-info {
+	display: none;
+
+	& .footer__email {
+		margin-left: auto;
+	}
+
+	& .footer__callback {
+		display: none;
+
+		@media (max-width: 700px) {
+			display: flex;
+			margin-top: 12px;
+		}
+	}
+
+	& .footer__address {
+		margin-left: 30px;
+		max-width: 210px;
+	}
+
+	@media (max-width: 950px) {
+		display: flex;
+		align-items: center;
+		margin-top: 60px;
+	}
+
+	@media (max-width: $mobile-l) {
+		display: none;
+	}
+}
+
+.footer-up__tablet-info-buttons {
+	margin-right: 24px;
+}
+
+.footer-up__tablet-info-contacts {
+
+	@media (max-width: 740px) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
+		margin-left: auto;
+
+		& .footer__email {
+			width: fit-content;
+			margin-left: 0;
+		}
+
+		& .footer__address {
+			margin: 12px 0 0 0;
+		}
+	}
+}
+
+// Блок с информацией о компании
+.footer-info {
+
+	@media (max-width: $laptop) {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 24px 0;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+			width: calc(100% + #{$container-padding}px);
+			height: 1px;
+			background: $border-line-dark;
+		}
+	}
+
+	@media (max-width: $mobile-l) {
+		flex-direction: column;
+		padding: 32px 0 0 0;
+
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.footer__logo {
+	max-width: 206px;
+	display: block;
+	filter: contrast(0) brightness(2);
+
+	@media (max-width: $laptop) {
+		max-width: 185px;
+	}
+
+	@media (max-width: 950px) {
+		margin-right: 24px;
+	}
+}
+
+.footer-info__buttons {
+	display: flex;
+	align-items: center;
+	margin: 14px -4px -4px;
+
+	& > * {
+		margin: 4px;
+
+		@media (max-width: $laptop) {
+			margin: 0;
+		}
+
+		@media (max-width: $mobile-l) {
+			margin: 6px 4px;
+		}
+	}
+
+	@media (max-width: 1150px) {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	@media (max-width: $laptop) {
+		margin: 0 24px 0 24px;
+	}
+
+	@media (max-width: 950px) {
+		display: none;
+	}
+
+	@media (max-width: $mobile-l) {
+		order: 1;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 22px -4px -6px -4px;
+	}
+}
+
+.footer__callback {
+	--icon: url('@img/sprite-new.svg#tel');
+	--icon-size: 16px;
+
+	&_pc {
+
+		@media (max-width: $laptop) {
+			display: none;
+		}
+
+		@media (max-width: $mobile-l) {
+			display: flex;
+		}
+	}
+
+	&_mob {
+		display: none;
+
+		@media (max-width: $laptop) {
+			display: flex;
+		}
+
+		@media (max-width: 700px) {
+			display: none;
+		}
+	}
+}
+
+.footer__btn-calc {
+	--icon: url('@img/sprite-new.svg#calc');
+	--icon-size: 18px;
+}
+
+.footer-info__content {
+	margin-top: 28px;
+
+	& > * {
+
+		&:not(:last-child) {
+			margin-bottom: 18px;
+
+			@media (max-width: $laptop) {
+				margin: 0 0 0 18px;
+			}
+
+			@media (max-width: $mobile-l) {
+				margin: 16px 0 0 0;
+			}
+		}
+	}
+
+	@media (max-width: $laptop) {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		margin: 0 0 0 auto;
+	}
+
+	@media (max-width: $mobile-l) {
+		width: 100%;
+		flex-direction: column;
+		text-align: center;
+		margin: 18px 0 0 0;
+	}
+}
+
+.footer__company-info {
+
+	@media (max-width: $mobile-l) {
+
+	}
+}
+
+.footer__tel {
+	font-size: 22px;
+	color: $accent;
+
+	@media (max-width: $laptop) {
+		font-size: 17px;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 18px;
+		color: $light;
+	}
+}
+
+.footer__work-time {
+	font-size: 15px;
+	text-align: left;
+
+	@media (max-width: $laptop) {
+		font-size: 13px;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 15px;
+	}
+}
+
+.footer__email {
+	position: relative;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 600;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		right: 0;
+		display: block;
+		width: 100%;
+		height: 1px;
+		border-top: 1px dashed $accent;
+	}
+
+	&_pc {
+		@media (max-width: $laptop) {
+			display: none;
+		}
+
+		@media (max-width: $mobile-l) {
+			display: flex;
+		}
+	}
+
+	@media (max-width: 950px) {
+		font-size: 15px;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 20px;
+	}
+}
+
+.footer__address {
+	font-size: 16px;
+	font-weight: 500;
+	max-width: 230px;
+
+	&_pc {
+		@media (max-width: $laptop) {
+			display: none;
+		}
+
+		@media (max-width: $mobile-l) {
+			display: flex;
+		}
+	}
+
+	@media (max-width: 950px) {
+		font-size: 15px;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 16px;
+	}
+}
+
+.footer__socials {
+
+	@media (max-width: $mobile-l) {
+		order: -1;
+	}
+}
+
+
+// Меню в подвале
+.footer-menu__wrap {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-left: 24px;
+
+	@media (max-width: 1250px) {
+		margin-left: 20px;
+	}
+
+	@media (max-width: $laptop) {
+		margin: 40px 0 0 0;
+	}
+
+	@media (max-width: 950px) {
+		justify-content: flex-start;
+	}
+
+	@media (max-width: 600px) {
+		justify-content: center;
+	}
+}
+
+.footer-menu {
+	display: flex;
+	margin: -20px -50px;
+
+	& > * {
+		margin: 20px 50px;
+
+		@media (max-width: 1250px) {
+			margin: 20px 20px;
+		}
+
+		@media (max-width: 650px) {
+			margin: 20px 10px;
+		}
+
+		@media (max-width: $mobile-l) {
+			margin: 11px 0;
+		}
+	}
+
+	@media (max-width: 1250px) {
+		margin: -20px;
+	}
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@media (max-width: $mobile-l) {
+		margin: -11px 0;
+	}
+}
+
+.fm-block__group {
+	max-width: none;
+
+	& > * {
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+
+			@media (max-width: $mobile-l) {
+				margin-bottom: 22px;
+			}
+		}
+	}
+}
+
+.fm-block {
+	max-width: 190px;
+    display: flex;
+    flex-direction: column;
+
+	@media (max-width: 600px) {
+		max-width: none;
+		width: 100%;
+		align-items: center;
+		text-align: center;
+	}
+}
+
+.fm-block__mob-info {
+	display: none;
+
+	@media (max-width: $laptop) {
+		display: flex;
+	}
+
+	@media (max-width: 950px) {
+		display: none;
+	}
+}
+
+.fm-block__title {
+	display: block;
+	font-size: 20px;
+	font-weight: 500;
+	color: $light;
+	margin-bottom: 20px;
+
+	@media (max-width: $laptop) {
+		font-size: 16px;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 18px;
+		margin-bottom: 12px;
+	}
+}
+
+.fm-block__list {
+
+	& li {
+		font-size: 16px;
+
+		&:not(:last-child) {
+			margin-bottom: 18px;
+
+			@media (max-width: 950px) {
+				margin-bottom: 14px;
+			}
+
+			@media (max-width: $mobile-l) {
+				margin-bottom: 8px;
+			}
+		}
+
+		& a {
+			padding: 4px 0;
+		}
+
+		@media (max-width: $laptop) {
+			font-size: 15px;
+		}
+
+		@media (max-width: $mobile-l) {
+
+			& li {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+// Нижняя часть подвала
+.footer-down {
+	border-top: 1px solid $border-line-dark;
+	padding: 28px 0;
+
+	@media (max-width: $laptop) {
+		padding: 12px 0;
+	}
+
+	@media (max-width: 600px) {
+		padding: 36px 0;
+	}
+
+	@media (max-width: $mobile-l) {
+		padding: 34px 0;
+	}
+}
+
+.footer-down__container {
+	display: flex;
+	align-items: center;
+
+	@media (max-width: 600px) {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+}
+
+.footer-down__info {
+	width: 85%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: -8px 60px -8px -12px;
+
+	@media (max-width: $laptop) {
+		margin: -2px -12px;
+	}
+
+	@media (max-width: 600px) {
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+		// margin: -8px -12px;
+	}
+}
+
+.footer-down__text {
+	color: $text-label;
+	margin: 4px 12px;
+
+	@media (max-width: $laptop) {
+		margin: 2px 12px;
+	}
+}
+
+.footer-down__soc-links {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin: -4px -12px -4px auto;
+
+	@media (max-width: $laptop) {
+		flex-wrap: wrap;
+	}
+
+	@media (max-width: 600px) {
+		justify-content: center;
+		margin: 0 0 24px 0;
+	}
+}
+
+.footer-down__link-soc {
+	display: flex;
+	align-items: center;
+	margin: 4px 12px;
+}

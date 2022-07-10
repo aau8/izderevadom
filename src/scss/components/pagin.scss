@@ -1,0 +1,154 @@
+.pagin {
+	--size: 46px;
+
+	display: flex;
+	align-items: center;
+
+	@media (max-width: $mobile-l) {
+		--size: 40px;
+	}
+
+	@media (max-width: $mobile-m) {
+		--size: 32px;
+	}
+}
+
+.pagin__btn,
+.pagin__item {
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid $border-line;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.pagin__item {
+
+	@media (max-width: 600px) {
+
+		&:nth-child(4) {
+			display: none;
+		}
+	}
+}
+
+.pagin__btn {
+	transition: $tr;
+
+	& svg {
+		width: 34%;
+		height: 34%;
+		fill: $text-label;
+		transition: $tr;
+	}
+
+	&_prev {
+
+	}
+
+	&_next {
+
+	}
+
+	&:active {
+		background: brig-color($accent-second, hover);
+
+		& svg {
+			fill: $light;
+		}
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			background: brig-color($accent-second, hover);
+
+			& svg {
+				fill: $light;
+			}
+		}
+
+		&:active {
+			background: brig-color($accent-second, active);
+		}
+	}
+}
+
+.pagin__list {
+	display: flex;
+	align-items: center;
+	margin: 0 20px;
+
+	& > * {
+
+		&:not(:last-child) {
+			margin-right: 10px;
+
+			@media (max-width: $mobile-m) {
+				margin-right: 6px;
+			}
+		}
+	}
+
+	@media (max-width: $mobile-l) {
+		margin: 0 10px;
+	}
+}
+
+.pagin__item {
+
+	& a {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 15px;
+		transition: $tr;
+
+		&:active {
+			background: brig-color($accent-second, hover);
+		}
+
+		@media (any-hover: hover) {
+
+			&:hover {
+				background: brig-color($accent-second, hover);
+				color: $light;
+			}
+
+			&:active {
+				background: brig-color($accent-second, active);
+			}
+		}
+
+		@media (max-width: $mobile-l) {
+			font-size: 13px;
+		}
+	}
+
+	span {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		pointer-events: none;
+	}
+
+	&.is-current {
+
+		& span {
+			color: $light;
+			background: $accent-second;
+		}
+	}
+}
+
+.pagin__item_current {
+
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('tpls/header.html',{})
+
+		<main class="main"></main>
+		<div class="content">
+			<div class="breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item is-home"><a class="link" href="#">Главная</a></li>
+						<li class="breadcrumbs__item">Поиск</li>
+					</ul>
+				</div>
+			</div>
+			<section class="s-search">
+				<div class="s-search__container">
+					<div class="s-search__wrap">
+						<form action="#" class="search s-search__search">
+							<label class="tf search__tf">
+								<div class="tf__field">
+									<input type="text" name="search" value="Каркасные дома">
+									<span class="tf__label">Введите запрос</span>
+								</div>
+							</label>
+							<button class="btn is-accent has-icon search__btn"></button>
+						</form>
+						<div class="s-search__content">
+							<h1 class="s-search__title">По вашему запросу найдено 10 результатов</h1>
+							<div class="s-search__list">
+								<a href="#" class="search-result">
+									<h2 class="search-result__title" data-result-num="01">Каркасные дома под ключ недорого - проекты с фото и ценами ...</h2>
+									<p class="search-result__text">Русская Построечка осуществляет строительство каркасных домов под ключ в Центральном и Северо-Западном регионе России. Большой каталог готовых проектов. Гарантия до 3 лет.</p>
+								</a>
+								<a href="#" class="search-result">
+									<h2 class="search-result__title" data-result-num="02">Каркасные дома под ключ недорого - проекты с фото и ценами ...</h2>
+									<p class="search-result__text">Русская Построечка осуществляет строительство каркасных домов под ключ в Центральном и Северо-Западном регионе России. Большой каталог готовых проектов. Гарантия до 3 лет.</p>
+								</a>
+								<a href="#" class="search-result">
+									<h2 class="search-result__title" data-result-num="03">Каркасные дома под ключ недорого - проекты с фото и ценами ...</h2>
+									<p class="search-result__text">Русская Построечка осуществляет строительство каркасных домов под ключ в Центральном и Северо-Западном регионе России. Большой каталог готовых проектов. Гарантия до 3 лет.</p>
+								</a>
+								<a href="#" class="search-result">
+									<h2 class="search-result__title" data-result-num="04">Каркасные дома под ключ недорого - проекты с фото и ценами ...</h2>
+									<p class="search-result__text">Русская Построечка осуществляет строительство каркасных домов под ключ в Центральном и Северо-Западном регионе России. Большой каталог готовых проектов. Гарантия до 3 лет.</p>
+								</a>
+								<a href="#" class="search-result">
+									<h2 class="search-result__title" data-result-num="05">Каркасные дома под ключ недорого - проекты с фото и ценами ...</h2>
+									<p class="search-result__text">Русская Построечка осуществляет строительство каркасных домов под ключ в Центральном и Северо-Западном регионе России. Большой каталог готовых проектов. Гарантия до 3 лет.</p>
+								</a>
+								<a href="#" class="search-result">
+									<h2 class="search-result__title" data-result-num="06">Каркасные дома под ключ недорого - проекты с фото и ценами ...</h2>
+									<p class="search-result__text">Русская Построечка осуществляет строительство каркасных домов под ключ в Центральном и Северо-Западном регионе России. Большой каталог готовых проектов. Гарантия до 3 лет.</p>
+								</a>
+								<a href="#" class="search-result">
+									<h2 class="search-result__title" data-result-num="07">Каркасные дома под ключ недорого - проекты с фото и ценами ...</h2>
+									<p class="search-result__text">Русская Построечка осуществляет строительство каркасных домов под ключ в Центральном и Северо-Западном регионе России. Большой каталог готовых проектов. Гарантия до 3 лет.</p>
+								</a>
+							</div>
+							<div class="pagin s-search__pagin">
+								<button class="pagin__btn pagin__btn_prev" disabled><svg style="transform: rotate(180deg);"><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
+								<ul class="pagin__list">
+									<li class="pagin__item is-current"><span>01</span></li>
+									<li class="pagin__item"><a href="#">02</a></li>
+									<li class="pagin__item"><a href="#">03</a></li>
+									<li class="pagin__item"><a href="#">04</a></li>
+									<li class="pagin__item"><span>...</span></li>
+									<li class="pagin__item"><a href="#">12</a></li>
+								</ul>
+								<button class="pagin__btn pagin__btn_next"><svg><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+        @@include('tpls/footer.html',{})
+	</div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+</body>
+</html>

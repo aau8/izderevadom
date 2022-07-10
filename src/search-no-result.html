@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('tpls/header.html',{})
+
+		<main class="main"></main>
+		<div class="content">
+			<div class="breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item is-home"><a class="link" href="#">Главная</a></li>
+						<li class="breadcrumbs__item">Поиск</li>
+					</ul>
+				</div>
+			</div>
+			<section class="s-search">
+				<div class="s-search__container">
+					<div class="s-search__wrap">
+						<form action="#" class="search s-search__search">
+							<label class="tf search__tf">
+								<div class="tf__field">
+									<input type="text" name="search" value="Каркасные дома">
+									<span class="tf__label">Введите запрос</span>
+								</div>
+							</label>
+							<button class="btn is-accent has-icon search__btn"></button>
+						</form>
+						<div class="s-search__content">
+							<h1 class="s-search__title">К сожалению, по вашему запросу ничего нет</h1>
+							<div class="banner-search">
+								<div class="banner-search__wrap">
+									<div class="banner-search__body">
+										<div class="banner-search__content">
+											<h2 class="banner-search__title">Наш менеджер поможет с тем, что вы ищете!</h2>
+											<p class="banner-search__text">Оставьте свой номер, и мы свяжемся с Вами в течение 15 минут</p>
+										</div>
+										<form action="#" class="banner-search__form">
+											<label class="tf banner-search__tf">
+												<div class="tf__field">
+													<input type="text" name="user-name">
+													<span class="tf__label">Ваше имя</span>
+												</div>
+											</label>
+											<label class="tf banner-search__tf">
+												<div class="tf__field">
+													<input type="tel" name="user-tel">
+													<span class="tf__label">Введите ваш телефон</span>
+												</div>
+											</label>
+											<button class="btn is-accent banner-search__btn">Узнать</button>
+										</form>
+										<span class="banner-search__correct">Отправляя форму я даю согласие на обработку персональных данных</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+        @@include('tpls/footer.html',{})
+	</div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+</body>
+</html>

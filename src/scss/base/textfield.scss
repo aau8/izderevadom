@@ -2,12 +2,12 @@
 .tf {
     position: relative;
     width: 100%;
-    
+
     &.has-change-label {
 
-        & .tf__field label {
-            top: 0;
-            transform: translate(-16%, 0) scale(0.7);
+        & .tf__label {
+			transform: translate(50%, -50%);
+			opacity: 0;
         }
     }
 }
@@ -15,6 +15,7 @@
 .tf__field {
     position: relative;
     width: 100%;
+	height: 100%;
     display: flex;
     align-items: center;
     background: none;
@@ -28,35 +29,37 @@
 .tf__field textarea {
     width: 100%;
     height: 100%;
-    font-size: 18px;
+    font-size: 16px;
     background: none;
-    border-bottom: 1px solid #fff;
-    padding: 24px 0 4px 0;
+	border: 1px solid $border-line;
+	border-radius: $radius-s;
+	padding: 0 20px;
 }
 
-.tf__field label {
+.tf__label {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 20px;
     transform: translate(0, -50%);
     display: inline-block;
-    font-size: 18px;
-    font-weight: 100;
-    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+	font-style: italic;
+	color: $input-placeholder;
     pointer-events: none;
     transition: $tr;
 }
 
 .tf__field_textarea {
 
-    & label {
+    & .tf__label {
         top: 14px;
         transform: translate(0, 0);
     }
 }
 
 ._textfield-error {
-    
+
     &::after {
         content: attr(data-textfield-error);
         display: inline-block;

@@ -4,28 +4,34 @@
 @import "./mixins";
 
 // Шрифты
-// @include font('Gilroy', normal, 400, '../resources/fonts/Gilroy/Gilroy-Regular.woff2');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300..900&display=swap');
 
 // Переменные
 // Текст
 $text-primary: #333;
-$text-second: brig-color($text-primary, .7);
-$text-accent: #FFCD6D;
-$link-active: brig-color(#FFCD6D, active);
+$text-second: #4F4F4F;
+$text-label: #BDBDBD;
+$text-light: #E0E0E0;
 $light: #fff;
+$accent: #5BAA00;
+$accent-second: #C8996B;
 
 // Задний фон разделов
-// $frame-dark: #080A0A;
-// $frame-light: #0E1010;
+$frame-dark: #222222;
+$frame-light: #FAFAFA;
 
 // Обводка
-$border-line: #cecece;
-$input-placeholder: brig-color(#000, .3);
+$border-line: rgba(0,0,0,.08);
+$border-line-dark: #595959;
+$button-bg: #F7F7F7;
+
+// Радиусы
+$radius-s: 4px;
 
 $error: #EB5757;
 
 // Текстовые поля
-$tf-label: $text-second;
+$input-placeholder: #828282;
 
 // ================ Colors End ================
 
@@ -33,9 +39,13 @@ $tf-label: $text-second;
 // ================ Responsive Start ================
 $min-width: 320px;
 $max-width: 1920px;
-$max-width-container: 1200;
-$container-padding: 48;
+$max-width-container: 1480;
+$container-padding: 100;
 $container-width: $max-width-container + $container-padding;
+
+:root {
+	--container-padding: #{$container-padding / 2 + px};
+}
 
 $laptop-l: 1500px;
 $laptop: 1100px;
@@ -48,7 +58,8 @@ $hide-menu: $tablet;
 
 
 // ================ Other Start ================
-$ff-main: sans-serif;
+// $ff-main: 'Exo 2', sans-serif;
+$ff-main: 'Exo 2', sans-serif;
 $tr: .3s;
 // ================ Other End ================
 //========================================================================================================================================================
@@ -80,34 +91,50 @@ body {
 }
 
 /*
-(i) Стили будут применяться ко 
+(i) Стили будут применяться ко
 всем классам содержащим *__container
 Например header__container, main__container и т.д.
 */
 [class*="__container"] {
     @if ($max-width-container>0) {
-        max-width: rem($max-width-container);
+        max-width: $max-width-container + px;
         box-sizing: content-box;
         margin: 0 auto;
     }
     @if ($container-padding>0) {
-        padding: 0 rem(math.div($container-padding, 2));
+        padding: 0 var(--container-padding);
     }
 
+	@media (max-width: $tablet) {
+		--container-padding: 30px;
+	}
+
     @media (max-width: $mobile-l) {
-        padding: 0 rem(16);
+		--container-padding: 20px;
+    }
+
+    @media (max-width: $mobile-m) {
+		--container-padding: 16px;
     }
 }
 
-// Общие стили проекта
-@import "./common";
 
 // Базовые стили, шаблоны, заготовки
 @import "./base";
 
+// Общие стили проекта
+@import "./common";
+
+// Компоненты
+@import "./components/search";
+@import "./components/breadcrumbs";
+@import "./components/pagin";
+@import "./components/banner-search";
+
 // Стили частоиспользуемых секций
 @import "./sections/header";
 @import "./sections/main";
+@import "./sections/s-search";
 @import "./sections/footer";
 
 

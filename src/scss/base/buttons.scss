@@ -1,36 +1,180 @@
 // Основной шаблон кнопки
 .btn {
-    height: 54px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    font-weight: 700;
-    padding: 0 50px;
-    border-radius: 50px;
+    font-weight: 600;
+	color: $light;
+    border-radius: $radius-s;
+    padding: 0 14px;
     transition: $tr;
     white-space: nowrap;
     user-select: none;
 
-	@media (any-hover: hover) {
-        
-        &:hover {
-            background: #000;
-        }
-    }
+	&.is-accent {
+		background: $accent;
+
+		&:active {
+			background: brig-color($accent, hover);
+		}
+
+		@media (any-hover: hover) {
+
+			&:hover {
+				background: brig-color($accent, hover);
+			}
+
+			&:active {
+				background: brig-color($accent, active);
+			}
+		}
+	}
+
+	&.is-second {
+		background: $accent-second;
+
+		&:active {
+			background: brig-color($accent-second, hover);
+		}
+
+		@media (any-hover: hover) {
+
+			&:hover {
+				background: brig-color($accent-second, hover);
+			}
+
+			&:active {
+				background: brig-color($accent-second, active);
+			}
+		}
+	}
+
+	&.is-ghost {
+		color: $text-primary;
+
+		@include buttonBgLight;
+	}
+
+	&.is-linear {
+		color: $light;
+		background: transparent;
+		border: 1px solid $light;
+
+		&:active {
+			background: create-rgba($light, .1);
+		}
+
+		@media (any-hover: hover) {
+
+			&:hover {
+				background: create-rgba($light, .1);
+			}
+
+			&:active {
+				background: create-rgba($light, .15);
+			}
+		}
+	}
+
+	&.has-icon {
+
+		&::before {
+			display: inline-block;
+		}
+	}
+
+	&::before {
+		content: '';
+		display: none;
+		min-width: var(--icon-size);
+		width: var(--icon-size);
+		height: var(--icon-size);
+		-webkit-mask: center/contain no-repeat var(--icon);
+		mask: center/contain no-repeat var(--icon);
+		margin-right: 10px;
+		vertical-align: middle;
+		background: $light;
+	}
 }
 
 .link {
     transition: $tr;
 
     @media (any-hover: hover) {
-        
+
         &:hover {
-            color: $text-accent;
+            color: $accent;
         }
     }
 
     &:active {
-        color: brig-color($text-accent, active);
+        color: brig-color($accent, active);
     }
+
+	&.has-icon {
+		--icon-size: 16px;
+		--icon-indent: 4px;
+
+		position: relative;
+		padding-left: calc(var(--icon-size) + var(--icon-indent));
+		white-space: nowrap;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			display: inline-block;
+			min-width: var(--icon-size);
+			width: var(--icon-size);
+			height: var(--icon-size);
+			transform: translate(0, -50%);
+			-webkit-mask: center/contain no-repeat var(--icon);
+			mask: center/contain no-repeat var(--icon);
+			margin-right: var(--icon-indent);
+			vertical-align: middle;
+			background: $accent;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			right: 0;
+			width: calc(100% - (calc(var(--icon-size) + var(--icon-indent))));
+			height: 1px;
+			border-top: 1px dashed $accent;
+		}
+	}
 }
+
+// Ссылка с иконкой
+// .link-icon {
+// 	// display: flex;
+// 	// align-items: center;
+
+// }
+
+// .link-icon__icon {
+// 	min-width: 16px;
+// 	width: 16px;
+// 	height: 16px;
+// 	display: inline-block;
+// }
+
+// .link-icon__text {
+// 	position: relative;
+// 	margin-left: 4px;
+
+// 	&::after {
+// 		content: '';
+// 		position: absolute;
+// 		bottom: -2px;
+// 		left: 0;
+// 		width: 100%;
+// 		height: 1px;
+// 		border-top: 1px dashed $accent;
+// 	}
+// }

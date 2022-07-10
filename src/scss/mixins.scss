@@ -1,3 +1,5 @@
+// INFO: Общие миксины и функции
+
 // ШРИФТЫ
 @mixin font($fname, $fstyle, $fweight, $furl_woff2){
     @font-face{
@@ -86,11 +88,11 @@
         width: $width;
         height: $height;
     }
-    
+
     &::-webkit-scrollbar-track {
         background: $track;
     }
-    
+
     &::-webkit-scrollbar-thumb {
         background-color: $thumb;
     }
@@ -130,3 +132,24 @@
     animation: spinAround 500ms infinite linear;
 }
 //========================================================================================================================================================
+
+// INFO: Миксины и функции проекта
+
+@mixin buttonBgLight() {
+	background: $button-bg;
+
+	&:active {
+		background: brig-color($button-bg, hover);
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			background: brig-color($button-bg, hover);
+		}
+
+		&:active {
+			background: brig-color($button-bg, active);
+		}
+	}
+}

@@ -1,0 +1,144 @@
+// Верхняя часть меню
+.header-up {
+	border-bottom: 1px solid $border-line;
+	padding: 12px 0;
+}
+
+.header-up__container {
+	display: flex;
+	align-items: center;
+}
+
+// Меню
+.menu {
+	// margin-left: 108px;
+	margin: 0 24px 0 108px;
+}
+
+.menu__wrap {
+
+}
+
+.menu__list {
+	display: flex;
+	align-items: center;
+
+	& li {
+		font-size: 15px;
+
+		&:not(:last-child) {
+			margin-right: 24px;
+		}
+
+		& a {
+
+		}
+	}
+}
+
+.header__email {
+	--icon: url('../img/sprite-new.svg#email');
+	// margin-left: auto;
+	margin: 0 20px 0 auto;
+}
+
+.header__socials {
+	margin-right: 18px;
+}
+
+.header__company-info {
+	margin-right: 15px;
+}
+
+.header__callback {
+	--icon: url('../img/sprite-new.svg#tel');
+	--icon-size: 12px;
+}
+
+// Нижняя часть меню
+.header-down {
+	padding: 7px 0;
+}
+
+.header-down__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__logo {
+	display: block;
+	min-width: 150px;
+	max-width: 220px;
+}
+
+.project-btn {
+	height: 50px;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 0 32px;
+	margin-left: 26px;
+}
+
+.project-btn__icon {
+	position: relative;
+	display: inline-block;
+	min-width: 18px;
+	width: 18px;
+	height: 18px;
+	margin-right: 16px;
+
+	& span {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+		display: block;
+		height: 2px;
+		background: $light;
+
+		&:nth-child(1) {
+			width: 9px;
+			transform: translate(0, calc(-50% - 6px))
+		}
+
+		&:nth-child(2) {
+			width: 18px;
+		}
+
+		&:nth-child(3) {
+			width: 14px;
+			transform: translate(0, calc(-50% + 6px))
+		}
+	}
+}
+
+.project-btn__text {
+
+}
+
+// Поиск
+.header__search {
+	max-width: 660px;
+	width: 100%;
+	margin-left: 10px;
+}
+
+.header__link-calc {
+	--icon: url('@img/sprite-new.svg#calc');
+
+	&.has-icon {
+		--icon-size: 24px;
+		--icon-indent: 8px;
+	}
+}
+
+.header__tools {
+	display: flex;
+	align-items: center;
+	margin-left: 24px;
+
+	& > *:not(:last-child) {
+		margin-right: 20px;
+	}
+}

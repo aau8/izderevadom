@@ -1,4 +1,4 @@
-// Бургер 
+// Бургер
 .burger {
     position: relative;
     width: 40px;
@@ -35,11 +35,11 @@
             &:nth-child(1) {
                 transform: translate(-50%, -50%) rotate(45deg);
             }
-    
+
             &:nth-child(2) {
                 width: 0;
             }
-    
+
             &:nth-child(3) {
                 transform: translate(-50%, -50%) rotate(-45deg);
             }
@@ -83,14 +83,130 @@
 }
 
 .s-header__title {
-    
+
 }
 
 .s-header__subtitle {
-    
+
 }
 
 .s-header__text {
-    
+
 }
 //========================================================================================================================================================
+
+
+// Локация
+.location {
+	--icon: url('../img/sprite-new.svg#location');
+}
+//========================================================================================================================================================
+
+
+// Ссылка на соц. сеть
+.link-soc {
+	--icon-size: 16px;
+
+	border-radius: 98px;
+
+	&[data-link-soc=vk] {
+		--icon: url("@img/sprite-new.svg#vk");
+
+		&::before {
+			background: #0173F7;
+		}
+	}
+
+	&[data-link-soc=telegram] {
+		--icon: url("@img/sprite-new.svg#telegram");
+
+		&::before {
+			background: #40B3E0;
+		}
+	}
+
+	&[data-link-soc=whatsapp] {
+		--icon: url("@img/sprite-new.svg#whatsapp");
+
+		&::before {
+			background: #55EF73;
+		}
+	}
+
+	&[data-link-soc=viber] {
+		--icon: url("@img/sprite-new.svg#viber");
+
+		&::before {
+			background: #6F5CEA;
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+// Логотип
+.logo {
+
+	& img,
+	& svg {
+		transform: translateY(6%);
+	}
+}
+//========================================================================================================================================================
+
+
+// Список соц. сетей
+.socials {
+	display: flex;
+	align-items: center;
+
+	& > * {
+
+		&:not(:last-child) {
+			margin-right: 6px;
+		}
+	}
+}
+
+.socials__link {
+	min-width: 28px;
+	width: 28px;
+	height: 28px;
+	display: flex;
+	border-radius: 50%;
+	transition: $tr;
+
+	@include buttonBgLight;
+
+	& svg,
+	& img {
+		width: 16px;
+		height: 16px;
+		margin: auto;
+	}
+
+	& svg {
+		fill: $text-primary;
+		transition: $tr;
+	}
+}
+//========================================================================================================================================================
+
+
+// Блок с информацией компании (номер, время работы)
+.company-info {
+	width: fit-content;
+}
+
+.company-info__tel {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.company-info__work-time {
+	display: block;
+	font-size: 13px;
+	text-align: right;
+}

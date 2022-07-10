@@ -1,0 +1,30 @@
+.search {
+	position: relative;
+	height: 50px;
+	display: flex;
+}
+
+.search__tf {
+
+	& .tf__field {
+		height: 100%;
+	}
+
+	& input {
+		border-radius: $radius-s 0 0 $radius-s;
+	}
+}
+
+.search__btn {
+	--icon: url('@img/sprite-new.svg#search');
+	--icon-size: 18px;
+
+	// position: absolute;
+	// top: 0;
+	// right: 0;
+
+	height: 100%;
+	font-size: 16px;
+	font-weight: 700;
+	border-radius: 0 $radius-s $radius-s 0;
+}

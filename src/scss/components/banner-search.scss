@@ -1,0 +1,63 @@
+.banner-search {
+	margin: 48px 0;
+}
+
+.banner-search__wrap {
+	position: relative;
+	background: $frame-light;
+	border-radius: $radius-s;
+	padding: 40px 50px 50px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: -42px;
+		width: 340px;
+		aspect-ratio: 1;
+		display: block;
+		background: center/contain no-repeat url('@img/banners/man.png');
+
+	}
+}
+
+.banner-search__body {
+	position: relative;
+	z-index: 1;
+}
+
+.banner-search__content {
+
+}
+
+.banner-search__title {
+	font-size: 34px;
+	font-weight: 600;
+}
+
+.banner-search__text {
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: 7px;
+}
+
+.banner-search__form {
+	max-width: 770px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr .7fr;
+	gap: 6px;
+	margin-top: 32px;
+}
+
+.banner-search__tf,
+.banner-search__btn {
+	height: 50px;
+}
+
+.banner-search__correct {
+	display: block;
+	font-size: 14px;
+	color: $input-placeholder;
+	margin-top: 16px;
+}
