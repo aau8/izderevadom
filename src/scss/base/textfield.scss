@@ -1,5 +1,7 @@
 // Поле ввода
 .tf {
+	--icon-size: 16px;
+
     position: relative;
     width: 100%;
 
@@ -10,6 +12,32 @@
 			opacity: 0;
         }
     }
+
+	&.has-icon {
+
+		& .tf__field {
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 15px;
+				min-width: var(--icon-size);
+				width: var(--icon-size);
+				height: var(--icon-size);
+				transform: translate(0, -50%);
+				-webkit-mask: center/contain no-repeat var(--icon);
+				mask: center/contain no-repeat var(--icon);
+				background: $accent-second;
+				pointer-events: none;
+			}
+
+			& input,
+			& textarea {
+				padding-right: calc(var(--icon-size) + 20px);
+			}
+		}
+	}
 }
 
 .tf__field {
@@ -19,6 +47,7 @@
     display: flex;
     align-items: center;
     background: none;
+	overflow: hidden;
 
     &_textarea {
         height: 80px;
@@ -30,7 +59,7 @@
     width: 100%;
     height: 100%;
     font-size: 16px;
-    background: none;
+    background: $light;
 	border: 1px solid $border-line;
 	border-radius: $radius-s;
 	padding: 0 20px;

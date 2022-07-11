@@ -1,5 +1,4 @@
 .s-search {
-	padding-bottom: 84px;
 }
 
 .s-search__container {
@@ -17,51 +16,6 @@
 
 .s-search__search {
 	max-width: 870px;
-
-	& .tf__field {
-
-		& input,
-		& textarea {
-			padding-right: 50px;
-		}
-	}
-
-	& .search__btn {
-		position: absolute;
-		top: 50%;
-		right: 0;
-		transform: translate(0, -50%);
-		width: 50px;
-		background: transparent;
-
-		&::before {
-			margin: 0;
-			background: $accent;
-		}
-
-		&:active {
-			background: transparent;
-		}
-
-		@media (any-hover: hover) {
-
-			&:hover {
-				background: transparent;
-			}
-
-			&:active {
-				background: transparent;
-			}
-		}
-	}
-
-	@media (max-width: $laptop) {
-		max-width: 690px;
-	}
-
-	@media (max-width: $tablet) {
-		max-width: 580px;
-	}
 }
 
 .s-search__content {

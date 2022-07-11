@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220710223356">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220711115604">
 </head>
 <body>
 	<div class="wrapper">
@@ -16,9 +16,17 @@
 				<div class="link-icon__icon"><svg><use href='./img/sprite-new.svg#location-sym'></use></svg></div>
 				<span class="link-icon__text">Москва</span>
 			</a> -->
+			<button class="burger header__burger" data-menu-open><span></span><span></span><span></span></button>
 			<a href="#" class="link has-icon location">Москва</a>
-			<nav class="menu">
+			<nav class="menu" >
 				<div class="menu__wrap">
+					<div class="menu__header">
+						<button class="btn is-second project-btn">
+							<span class="project-btn__icon"><span></span><span></span><span></span></span>
+							<span class="project-btn__text">Проекты</span>
+						</button>
+						<button class="burger is-active menu__close" data-menu-close><span></span><span></span><span></span></button>
+					</div>
 					<ul class="menu__list">
 						<li><a href="" class="link">Клиенту</a></li>
 						<li><a href="" class="link">Акции</a></li>
@@ -28,6 +36,21 @@
 						<li><a href="" class="link">О нас</a></li>
 						<li><a href="" class="link">Контакты</a></li>
 					</ul>
+					<div class="menu__footer">
+						<div class="menu__footer-buttons">
+							<button class="btn has-icon is-accent header__callback">Заказать звонок</button>
+							<a href="#" class="btn has-icon is-accent is-border menu__link-calc">Калькулятор проекта</a>
+						</div>
+						<form action="#" class="search is-light menu__search">
+							<label class="tf search__tf">
+								<div class="tf__field">
+									<input type="text" name="search">
+									<span class="tf__label">Введите запрос</span>
+								</div>
+							</label>
+							<button class="btn is-accent has-icon search__btn"></button>
+						</form>
+					</div>
 				</div>
 			</nav>
 			<!-- <a href="mailto:info@izderevadom.ru" class="link link-icon header__email">
@@ -50,7 +73,7 @@
 	<div class="header-down">
 		<div class="header-down__container">
 			<a href="#" class="logo header__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
-			<button class="btn is-second project-btn">
+			<button class="btn is-second project-btn header__project-btn">
 				<span class="project-btn__icon">
 					<span></span>
 					<span></span>
@@ -88,7 +111,7 @@
 			<section class="s-search">
 				<div class="s-search__container">
 					<div class="s-search__wrap">
-						<form action="#" class="search s-search__search">
+						<form action="#" class="search is-light s-search__search">
 							<label class="tf search__tf">
 								<div class="tf__field">
 									<input type="text" name="search" value="Каркасные дома">
@@ -99,32 +122,67 @@
 						</form>
 						<div class="s-search__content">
 							<h1 class="s-search__title">К сожалению, по вашему запросу ничего нет</h1>
-							<div class="banner-search">
-								<div class="banner-search__wrap">
-									<div class="banner-search__body">
-										<div class="banner-search__content">
-											<h2 class="banner-search__title">Наш менеджер поможет с тем, что вы ищете!</h2>
-											<p class="banner-search__text">Оставьте свой номер, и мы свяжемся с Вами в течение 15 минут</p>
-										</div>
-										<form action="#" class="banner-search__form">
-											<label class="tf banner-search__tf">
-												<div class="tf__field">
-													<input type="text" name="user-name">
-													<span class="tf__label">Ваше имя</span>
-												</div>
-											</label>
-											<label class="tf banner-search__tf">
-												<div class="tf__field">
-													<input type="tel" name="user-tel">
-													<span class="tf__label">Введите ваш телефон</span>
-												</div>
-											</label>
-											<button class="btn is-accent banner-search__btn">Узнать</button>
-										</form>
-										<span class="banner-search__correct">Отправляя форму я даю согласие на обработку персональных данных</span>
-									</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="banner">
+				<div class="banner__container">
+					<div class="banner-search">
+						<div class="banner-search__wrap">
+							<div class="banner-search__body">
+								<div class="banner-search__content">
+									<h2 class="banner-search__title">Наш менеджер поможет с тем, что вы ищете!</h2>
+									<p class="banner-search__text">Оставьте свой номер, и мы свяжемся с Вами в течение 15 минут</p>
 								</div>
+								<form action="#" class="banner-search__form">
+									<label class="tf banner-search__tf">
+										<div class="tf__field">
+											<input type="text" name="user-name">
+											<span class="tf__label">Ваше имя</span>
+										</div>
+									</label>
+									<label class="tf has-icon banner-search__tf banner-search__tf-tel">
+										<div class="tf__field">
+											<input type="tel" name="user-tel">
+											<span class="tf__label">Введите ваш телефон</span>
+										</div>
+									</label>
+									<button class="btn is-accent banner-search__btn">Узнать</button>
+									<span class="banner-search__correct">Отправляя форму я даю согласие на обработку персональных данных</span>
+								</form>
 							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="find-project">
+				<div class="find-project__container">
+					<div class="s-header">
+						<h2 class="s-header__title">Найдите подходящий проект</h2>
+					</div>
+					<div class="find-project__body">
+						<div class="find-project__list">
+							<a href="#" class="c-project">
+								<div class="c-project__img"><img src="./img/projects/1.svg" alt=""></div>
+								<span class="c-project__title">Каркасные дома</span>
+							</a>
+							<a href="#" class="c-project">
+								<div class="c-project__img"><img src="./img/projects/2.svg" alt=""></div>
+								<span class="c-project__title">Дома из&nbsp;бруса</span>
+							</a>
+							<a href="#" class="c-project">
+								<div class="c-project__img"><img src="./img/projects/3.svg" alt=""></div>
+								<span class="c-project__title">Каркасные бани</span>
+							</a>
+							<a href="#" class="c-project">
+								<div class="c-project__img"><img src="./img/projects/4.svg" alt=""></div>
+								<span class="c-project__title">Бани из&nbsp;бруса</span>
+							</a>
+							<a href="#" class="c-project">
+								<div class="c-project__img"><img src="./img/projects/5.svg" alt=""></div>
+								<span class="c-project__title">Мобильные бани</span>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -139,7 +197,7 @@
 					<a href="#" class="logo footer__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
 					<div class="footer-info__buttons">
 						<button class="btn has-icon is-accent footer__callback footer__callback_pc">Заказать звонок</button>
-						<button class="btn has-icon is-linear footer__btn-calc footer__btn-calc_main">Калькулятор проекта</button>
+						<button class="btn has-icon is-border is-ghost footer__btn-calc footer__btn-calc_main">Калькулятор проекта</button>
 					</div>
 					<div class="footer-info__content">
 						<button class="btn has-icon is-accent footer__callback footer__callback_mob">Заказать звонок</button>
@@ -209,7 +267,7 @@
 			</div>
 			<div class="footer-up__tablet-info">
 				<div class="footer-up__tablet-info-buttons">
-					<button class="btn has-icon is-linear footer__btn-calc">Калькулятор проекта</button>
+					<button class="btn has-icon is-border footer__btn-calc">Калькулятор проекта</button>
 					<button class="btn has-icon is-accent footer__callback">Заказать звонок</button>
 				</div>
 				<div class="footer-up__tablet-info-contacts">
@@ -246,6 +304,6 @@
         <div class="modal__bg"></div>
     </div>
 </div> -->
-    <script src="./js/bundle.min.js?_v=20220710223356"></script>
+    <script src="./js/bundle.min.js?_v=20220711115604"></script>
 </body>
 </html>

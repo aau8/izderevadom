@@ -1,30 +1,33 @@
 // Бургер
 .burger {
     position: relative;
-    width: 40px;
-    height: 40px;
+    min-width: 28px;
+    width: 28px;
+    height: 28px;
     transition: $tr;
 
     & span {
         position: absolute;
         top: 50%;
-        left: 50%;
-        width: 40%;
-        height: 2px;
+        left: 0;
+        height: 3.2px;
         display: block;
         background: $text-primary;
         transition: $tr;
 
         &:nth-child(1) {
-            transform: translate(-50%, calc(-50% - 5px));
+			width: 50%;
+			transform: translate(0, calc(-50% - 9px));
         }
 
         &:nth-child(2) {
-            transform: translate(-50%, -50%);
+			width: 100%;
+            transform: translate(0, -50%);
         }
 
         &:nth-child(3) {
-            transform: translate(-50%, calc(-50% + 5px));
+			width: 80%;
+            transform: translate(0, calc(-50% + 9px));
         }
     }
 
@@ -33,6 +36,8 @@
         & span {
 
             &:nth-child(1) {
+				left: 50%;
+				width: 100%;
                 transform: translate(-50%, -50%) rotate(45deg);
             }
 
@@ -41,6 +46,8 @@
             }
 
             &:nth-child(3) {
+				left: 50%;
+				width: 100%;
                 transform: translate(-50%, -50%) rotate(-45deg);
             }
         }
@@ -77,21 +84,31 @@
 .s-header {
     margin-bottom: 40px;
 
-    @media (max-width: $mobile-l) {
-        margin-bottom: 30px;
-    }
+	@media (max-width: $tablet) {
+		margin-bottom: 30px;
+	}
 }
 
 .s-header__title {
+	font-size: 34px;
+	font-weight: 600;
 
+	@media (max-width: $laptop) {
+		font-size: 28px;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 24px;
+	}
 }
 
 .s-header__subtitle {
-
+	font-size: 22px;
+	margin-top: 16px;
 }
 
 .s-header__text {
-
+	margin-top: 6px;
 }
 //========================================================================================================================================================
 

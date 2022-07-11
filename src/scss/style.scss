@@ -44,7 +44,7 @@ $container-padding: 100;
 $container-width: $max-width-container + $container-padding;
 
 :root {
-	--container-padding: #{$container-padding / 2 + px};
+	--container-padding: #{math.div($container-padding, 2) + 'px'};
 }
 
 $laptop-l: 1500px;
@@ -53,7 +53,7 @@ $tablet: 800px;
 $mobile-l: 450px;
 $mobile-m: 390px;
 $mobile-s: 330px;
-$hide-menu: $tablet;
+$hide-menu: 1400px;
 // ================ Responsive End ================
 
 
@@ -69,7 +69,7 @@ $tr: .3s;
 
 body {
 
-    ._lock & {
+    .is-lock & {
         overflow: hidden;
 		touch-action: none;
     }
@@ -87,7 +87,15 @@ body {
         flex: 1 0 auto;
         position: relative;
         z-index: 1;
-    }
+		padding-bottom: 84px;
+
+		& > * {
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 
 /*
@@ -131,10 +139,14 @@ body {
 @import "./components/pagin";
 @import "./components/banner-search";
 
+// Карточки
+@import "./components/cards/c-project";
+
 // Стили частоиспользуемых секций
 @import "./sections/header";
 @import "./sections/main";
 @import "./sections/s-search";
+@import "./sections/find-project";
 @import "./sections/footer";
 
 

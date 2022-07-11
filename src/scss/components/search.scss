@@ -2,13 +2,61 @@
 	position: relative;
 	height: 50px;
 	display: flex;
+
+	&.is-light {
+
+		& .tf__field {
+
+			& input,
+			& textarea {
+				padding-right: 50px;
+			}
+		}
+
+		& .search__btn {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(0, -50%);
+			width: 50px;
+			background: transparent;
+
+			&::before {
+				margin: 0;
+				background: $accent;
+			}
+
+			&:active {
+				background: transparent;
+			}
+
+			@media (any-hover: hover) {
+
+				&:hover {
+					background: transparent;
+				}
+
+				&:active {
+					background: transparent;
+				}
+			}
+		}
+
+		@media (max-width: $laptop) {
+			max-width: 690px;
+		}
+
+		@media (max-width: $tablet) {
+			max-width: 580px;
+		}
+	}
 }
 
 .search__tf {
 
-	& .tf__field {
-		height: 100%;
-	}
+	// & .tf__field {
+	// 	height: 100%;
+	// }
 
 	& input {
 		border-radius: $radius-s 0 0 $radius-s;
@@ -18,10 +66,6 @@
 .search__btn {
 	--icon: url('@img/sprite-new.svg#search');
 	--icon-size: 18px;
-
-	// position: absolute;
-	// top: 0;
-	// right: 0;
 
 	height: 100%;
 	font-size: 16px;

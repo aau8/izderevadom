@@ -30,6 +30,31 @@
 				background: brig-color($accent, active);
 			}
 		}
+
+		&.is-border {
+			font-weight: 500;
+			color: $text-primary;
+			border-color: $accent;
+
+			&::before {
+				background: $accent;
+			}
+
+			&:active {
+				background: create-rgba($accent, .05);
+			}
+
+			@media (any-hover: hover) {
+
+				&:hover {
+					background: create-rgba($accent, .05);
+				}
+
+				&:active {
+					background: create-rgba($accent, .1);
+				}
+			}
+		}
 	}
 
 	&.is-second {
@@ -55,27 +80,32 @@
 		color: $text-primary;
 
 		@include buttonBgLight;
-	}
 
-	&.is-linear {
-		color: $light;
-		background: transparent;
-		border: 1px solid $light;
+		&.is-border {
+			color: $light;
+			border-color: $light;
 
-		&:active {
-			background: create-rgba($light, .1);
-		}
-
-		@media (any-hover: hover) {
-
-			&:hover {
+			&:active {
 				background: create-rgba($light, .1);
 			}
 
-			&:active {
-				background: create-rgba($light, .15);
+			@media (any-hover: hover) {
+
+				&:hover {
+					background: create-rgba($light, .1);
+				}
+
+				&:active {
+					background: create-rgba($light, .15);
+				}
 			}
 		}
+	}
+
+	&.is-border {
+		// color: $light;
+		background: transparent;
+		border: 1.4px solid;
 	}
 
 	&.has-icon {
@@ -178,3 +208,48 @@
 // 		border-top: 1px dashed $accent;
 // 	}
 // }
+
+// Кнопка проектов
+.project-btn {
+	height: 50px;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 0 32px;
+}
+
+.project-btn__icon {
+	position: relative;
+	display: inline-block;
+	min-width: 18px;
+	width: 18px;
+	height: 18px;
+	margin-right: 16px;
+
+	& span {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+		display: block;
+		height: 2px;
+		background: $light;
+
+		&:nth-child(1) {
+			width: 9px;
+			transform: translate(0, calc(-50% - 6px))
+		}
+
+		&:nth-child(2) {
+			width: 18px;
+		}
+
+		&:nth-child(3) {
+			width: 14px;
+			transform: translate(0, calc(-50% + 6px))
+		}
+	}
+}
+
+.project-btn__text {
+
+}

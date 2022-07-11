@@ -1,5 +1,9 @@
 .banner-search {
 	margin: 48px 0;
+
+	@media (max-width: $mobile-l) {
+		margin: 30px 0;
+	}
 }
 
 .banner-search__wrap {
@@ -8,7 +12,7 @@
 	border-radius: $radius-s;
 	padding: 40px 50px 50px;
 
-	&::before {
+	&::after {
 		content: '';
 		position: absolute;
 		bottom: 0;
@@ -18,6 +22,54 @@
 		display: block;
 		background: center/contain no-repeat url('@img/banners/man.png');
 
+		@media (max-width: $laptop) {
+			width: 300px;
+		}
+
+		@media (max-width: 650px) {
+			position: initial;
+			bottom: 0;
+			right: 0;
+			margin-top: 22px;
+		}
+
+		@media (max-width: $mobile-l) {
+			width: 275px;
+		}
+
+		@media (max-width: $mobile-m) {
+			width: 250px;
+		}
+	}
+
+	@media (max-width: $laptop) {
+		padding: 40px 40px 50px;
+	}
+
+	@media (max-width: 650px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 0;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -105px;
+			right: -7px;
+			max-width: 450px;
+			min-width: 300px;
+			width: 92%;
+			aspect-ratio: 1;
+			transform: rotate(50deg);
+			background: create-rgba($accent-second, .08);
+			border-radius: 50px;
+		}
+	}
+
+	@media (max-width: 410px) {
+		padding: 30px 24px 0;
 	}
 }
 
@@ -28,17 +80,44 @@
 
 .banner-search__content {
 
+	@media (max-width: $tablet) {
+		max-width: 350px;
+	}
+
+	@media (max-width: 650px) {
+		max-width: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
 }
 
 .banner-search__title {
 	font-size: 34px;
 	font-weight: 600;
+
+	@media (max-width: $laptop) {
+		font-size: 28px;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 24px;
+	}
+
+	@media (max-width: $mobile-m) {
+		font-size: 20px;
+	}
 }
 
 .banner-search__text {
 	font-size: 18px;
 	font-weight: 300;
 	margin-top: 7px;
+
+	@media (max-width: $mobile-l) {
+		font-size: 15px;
+	}
 }
 
 .banner-search__form {
@@ -46,8 +125,21 @@
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr .7fr;
-	gap: 6px;
+	gap: 16px 6px;
 	margin-top: 32px;
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 1fr 1fr;
+		gap: 6px;
+	}
+
+	@media (max-width: 650px) {
+		grid-template-columns: 1fr;
+	}
+
+	@media (max-width: $mobile-l) {
+		margin-top: 16px;
+	}
 }
 
 .banner-search__tf,
@@ -55,9 +147,42 @@
 	height: 50px;
 }
 
+.banner-search__tf-tel {
+	--icon: url('@img/sprite-new.svg#ringing-phone');
+}
+
+.banner-search__btn {
+
+	@media (max-width: $tablet) {
+		grid-column: 2 / 4;
+		grid-row: 2 / 3;
+	}
+
+	@media (max-width: 650px) {
+		grid-column: auto;
+		grid-row: auto;
+	}
+}
+
 .banner-search__correct {
+	grid-column: 1 / 4;
 	display: block;
 	font-size: 14px;
 	color: $input-placeholder;
-	margin-top: 16px;
+
+	@media (max-width: $tablet) {
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+		margin: auto 0;
+	}
+
+	@media (max-width: 650px) {
+		grid-column: auto;
+		grid-row: auto;
+		text-align: center;
+	}
+
+	@media (max-width: $mobile-l) {
+		margin: 4px 0 0 0;
+	}
 }

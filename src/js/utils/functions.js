@@ -76,7 +76,7 @@ export function isWebp() {
 // Вспомогательные модули блокировки прокрутки и резкого сдвига
 export let bodyLockStatus = true;
 export let bodyLockToggle = (delay = 100) => {
-	if (document.documentElement.classList.contains('_lock')) {
+	if (document.documentElement.classList.contains('is-lock')) {
 		bodyUnlock(delay);
 	} else {
 		bodyLock(delay);
@@ -93,7 +93,7 @@ export let bodyUnlock = (delay = 100) => {
 				el.style.paddingRight = '0px';
 			}
 			body.style.paddingRight = '0px';
-			document.documentElement.classList.remove("_lock");
+			document.documentElement.classList.remove("is-lock");
 		}, delay);
 		bodyLockStatus = false;
 		setTimeout(function () {
@@ -112,7 +112,7 @@ export let bodyLock = (delay = 100) => {
 			el.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 		}
 		body.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-		document.documentElement.classList.add("_lock");
+		document.documentElement.classList.add("is-lock");
 
 		bodyLockStatus = false;
 		setTimeout(function () {

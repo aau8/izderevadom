@@ -1,0 +1,74 @@
+.c-project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: $frame-light;
+	border-radius: $radius-s;
+	padding: 28px 24px;
+	overflow: hidden;
+	transition: $tr;
+
+	&:active {
+		background: brig-color($frame-light, hover);
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			background: brig-color($frame-light, hover);
+		}
+
+		&:active {
+			background: brig-color($frame-light, active);
+		}
+	}
+
+	@media (max-width: $tablet) {
+		padding: 22px 20px;
+	}
+
+	@media (max-width: $mobile-l) {
+		padding: 18px 10px;
+	}
+}
+
+.c-project__img {
+	max-width: 68px;
+	width: 100%;
+	aspect-ratio: 1;
+
+	@media (max-width: $laptop) {
+		max-width: 54px;
+	}
+
+	@media (max-width: $tablet) {
+		max-width: 42px;
+	}
+
+	@media (max-width: $mobile-l) {
+		max-width: 34px;
+	}
+}
+
+.c-project__title {
+	max-width: 110px;
+	font-size: 22px;
+	font-weight: 500;
+	text-align: center;
+	margin-top: 30px;
+
+	@media (max-width: $laptop) {
+		font-size: 17px;
+		font-weight: 600;
+		margin-top: 18px;
+	}
+
+	@media (max-width: $tablet) {
+		font-size: 16px;
+		margin-top: 10px;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-weight: 400;
+	}
+}
