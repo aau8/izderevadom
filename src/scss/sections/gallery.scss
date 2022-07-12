@@ -1,0 +1,7 @@
+.gallery__slider {
+	height: 154px;
+
+	@media (max-width: $mobile-l) {
+		height: 120px;
+	}
+}

@@ -1,0 +1,142 @@
+.order-estimate {
+
+}
+
+.order-estimate__container {
+
+}
+
+.order-estimate__wrap {
+	position: relative;
+	background: $accent;
+	border-radius: 4px;
+	padding: 24px 36px;
+	overflow: hidden;
+
+	@media (max-width: $tablet) {
+		height: 385px;
+	}
+}
+
+.order-estimate__house {
+	position: absolute;
+	top: 50%;
+	right: 30%;
+	transform: translate(115%, -50%);
+	width: 300px;
+	aspect-ratio: 1;
+	background: center/contain no-repeat url('@img/banners/house.png');
+
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 8px;
+		transform: rotate(13deg);
+		display: block;
+		width: 300px;
+		aspect-ratio: 1;
+		background: create-rgba($light, .4);
+		border-radius: $radius-l;
+
+		@media (max-width: $tablet) {
+			top: 59%;
+			left: 54%;
+			right: auto;
+			transform: translate(-50%, -50%) rotate(28deg);
+			width: 400px;
+			background: create-rgba($light, .2);
+		}
+
+		@media (max-width: $mobile-l) {
+			top: 72%;
+			left: 63%;
+		}
+	}
+
+	@media (max-width: $laptop) {
+		right: 10%;
+		transform: translate(50%, -50%);
+	}
+
+	@media (max-width: 900px) {
+		right: 0;
+		transform: translate(0, -50%);
+	}
+
+	@media (max-width: $tablet) {
+		right: auto;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		// position: relative;
+		// z-index: 1;
+		// top: auto;
+		// right: auto;
+		// transform: none;
+		max-width: 450px;
+		width: 100%;
+		// aspect-ratio: 1;
+		margin: 0 auto;
+	}
+}
+
+.order-estimate__content {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: -8px -22px;
+
+	& > * {
+		margin: 8px 22px;
+
+		@media (max-width: $tablet) {
+			margin: 0;
+		}
+	}
+
+	@media (max-width: $tablet) {
+		height: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		// display: grid;
+		// grid-template-columns: 1fr;
+		// gap: 16px;
+		// margin-top: 32px;
+	}
+
+	@media (max-width: 600px) {
+		// margin-top: 24px;
+	}
+
+	@media (max-width: $mobile-l) {
+		// margin-top: 24px;
+	}
+}
+
+.order-estimate__title {
+	font-size: 28px;
+	color: $light;
+
+	@media (max-width: $tablet) {
+		// font-size: 22px;
+		text-align: center;
+	}
+
+	@media (max-width: $mobile-m) {
+		font-size: 24px;
+	}
+}
+
+.order-estimate__btn {
+	width: 225px;
+	height: 60px;
+	font-size: 16px;
+
+	@media (max-width: $mobile-m) {
+		width: 100%;
+		height: 46px;
+	}
+}

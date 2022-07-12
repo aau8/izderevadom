@@ -1,12 +1,54 @@
 <header class="header">
+	<div class="header-die">
+		<div class="header-die__container is-large">
+			<div class="header-die__tels">
+				<a href="#" class="link header-die__tel">8 800 222-32-53</a>
+				<a href="#" class="link header-die__tel">8 800 789-26-85</a>
+			</div>
+			<div class="socials header-die__socials">
+				<a href="#" class="socials__link"><svg><use href='./img/sprite-new.svg#telegram-sym'></use></svg></a>
+				<a href="#" class="socials__link"><svg><use href='./img/sprite-new.svg#whatsapp-sym'></use></svg></a>
+				<a href="#" class="socials__link"><svg><use href='./img/sprite-new.svg#viber-sym'></use></svg></a>
+				<button class="socials__link header-die__callback"><svg><use href='./img/sprite-new.svg#tel-sym'></use></svg></button>
+			</div>
+
+		</div>
+	</div>
 	<div class="header-up">
-		<div class="header-up__container">
-			<!-- <a href="#" class="link link-icon location">
-				<div class="link-icon__icon"><svg><use href='./img/sprite-new.svg#location-sym'></use></svg></div>
-				<span class="link-icon__text">Москва</span>
-			</a> -->
-			<button class="burger header__burger" data-menu-open><span></span><span></span><span></span></button>
-			<a href="#" class="link has-icon location">Москва</a>
+		<div class="header-up__container is-large">
+			<button class="burger header-up__burger" data-menu-open><span></span><span></span><span></span></button>
+			<a href="#" class="logo header__logo header-up__logo"><img src="@img/logo.png" alt=""></a>
+			<div class="location header__location">
+				<button class="location__toggle">
+					<span class="link has-icon location__btn">Москва</span>
+				</button>
+				<div class="location-dropdown">
+					<div class="location-dropdown__header">
+						<button class="burger is-active location-dropdown__close"><span></span><span></span><span></span></button>
+					</div>
+					<ul class="location__list">
+						<li><a href="#" class="location__link link">Мытищи</a></li>
+						<li><a href="#" class="location__link link">Королев</a></li>
+						<li><a href="#" class="location__link link">Люберцы</a></li>
+						<li><a href="#" class="location__link link">Одинцово</a></li>
+						<li><a href="#" class="location__link link">Химки</a></li>
+						<li><a href="#" class="location__link link">Красногорск</a></li>
+						<li><a href="#" class="location__link link">Люберцы</a></li>
+						<li><a href="#" class="location__link link">Реутов</a></li>
+						<li><a href="#" class="location__link link">Мытищи</a></li>
+						<li><a href="#" class="location__link link">Королев</a></li>
+						<li><a href="#" class="location__link link">Люберцы</a></li>
+						<li><a href="#" class="location__link link">Одинцово</a></li>
+						<li><a href="#" class="location__link link">Химки</a></li>
+						<li><a href="#" class="location__link link">Красногорск</a></li>
+						<li><a href="#" class="location__link link">Люберцы</a></li>
+						<li><a href="#" class="location__link link">Реутов</a></li>
+						<li><a href="#" class="location__link link">Красногорск</a></li>
+						<li><a href="#" class="location__link link">Реутов</a></li>
+						<li><a href="#" class="location__link link">Дзержинский</a></li>
+					</ul>
+				</div>
+			</div>
 			<nav class="menu" >
 				<div class="menu__wrap">
 					<div class="menu__header">
@@ -17,7 +59,16 @@
 						<button class="burger is-active menu__close" data-menu-close><span></span><span></span><span></span></button>
 					</div>
 					<ul class="menu__list">
-						<li><a href="" class="link">Клиенту</a></li>
+						<li class="has-sub-menu">
+							<a href="" class="link">Клиенту</a>
+							<ul class="sub-menu">
+								<li><a href="#" class="link">Цены</a></li>
+								<li><a href="#" class="link">Услуги</a></li>
+								<li><a href="#" class="link">Материнский капитал</a></li>
+								<li><a href="#" class="link">Строительство заборов</a></li>
+								<li><a href="#" class="link">Фундаменты</a></li>
+							</ul>
+						</li>
 						<li><a href="" class="link">Акции</a></li>
 						<li><a href="" class="link">Статьи</a></li>
 						<li><a href="" class="link">Объекты</a></li>
@@ -27,7 +78,7 @@
 					</ul>
 					<div class="menu__footer">
 						<div class="menu__footer-buttons">
-							<button class="btn has-icon is-accent header__callback">Заказать звонок</button>
+							<button class="btn has-icon is-accent menu__callback">Заказать звонок</button>
 							<a href="#" class="btn has-icon is-accent is-border menu__link-calc">Калькулятор проекта</a>
 						</div>
 						<form action="#" class="search is-light menu__search">
@@ -42,10 +93,6 @@
 					</div>
 				</div>
 			</nav>
-			<!-- <a href="mailto:info@izderevadom.ru" class="link link-icon header__email">
-				<div class="link-icon__icon"><svg><use href='./img/sprite-new.svg#email-sym'></use></svg></div>
-				<span class="link-icon__text">info@izderevadom.ru</span>
-			</a> -->
 			<a href="mailto:info@izderevadom.ru" class="link has-icon header__email">info@izderevadom.ru</a>
 			<div class="socials header__socials">
 				<a href="#" class="socials__link"><svg><use href='./img/sprite-new.svg#telegram-sym'></use></svg></a>
@@ -60,9 +107,9 @@
 		</div>
 	</div>
 	<div class="header-down">
-		<div class="header-down__container">
-			<a href="#" class="logo header__logo"><img src="@img/logo.png" alt=""></a>
-			<button class="btn is-second project-btn header__project-btn">
+		<div class="header-down__container is-large">
+			<a href="#" class="logo header__logo header-down__logo"><img src="@img/logo.png" alt=""></a>
+			<button class="btn is-second project-btn header__project-btn" data-project-open>
 				<span class="project-btn__icon">
 					<span></span>
 					<span></span>
@@ -80,8 +127,433 @@
 				<button class="btn is-accent has-icon search__btn">Найти</button>
 			</form>
 			<div class="header__tools">
-				<button class="btn has-icon is-ghost link-soc header__link-soc" data-link-soc=vk>Мы в контакте</button>
+				<button class="btn has-icon is-light link-soc header__link-soc" data-link-soc=vk>Мы в контакте</button>
 				<a href="#" class="link has-icon header__link-calc">Калькулятор проекта</a>
+			</div>
+		</div>
+	</div>
+	<div class="m-proj">
+		<div class="m-proj__wrap">
+			<div class="mp-links">
+				<div class="mp-links__list">
+					<button class="mp-links__btn is-active" data-project-btn="carc-doma">
+						<div class="mp-links__btn-wrap">
+							<div class="mp-links__btn-icon"><svg><use href='@img/sprite-new.svg#project-1-sym'></use></svg></div>
+							<span class="mp-links__btn-title">Каркасные дома</span>
+						</div>
+					</button>
+					<button class="mp-links__btn" data-project-btn="doma-iz-brusa">
+						<div class="mp-links__btn-wrap">
+							<div class="mp-links__btn-icon"><svg><use href='@img/sprite-new.svg#project-2-sym'></use></svg></div>
+							<span class="mp-links__btn-title">Дома из бруса</span>
+						</div>
+					</button>
+					<button class="mp-links__btn" data-project-btn="carc-bany">
+						<div class="mp-links__btn-wrap">
+							<div class="mp-links__btn-icon"><svg><use href='@img/sprite-new.svg#project-3-sym'></use></svg></div>
+							<span class="mp-links__btn-title">Каркасные бани</span>
+						</div>
+					</button>
+					<button class="mp-links__btn" data-project-btn="bany-iz-brusa">
+						<div class="mp-links__btn-wrap">
+							<div class="mp-links__btn-icon"><svg><use href='@img/sprite-new.svg#project-4-sym'></use></svg></div>
+							<span class="mp-links__btn-title">Бани из бруса</span>
+						</div>
+					</button>
+					<button class="mp-links__btn" data-project-btn="mob-bany">
+						<div class="mp-links__btn-wrap">
+							<div class="mp-links__btn-icon"><svg><use href='@img/sprite-new.svg#project-5-sym'></use></svg></div>
+							<span class="mp-links__btn-title">Мобильные бани</span>
+						</div>
+					</button>
+				</div>
+			</div>
+			<div class="mp-body is-show" data-project-block="carc-doma">
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-body" data-project-block="doma-iz-brusa">
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-body" data-project-block="carc-bany">
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-body" data-project-block="bany-iz-brusa">
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-body" data-project-block="mob-bany">
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
+				<div class="mp-body__block">
+					<h3 class="mp-body__title">Раздел 1</h3>
+					<ul class="mp-body__list">
+						<li><a href="#" class="link">По размеру</a></li>
+						<li><a href="#" class="link">Список ссылок</a></li>
+						<li><a href="#" class="link">По этажности</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+						<li><a href="#" class="link">По площади</a></li>
+						<li><a href="#" class="link">По назначению</a></li>
+						<li><a href="#" class="link">По доп. элементам</a></li>
+						<li><a href="#" class="link">По цене</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

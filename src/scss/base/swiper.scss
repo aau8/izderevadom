@@ -1,0 +1,87 @@
+.swiper {
+	opacity: 0;
+	transition: opacity $tr;
+
+	&.swiper-initialized {
+		opacity: 1;
+	}
+
+	&.is-crop {
+		overflow: hidden;
+	}
+
+	& .swiper-wrapper > .swiper-slide {
+		margin-right: 20px;
+
+		@media (max-width: $mobile-l) {
+			margin-right: 10px;
+		}
+	}
+}
+
+// Подвал слайдера
+.swiper__footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 42px;
+	padding: 0 var(--container-padding);
+
+	@media (max-width: $laptop) {
+		margin-top: 32px;
+	}
+
+	@media (max-width: $mobile-l) {
+		justify-content: space-between;
+	}
+
+	@media (max-width: $mobile-m) {
+		justify-content: center;
+		flex-wrap: wrap-reverse;
+		margin: 22px -8px -8px;
+
+		& > * {
+			margin: 8px;
+		}
+	}
+}
+
+// Стрелки
+.swiper__arrows {
+	display: flex;
+	align-items: center;
+
+	& > .swiper__arrow {
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+}
+
+.swiper__arrow {
+	width: 56px;
+	aspect-ratio: 1;
+	display: flex;
+	border: 1px solid $border-line;
+	border-radius: 99px;
+
+	&.is-next {
+
+	}
+
+	&.is-prev {
+
+	}
+
+	& svg {
+		fill: $text-label;
+		width: 16px;
+		aspect-ratio: 1;
+		margin: auto;
+	}
+
+	@media (max-width: $mobile-m) {
+		width: 50px;
+	}
+}

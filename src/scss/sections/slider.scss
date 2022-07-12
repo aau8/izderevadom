@@ -1,0 +1,31 @@
+
+.slider__container {
+	padding: 0;
+}
+
+.slider__header {
+
+	@media (max-width: 950px) {
+		padding: 0 var(--container-padding);
+	}
+}
+
+.slider__more-btn {
+	height: 50px;
+
+	&.is-pc {
+		margin-left: 24px;
+
+		@media (max-width: $mobile-l) {
+			display: none;
+		}
+	}
+
+	&.is-mob {
+		display: none;
+
+		@media (max-width: $mobile-l) {
+			display: flex;
+		}
+	}
+}

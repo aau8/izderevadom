@@ -1,64 +1,67 @@
+@mixin searchIsLight {
+
+	& .tf__field {
+
+		& input,
+		& textarea {
+			padding-right: 50px;
+			border-radius: $radius-s;
+		}
+	}
+
+	& .search__btn {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		width: 50px;
+		background: $frame-light;
+		border: 1px solid $border-line;
+
+		&::before {
+			margin: 0;
+			background: $accent;
+		}
+
+		&:active {
+			background: brig-color($frame-light, hover);
+		}
+
+		@media (any-hover: hover) {
+
+			&:hover {
+				background: brig-color($frame-light, hover);
+			}
+
+			&:active {
+				background: brig-color($frame-light, active);
+			}
+		}
+	}
+
+	@media (max-width: $laptop) {
+		max-width: 690px;
+	}
+
+	@media (max-width: $tablet) {
+		max-width: 580px;
+	}
+}
+
 .search {
 	position: relative;
 	height: 50px;
 	display: flex;
 
 	&.is-light {
-
-		& .tf__field {
-
-			& input,
-			& textarea {
-				padding-right: 50px;
-			}
-		}
-
-		& .search__btn {
-			position: absolute;
-			top: 50%;
-			right: 0;
-			transform: translate(0, -50%);
-			width: 50px;
-			background: transparent;
-
-			&::before {
-				margin: 0;
-				background: $accent;
-			}
-
-			&:active {
-				background: transparent;
-			}
-
-			@media (any-hover: hover) {
-
-				&:hover {
-					background: transparent;
-				}
-
-				&:active {
-					background: transparent;
-				}
-			}
-		}
-
-		@media (max-width: $laptop) {
-			max-width: 690px;
-		}
-
-		@media (max-width: $tablet) {
-			max-width: 580px;
-		}
+		@include searchIsLight;
 	}
 }
 
 .search__tf {
 
-	// & .tf__field {
-	// 	height: 100%;
-	// }
-
-	& input {
+	& input,
+	& textarea {
 		border-radius: $radius-s 0 0 $radius-s;
 	}
 }

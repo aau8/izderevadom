@@ -1,4 +1,7 @@
 import { bodyLock, bodyUnlock, bodyLockToggle, removeAllClasses, getSiblings } from './functions.js'
+import lightGallery from 'lightgallery';
+// import lgVideo from 'lightgallery/plugins/video/lg-video.min.js'
+// import lgVideo from 'https://cdn.skypack.dev/lightgallery@2.3.0-beta.4/plugins/video'
 
 
 /**
@@ -182,14 +185,14 @@ export class Modals {
         modalShow: 'is-show',
         modalBg: 'modal__bg',
     }
-    modalList = document.querySelectorAll(`[${this.attrs.modalId}]`)
+    modalList = Array.from(document.querySelectorAll(`[${this.attrs.modalId}]`))
     openingBtnList = document.querySelectorAll(`[${this.attrs.btnModalOpen}]`)
 	openBtn = null
     modalIsShow = false
     modalShow = null
     modalShowId = null
     keyEsc = true
-    useHash = true
+    useHash = false
     historyHash = !this.useHash ? false : false
     hash = null
 
@@ -238,7 +241,7 @@ export class Modals {
 
 		// Событие закрытия модалки
 		const _eModalOpenClose = new Event('modal-close')
-		_eModalOpenStart.data = { ...this }
+		_eModalOpenClose.data = { ...this }
 
 		modal.dispatchEvent( _eModalOpenClose )
 
@@ -250,6 +253,11 @@ export class Modals {
         bodyUnlock()
     }
 
+	// Получить модальное окно
+	get(modalName) {
+		return modalName ? this.modalList.find(e => e.getAttribute(`${this.attrs.modalId}`) === modalName) || null : this.modalList
+	}
+
     // Обновляет список модалок и кнопок
     update() {
         this.updateModalList()
@@ -258,7 +266,7 @@ export class Modals {
 
     // Обновить список модальных окон
     updateModalList() {
-        this.modalList = document.querySelectorAll(`[${this.attrs.modalId}]`)
+        this.modalList = Array.from(document.querySelectorAll(`[${this.attrs.modalId}]`))
     }
 
     // Обновить список кнопок, открывающих модальные окна
@@ -553,6 +561,20 @@ export function onlyDigit() {
     }
 }
 //========================================================================================================================================================
+
+// Галерея
+const galleries = document.querySelectorAll('[data-gallery]');
+if (galleries.length) {
+
+	galleries.forEach(gallery => {
+		lightGallery(gallery, {
+			licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
+			speed: 500,
+			thumbnail: true,
+		})
+	});
+}
+
 
 
 export default {

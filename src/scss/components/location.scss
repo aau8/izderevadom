@@ -1,0 +1,140 @@
+.location {
+	position: relative;
+
+	&.is-open {
+
+		.location__toggle {
+			color: $accent;
+
+			&::after {
+				background: $accent;
+			}
+		}
+
+		& .location-dropdown {
+			transform: translate(0, 100%);
+			opacity: 1;
+			pointer-events: fill;
+
+			@media (max-width: 620px) {
+				transform: translate(0, 0);
+			}
+		}
+	}
+}
+
+.location__toggle {
+	position: relative;
+
+	&::after {
+		content: '';
+		display: inline-block;
+		width: 12px;
+		aspect-ratio: 1;
+		-webkit-mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
+		mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
+		background: $text-label;
+		margin-left: 6px;
+		vertical-align: middle;
+		transition: $tr;
+	}
+
+	&:active {
+		color: $accent;
+
+		&::after {
+			background: $accent;
+		}
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+            color: $accent;
+
+			&::after {
+				background: $accent;
+			}
+		}
+
+		&:active {
+			color: brig-color($accent, active);
+
+			&::after {
+				background: brig-color($accent, active);
+			}
+		}
+	}
+}
+
+.location__btn {
+	--icon: url('../img/sprite-new.svg#location');
+}
+
+.location-dropdown {
+	position: absolute;
+	z-index: 1;
+	bottom: -4px;
+	left: 0;
+	transform: translate(0, calc(100% + 10px));
+	min-width: 264px;
+    max-height: 300px;
+	width: fit-content;
+	background: $light;
+	border-radius: $radius-s;
+	box-shadow: 4px 0px 14px rgba(0, 0, 0, 0.04);
+	padding: 18px 0;
+	pointer-events: none;
+	opacity: 0;
+    overflow-y: auto;
+	transition: $tr;
+
+	@include scrollbar(4px, 100%);
+
+	& li {
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+
+		& a {
+			display: block;
+			padding: 4px 25px;
+			white-space: nowrap;
+		}
+	}
+
+	@media (max-width: 620px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		max-height: none;
+		height: 100%;
+		transform: translate(100%, 0);
+	}
+}
+
+.location-dropdown__header {
+	display: none;
+
+	@media (max-width: 620px) {
+		display: flex;
+		padding: 0 var(--container-padding);
+	}
+
+	.location-dropdown__close {
+		display: block;
+		margin-left: auto;
+
+		& span {
+			height: 2px;
+			background: #BDBDBD;
+		}
+	}
+}
+
+
+.location__list {
+
+}

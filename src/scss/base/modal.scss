@@ -57,19 +57,19 @@
     height: 36px;
     transition: $tr;
 
-    @media (any-hover: hover) {
-        
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
+    // @media (any-hover: hover) {
 
-    &:active {
+    //     &:hover {
+    //         transform: scale(1.1);
+    //     }
+    // }
 
-        @media (any-hover: hover) {
-            transform: scale(1);
-        }
+    // &:active {
 
-        transform: scale(.9);
-    }
+    //     @media (any-hover: hover) {
+    //         transform: scale(1);
+    //     }
+
+    //     transform: scale(.9);
+    // }
 }

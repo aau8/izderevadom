@@ -1,9 +1,11 @@
 // Поле ввода
 .tf {
 	--icon-size: 16px;
+	--font-size: 16px;
 
     position: relative;
     width: 100%;
+	height: 100%;
 
     &.has-change-label {
 
@@ -38,6 +40,14 @@
 			}
 		}
 	}
+
+	&.is-tel {
+		--icon: url('@img/sprite-new.svg#ringing-phone');
+	}
+
+	@media (max-width: $mobile-m) {
+		--font-size: 14px;
+	}
 }
 
 .tf__field {
@@ -58,11 +68,16 @@
 .tf__field textarea {
     width: 100%;
     height: 100%;
-    font-size: 16px;
+    font-size: var(--font-size);
     background: $light;
 	border: 1px solid $border-line;
 	border-radius: $radius-s;
 	padding: 0 20px;
+	transition: border-color $tr;
+
+	&:focus {
+		border-color: $accent;
+	}
 }
 
 .tf__label {
@@ -71,7 +86,7 @@
     left: 20px;
     transform: translate(0, -50%);
     display: inline-block;
-    font-size: 16px;
+    font-size: var(--font-size);
     font-weight: 300;
 	font-style: italic;
 	color: $input-placeholder;

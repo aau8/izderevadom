@@ -11,7 +11,13 @@
 @import "./base/textfield";
 
 // Модальные окна
-// @import "./base/modal";
+@import "./base/modal";
 
 // Аккордеоны (Спойлеры)
 @import "./base/accordion";
+
+// Слайдеры
+@import "./base/swiper";
+
+// Ленивая загрузка видео
+@import "./base/lazy-video";

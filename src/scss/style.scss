@@ -27,6 +27,7 @@ $button-bg: #F7F7F7;
 
 // Радиусы
 $radius-s: 4px;
+$radius-l: 30px;
 
 $error: #EB5757;
 
@@ -39,7 +40,8 @@ $input-placeholder: #828282;
 // ================ Responsive Start ================
 $min-width: 320px;
 $max-width: 1920px;
-$max-width-container: 1480;
+// $max-width-container: 1480;
+$max-width-container: 1140;
 $container-padding: 100;
 $container-width: $max-width-container + $container-padding;
 
@@ -95,6 +97,10 @@ body {
 				margin-bottom: 0;
 			}
 		}
+
+		&.has-pb-null {
+			padding-bottom: 0;
+		}
 	}
 }
 
@@ -113,6 +119,10 @@ body {
         padding: 0 var(--container-padding);
     }
 
+	&.is-large {
+		max-width: 1480px;
+	}
+
 	@media (max-width: $tablet) {
 		--container-padding: 30px;
 	}
@@ -127,6 +137,10 @@ body {
 }
 
 
+// Библиотеки
+@import "./libs/swiper";
+@import "./libs/lightgallery";
+
 // Базовые стили, шаблоны, заготовки
 @import "./base";
 
@@ -138,15 +152,30 @@ body {
 @import "./components/breadcrumbs";
 @import "./components/pagin";
 @import "./components/banner-search";
+@import "./components/location";
+@import "./components/m-proj";
 
 // Карточки
 @import "./components/cards/c-project";
+@import "./components/cards/c-steps";
+@import "./components/cards/c-reviews";
+@import "./components/cards/c-gallery";
+
+// Модальные окна
+@import "./components/modals/video";
 
 // Стили частоиспользуемых секций
 @import "./sections/header";
 @import "./sections/main";
 @import "./sections/s-search";
 @import "./sections/find-project";
+@import "./sections/steps";
+@import "./sections/unique";
+@import "./sections/order-estimate";
+@import "./sections/map";
+@import "./sections/slider";
+@import "./sections/reviews";
+@import "./sections/gallery";
 @import "./sections/footer";
 
 

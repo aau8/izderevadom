@@ -6,20 +6,56 @@
 	border-radius: $radius-s;
 	padding: 28px 24px;
 	overflow: hidden;
-	transition: $tr;
+	// transition: $tr;
 
 	&:active {
-		background: brig-color($frame-light, hover);
+		// background: brig-color($frame-light, hover);
+		background: $accent-second;
+
+		& .c-project__title {
+			color: $light;
+		}
+
+		& .c-project__img {
+
+			& svg {
+				fill: $light;
+			}
+		}
 	}
 
 	@media (any-hover: hover) {
 
 		&:hover {
-			background: brig-color($frame-light, hover);
+			// background: brig-color($frame-light, hover);
+			background: $accent-second;
+
+			& .c-project__title {
+				color: $light;
+			}
+
+			& .c-project__img {
+
+				& svg {
+					fill: $light;
+				}
+			}
 		}
 
 		&:active {
-			background: brig-color($frame-light, active);
+			// background: brig-color($frame-light, active);
+			background: brig-color($accent-second, active);
+
+			& .c-project__title {
+				color: $light;
+			}
+
+			& .c-project__img {
+
+				& svg {
+					fill: $light;
+				}
+			}
 		}
 	}
 
@@ -36,6 +72,11 @@
 	max-width: 68px;
 	width: 100%;
 	aspect-ratio: 1;
+	transition: $tr;
+
+	& svg {
+		fill: $accent-second;
+	}
 
 	@media (max-width: $laptop) {
 		max-width: 54px;
@@ -56,6 +97,7 @@
 	font-weight: 500;
 	text-align: center;
 	margin-top: 30px;
+	transition: $tr;
 
 	@media (max-width: $laptop) {
 		font-size: 17px;

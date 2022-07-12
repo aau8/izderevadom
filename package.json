@@ -41,5 +41,9 @@
         "webpack-stream": "^7.0.0"
     },
     "type": "module",
-    "private": true
+    "private": true,
+    "dependencies": {
+        "lightgallery": "^2.5.0",
+        "swiper": "^8.3.0"
+    }
 }
