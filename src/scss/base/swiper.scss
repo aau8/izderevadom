@@ -51,7 +51,7 @@
 	display: flex;
 	align-items: center;
 
-	& > .swiper__arrow {
+	& > .swiper-arrow {
 
 		&:not(:last-child) {
 			margin-right: 10px;
@@ -59,12 +59,17 @@
 	}
 }
 
-.swiper__arrow {
+.swiper-arrow {
 	width: 56px;
 	aspect-ratio: 1;
 	display: flex;
 	border: 1px solid $border-line;
 	border-radius: 99px;
+
+	&.swiper-button-disabled {
+		pointer-events: none;
+		opacity: .5;
+	}
 
 	&.is-next {
 

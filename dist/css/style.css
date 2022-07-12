@@ -2295,11 +2295,11 @@ strong {
           align-items: center;
 }
 
-.swiper__arrows > .swiper__arrow:not(:last-child) {
+.swiper__arrows > .swiper-arrow:not(:last-child) {
   margin-right: 10px;
 }
 
-.swiper__arrow {
+.swiper-arrow {
   width: 56px;
   aspect-ratio: 1;
   display: -webkit-box;
@@ -2309,7 +2309,12 @@ strong {
   border-radius: 99px;
 }
 
-.swiper__arrow svg {
+.swiper-arrow.swiper-button-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.swiper-arrow svg {
   fill: #BDBDBD;
   width: 16px;
   aspect-ratio: 1;
@@ -3460,6 +3465,31 @@ strong {
   background-color: #5BAA00;
 }
 
+.c-trust {
+  max-width: 390px;
+}
+
+.c-trust__img {
+  max-width: 200px;
+}
+
+.c-trust__content {
+  margin-top: 48px;
+}
+
+.c-trust__title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.c-trust__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #4F4F4F;
+  margin-top: 14px;
+}
+
 .m-video .modal__window {
   padding: 0;
 }
@@ -4088,6 +4118,85 @@ strong {
 
 .gallery__slider {
   height: 154px;
+}
+
+.trust {
+  position: relative;
+  background: #FAFAFA;
+  padding: 70px 0 50px 0;
+  overflow: hidden;
+}
+
+.trust__header {
+  max-width: 480px;
+}
+
+.trust__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trust-slider {
+  width: 35%;
+}
+
+.trust-slider__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 390px;
+}
+
+.trust-slider__slider .swiper-wrapper > .swiper-slide {
+  height: auto;
+  background: #FAFAFA;
+}
+
+.trust-slider__arrows {
+  margin-top: 50px;
+}
+
+.trust-slider__arrows .swiper-arrow {
+  width: 46px;
+}
+
+.trust-visual {
+  position: absolute;
+  bottom: -312px;
+  right: 50%;
+  -webkit-transform: translate(90%, 0);
+      -ms-transform: translate(90%, 0);
+          transform: translate(90%, 0);
+  width: 950px;
+  padding: 40px;
+}
+
+.trust-visual__wrap {
+  position: relative;
+  max-width: 950px;
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px dashed #5BAA00;
+  border-radius: 50%;
+}
+
+.trust-visual__img {
+  --padding: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: calc(100% - var(--padding) * 2);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .footer {
@@ -5724,7 +5833,7 @@ strong {
     margin: 8px;
   }
 
-  .swiper__arrow {
+  .swiper-arrow {
     width: 50px;
   }
 

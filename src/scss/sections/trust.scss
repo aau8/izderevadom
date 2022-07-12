@@ -1,0 +1,93 @@
+.trust {
+	position: relative;
+	background: $frame-light;
+	padding: 70px 0 50px 0;
+	overflow: hidden;
+}
+
+.trust__header {
+	max-width: 480px;
+}
+
+.trust__body {
+	display: flex;
+
+}
+
+// Слайдер
+.trust-slider {
+	width: 35%;
+}
+
+.trust-slider__wrap {
+
+}
+
+.trust-slider__slider {
+	display: flex;
+	flex-direction: column;
+	max-width: 390px;
+
+	& .swiper-wrapper > .swiper-slide {
+		height: auto;
+		background: $frame-light;
+	}
+}
+
+// Стрелки слайдера
+.trust-slider__arrows {
+	margin-top: 50px;
+
+	& .swiper-arrow {
+		width: 46px;
+	}
+}
+
+.trust-slider__arrow-prev {
+
+}
+
+.trust-slider__arrow-next {
+
+}
+
+// Блок с визуальной частью, с пагинацией
+.trust-visual {
+	position: absolute;
+	bottom: -312px;
+	right: 50%;
+	transform: translate(90%, 0);
+	// width: 65%;
+	width: 950px;
+	padding: 40px;
+}
+
+.trust-visual__wrap {
+	position: relative;
+	max-width: 950px;
+	width: 100%;
+	aspect-ratio: 1;
+	border: 1px dashed $accent;
+	border-radius: 50%;
+}
+
+.trust-visual__pagin-list {
+
+}
+
+.trust-visual__pagin {
+
+}
+
+.trust-visual__img {
+	--padding: 70px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: calc(100% - (var(--padding) * 2));
+	aspect-ratio: 1;
+	border-radius: 50%;
+	overflow: hidden;
+}
