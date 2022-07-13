@@ -1,4 +1,4 @@
-.m-acc__header {
+.m-filter__header {
 	display: none;
 
 	@media (max-width: 600px) {
@@ -9,12 +9,12 @@
 	}
 }
 
-.m-acc__title {
+.m-filter__title {
 	font-size: 24px;
 	font-weight: 600;
 }
 
-.m-acc__modal-close.burger {
+.m-filter__modal-close.burger {
 	display: block;
 
 	& span {
@@ -23,7 +23,7 @@
 }
 
 // Опции
-.m-acc-options {
+.m-filter {
 	background: $frame-light;
 
 	@media (min-width: 601px) {
@@ -44,8 +44,8 @@
 	}
 }
 
-.m-acc-options__wrap {
-	padding: 0;
+.m-filter__wrap {
+	padding: 0; 
     transform: translate(100vh, 0);
 
 	@media (min-width: 601px) {
@@ -59,7 +59,7 @@
 	}
 }
 
-.m-acc-options__window {
+.m-filter__window {
 	background: $frame-light;
 
 	@media (min-width: 601px) {

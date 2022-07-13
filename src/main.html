@@ -56,79 +56,91 @@
 						<h2 class="s-header__title">Каркасные дома</h2>
 					</div>
 					<div class="filter__body is-pc" data-acc-container>
-						<div class="acc acc-category is-open filter__acc" data-acc="category">
-							<button class="acc__toggle" data-acc-toggler>
-								<span class="acc__toggle-icon"></span>
-								<span class="acc__toggle-title" data-acc-title-text='["Показать категории", "Скрыть категории"]'>Скрыть категории</span>
-							</button>
-							<div class="acc__body" data-acc-body>
-								<div class="acc__content acc-category__content">
-									<div class="acc-category__block">
-										<h3 class="acc-category__block-title">этажность</h3>
-										<ul class="acc-category__block-list">
-											<li><a href="#" class="link">Одноэтажные</a></li>
-											<li><a href="#" class="link">С мансардой</a></li>
-											<li><a href="#" class="link">Полутораэтажные</a></li>
-											<li><a href="#" class="link">Двухэтажные</a></li>
-										</ul>
+
+						<div class="modal m-filter" data-modal-id="category" data-close-on-bg>
+							<div class="modal__wrap m-filter__wrap">
+								<div class="modal__window m-filter__window">
+									<div class="m-filter__header">
+										<h2 class="m-filter__title">Фильтр</h2>
+										<button class="burger is-active modal-close m-filter__modal-close" data-modal-close><span></span><span></span><span></span></button>
 									</div>
-									<div class="acc-category__block">
-										<h3 class="acc-category__block-title">цена</h3>
-										<ul class="acc-category__block-list">
-											<li><a href="#" class="link">Эконом</a></li>
-											<li><a href="#" class="link">До 2 млн. руб</a></li>
-										</ul>
-									</div>
-									<div class="acc-category__block">
-										<h3 class="acc-category__block-title">размерность</h3>
-										<ul class="acc-category__block-list">
-											<li><a href="#" class="link">10 на 10</a></li>
-											<li><a href="#" class="link">12 на 8</a></li>
-											<li><a href="#" class="link">12 на 9</a></li>
-											<li><a href="#" class="link">120 м²</a></li>
-											<li><a href="#" class="link">10 на 10</a></li>
-											<li><a href="#" class="link">12 на 8</a></li>
-										</ul>
-										<button class="acc-category__block-more">Показать еще</but>
-									</div>
-									<div class="acc-category__block">
-										<h3 class="acc-category__block-title">площадь</h3>
-										<ul class="acc-category__block-list">
-											<li><a href="#" class="link">до 100 м²</a></li>
-											<li><a href="#" class="link">до 120 м²</a></li>
-											<li><a href="#" class="link">до 140 м²</a></li>
-											<li><a href="#" class="link">до 160 м²</a></li>
-											<li><a href="#" class="link">до 180 м²</a></li>
-										</ul>
-									</div>
-									<div class="acc-category__block">
-										<h3 class="acc-category__block-title">дополнения</h3>
-										<ul class="acc-category__block-list">
-											<li><a href="#" class="link">С балконом</a></li>
-											<li><a href="#" class="link">С террасой</a></li>
-											<li><a href="#" class="link">С эркером</a></li>
-											<li><a href="#" class="link">С гаражом</a></li>
-										</ul>
-									</div>
-									<div class="acc-category__block">
-										<h3 class="acc-category__block-title">по назначению</h3>
-										<ul class="acc-category__block-list">
-											<li><a href="#" class="link">Гостевые</a></li>
-											<li><a href="#" class="link">Для дачи</a></li>
-											<li><a href="#" class="link">Для постоянного проживания</a></li>
-											<li><a href="#" class="link">Садовые</a></li>
-											<li><a href="#" class="link">Зимние</a></li>
-										</ul>
+									<div class="acc acc-category is-open filter__acc" data-acc="category">
+										<button class="acc__toggle" data-acc-toggler>
+											<span class="acc__toggle-icon"></span>
+											<span class="acc__toggle-title" data-acc-title-text='["Показать категории", "Скрыть категории"]'>Скрыть категории</span>
+										</button>
+										<div class="acc__body" data-acc-body>
+											<div class="acc__content acc-category__content">
+												<div class="acc-category__block">
+													<h3 class="acc-category__block-title">этажность</h3>
+													<ul class="acc-category__block-list">
+														<li><a href="#" class="link">Одноэтажные</a></li>
+														<li><a href="#" class="link">С мансардой</a></li>
+														<li><a href="#" class="link">Полутораэтажные</a></li>
+														<li><a href="#" class="link">Двухэтажные</a></li>
+													</ul>
+												</div>
+												<div class="acc-category__block">
+													<h3 class="acc-category__block-title">цена</h3>
+													<ul class="acc-category__block-list">
+														<li><a href="#" class="link">Эконом</a></li>
+														<li><a href="#" class="link">До 2 млн. руб</a></li>
+													</ul>
+												</div>
+												<div class="acc-category__block">
+													<h3 class="acc-category__block-title">размерность</h3>
+													<ul class="acc-category__block-list">
+														<li><a href="#" class="link">10 на 10</a></li>
+														<li><a href="#" class="link">12 на 8</a></li>
+														<li><a href="#" class="link">12 на 9</a></li>
+														<li><a href="#" class="link">120 м²</a></li>
+														<li><a href="#" class="link">10 на 10</a></li>
+														<li><a href="#" class="link">12 на 8</a></li>
+													</ul>
+													<button class="acc-category__block-more">Показать еще</but>
+												</div>
+												<div class="acc-category__block">
+													<h3 class="acc-category__block-title">площадь</h3>
+													<ul class="acc-category__block-list">
+														<li><a href="#" class="link">до 100 м²</a></li>
+														<li><a href="#" class="link">до 120 м²</a></li>
+														<li><a href="#" class="link">до 140 м²</a></li>
+														<li><a href="#" class="link">до 160 м²</a></li>
+														<li><a href="#" class="link">до 180 м²</a></li>
+													</ul>
+												</div>
+												<div class="acc-category__block">
+													<h3 class="acc-category__block-title">дополнения</h3>
+													<ul class="acc-category__block-list">
+														<li><a href="#" class="link">С балконом</a></li>
+														<li><a href="#" class="link">С террасой</a></li>
+														<li><a href="#" class="link">С эркером</a></li>
+														<li><a href="#" class="link">С гаражом</a></li>
+													</ul>
+												</div>
+												<div class="acc-category__block">
+													<h3 class="acc-category__block-title">по назначению</h3>
+													<ul class="acc-category__block-list">
+														<li><a href="#" class="link">Гостевые</a></li>
+														<li><a href="#" class="link">Для дачи</a></li>
+														<li><a href="#" class="link">Для постоянного проживания</a></li>
+														<li><a href="#" class="link">Садовые</a></li>
+														<li><a href="#" class="link">Зимние</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
+								<div class="modal__bg"></div>
 							</div>
 						</div>
-						<div class="modal m-acc-options" data-modal-id="options" data-close-on-bg>
-							<div class="modal__wrap m-acc-options__wrap">
-								<div class="modal__window m-acc-options__window">
-									<div class="m-acc__header">
-										<h2 class="m-acc__title">Фильтр</h2>
-										<button class="burger is-active modal-close m-acc__modal-close" data-modal-close><span></span><span></span><span></span></button>
+						<div class="modal m-filter" data-modal-id="options" data-close-on-bg>
+							<div class="modal__wrap m-filter__wrap">
+								<div class="modal__window m-filter__window">
+									<div class="m-filter__header">
+										<h2 class="m-filter__title">Фильтр</h2>
+										<button class="burger is-active modal-close m-filter__modal-close" data-modal-close><span></span><span></span><span></span></button>
 									</div>
 									<div class="acc acc-options is-open filter__acc" data-acc="options">
 										<button class="acc__toggle" data-acc-toggler>
@@ -542,17 +554,14 @@
 							</div>
 						</div>
 					</div>
-					<div class="filter__body is-mob">
-
-					</div>
 				</div>
 			</section>
 			<section class="section catalog">
 				<div class="catalog__container">
 					<div class="catalog__header">
 						<span class="catalog__header-title">Сортировать проекты</span>
-						<button class="btn has-icon is-accent catalog__btn-filter">Фильтр</button>
-						<button class="btn is-light catalog__btn-cat" data-modal-open="options">Категории</button>
+						<button class="btn has-icon is-accent catalog__btn-filter" data-modal-open="options">Фильтр</button>
+						<button class="btn is-light catalog__btn-cat" data-modal-open="category">Категории</button>
 						<div class="select is-select-items catalog__select">
 							<button class="select-input">
 								<span class="select-input__title">Сортировать проекты</span>

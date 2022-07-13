@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220713204225">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220713230954">
 </head>
 <body>
 	<div class="wrapper">
@@ -63,30 +63,36 @@
 			<nav class="menu" >
 				<div class="menu__wrap">
 					<div class="menu__header">
-						<button class="btn is-second project-btn" data-project-open>
+						<button class="btn is-second project-btn menu__project-btn" data-project-open>
 							<span class="project-btn__icon"><span></span><span></span><span></span></span>
 							<span class="project-btn__text">Проекты</span>
 						</button>
+						<button class="btn is-back menu__back is-hide">Назад</button>
 						<button class="burger is-active menu__close" data-menu-close><span></span><span></span><span></span></button>
 					</div>
-					<ul class="menu__list">
-						<li class="has-sub-menu">
-							<a href="" class="link">Клиенту</a>
-							<ul class="sub-menu">
-								<li><a href="#" class="link">Цены</a></li>
-								<li><a href="#" class="link">Услуги</a></li>
-								<li><a href="#" class="link">Материнский капитал</a></li>
-								<li><a href="#" class="link">Строительство заборов</a></li>
-								<li><a href="#" class="link">Фундаменты</a></li>
-							</ul>
-						</li>
-						<li><a href="" class="link">Акции</a></li>
-						<li><a href="" class="link">Статьи</a></li>
-						<li><a href="" class="link">Объекты</a></li>
-						<li><a href="" class="link">Отзывы</a></li>
-						<li><a href="" class="link">О нас</a></li>
-						<li><a href="" class="link">Контакты</a></li>
-					</ul>
+					<div class="menu__list-container">
+						<ul class="menu__list">
+							<li class="has-sub-menu">
+								<span class="sub-link">
+									<a href="" class="link">Клиенту</a>
+									<button class="sub-link__arrow"></button>
+								</span>
+								<ul class="sub-menu">
+									<li><a href="#" class="link">Цены</a></li>
+									<li><a href="#" class="link">Услуги</a></li>
+									<li><a href="#" class="link">Материнский капитал</a></li>
+									<li><a href="#" class="link">Строительство заборов</a></li>
+									<li><a href="#" class="link">Фундаменты</a></li>
+								</ul>
+							</li>
+							<li><a href="" class="link">Акции</a></li>
+							<li><a href="" class="link">Статьи</a></li>
+							<li><a href="" class="link">Объекты</a></li>
+							<li><a href="" class="link">Отзывы</a></li>
+							<li><a href="" class="link">О нас</a></li>
+							<li><a href="" class="link">Контакты</a></li>
+						</ul>
+					</div>
 					<div class="menu__footer">
 						<div class="menu__footer-buttons">
 							<button class="btn has-icon is-accent menu__callback">Заказать звонок</button>
@@ -761,6 +767,6 @@
         <div class="modal__bg"></div>
     </div>
 </div>
-    <script src="./js/bundle.min.js?_v=20220713204225"></script>
+    <script src="./js/bundle.min.js?_v=20220713230954"></script>
 </body>
 </html>

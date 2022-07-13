@@ -98,7 +98,7 @@
 	@include resVal(margin-left, 16, 108, 1400, 1500);
 
 	@media (max-width: $hide-menu) {
-		position: absolute;
+		position: fixed;
 		z-index: 2;
 		top: 0;
 		left: 0;
@@ -129,6 +129,7 @@
 		background: $light;
 		padding: 22px 0 36px;
 		overflow-y: auto;
+		overflow-x: hidden;
 		transform: translateX(-100%);
 		transition: $tr;
 
@@ -150,6 +151,18 @@
 		justify-content: space-between;
 		padding: 0 var(--container-padding);
 	}
+}
+
+.menu__project-btn {
+	display: none;
+
+	@media (max-width: 620px) {
+		display: flex;
+	}
+}
+
+.menu__back {
+	margin-left: auto;
 }
 
 .menu__close {
@@ -189,6 +202,14 @@
 	}
 }
 
+.menu__list-container {
+
+	@media (max-width: $hide-menu) {
+		width: 200%;
+		transition: $tr;
+	}
+}
+
 .menu__list {
 	display: flex;
 	align-items: center;
@@ -210,10 +231,15 @@
 	}
 
 	@media (max-width: $hide-menu) {
+		position: relative;
+		width: 50%;
 		flex-direction: column;
 		align-items: flex-start;
-		padding: 0 var(--container-padding);
-		margin: 37px 0 37px 32px;
+		// padding: 0 var(--container-padding);
+		// margin: 37px 0 37px 32px;
+		// padding: 37px var(--container-padding) 37px calc(var(--container-padding) + 30px);
+		// margin: 37px 0;
+		padding: 37px 0;
 
 		& li {
 			width: 100%;
@@ -228,6 +254,7 @@
 				width: 100%;
 				display: inline-block;
 				padding: 4px 0;
+				padding: 4px var(--container-padding) 4px calc(var(--container-padding) + 30px);
 			}
 		}
 	}
@@ -236,23 +263,23 @@
 .menu__list li.has-sub-menu {
 	position: relative;
 
-	& > a {
+	// & > a {
 
-		&::after {
-			content: '';
-			display: inline-block;
-			width: 12px;
-			aspect-ratio: 1;
-			-webkit-mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
-			mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
-			background: $text-label;
-			margin-left: 6px;
-			vertical-align: middle;
-			transition: $tr;
-		}
-	}
+	// 	&::after {
+	// 		content: '';
+	// 		display: inline-block;
+	// 		width: 12px;
+	// 		aspect-ratio: 1;
+	// 		-webkit-mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
+	// 		mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
+	// 		background: $text-label;
+	// 		margin-left: 6px;
+	// 		vertical-align: middle;
+	// 		transition: $tr;
+	// 	}
+	// }
 
-	@media (any-hover: hover) {
+	@media (min-width: $hide-menu + 1px) {
 
 		&:hover {
 			& .sub-menu {
@@ -261,10 +288,67 @@
 				pointer-events: fill;
 			}
 
-			& > a::after {
+			& .sub-link__arrow {
 				background: $accent;
 			}
 		}
+	}
+
+	@media (max-width: $hide-menu) {
+		position: initial;
+	}
+}
+
+.sub-link {
+
+	@media (max-width: $hide-menu) {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+
+		& a {
+			padding-right: 0;
+			margin-right: var(--container-padding);
+		}
+	}
+}
+
+.sub-link__arrow {
+	display: inline-block;
+	width: 12px;
+	aspect-ratio: 1;
+	-webkit-mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
+	mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
+	background: $text-label;
+	margin-left: 2px;
+	vertical-align: middle;
+	transition: $tr;
+	pointer-events: none;
+
+	@media (max-width: $hide-menu) {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		width: 15%;
+		height: 100%;
+		pointer-events: fill;
+		mask: initial;
+		-webkit-mask: initial;
+		background: center/16px 16px no-repeat url('data:image/svg+xml,%3Csvg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M8.7097 6.19841C8.68192 6.2609 8.64329 6.3098 8.60443 6.3491L4.10649 11.0969L4.10656 11.097L4.10178 11.1018C4.06203 11.1415 4.01234 11.1813 3.94843 11.2097C3.88343 11.2386 3.81669 11.25 3.75 11.25C3.61819 11.25 3.48892 11.205 3.39197 11.108C3.29503 11.0111 3.25 10.8818 3.25 10.75C3.25 10.6833 3.2614 10.6166 3.2903 10.5516C3.31805 10.4891 3.35664 10.4403 3.39547 10.401L7.55596 6L3.39546 1.59898C3.35663 1.5597 3.31805 1.51084 3.2903 1.44841C3.26141 1.3834 3.25 1.31667 3.25 1.25C3.25 1.11819 3.29503 0.988917 3.39197 0.891972C3.48892 0.795027 3.61819 0.749999 3.75 0.749999C3.81669 0.749999 3.88343 0.761415 3.94843 0.79031C4.01234 0.818721 4.06203 0.858483 4.10178 0.898234L4.10185 0.89817L4.10649 0.903075L8.60444 5.65091C8.6433 5.69021 8.68193 5.7391 8.7097 5.80159C8.73859 5.8666 8.75 5.93333 8.75 6C8.75 6.06667 8.73859 6.1334 8.7097 6.19841Z\" fill=\"%23333333\" stroke=\"%23333333\" stroke-width=\"0.5\"/%3E%3C/svg%3E');
+		// background: $text-primary;
+		border-left: 1px solid $border-line;
+
+		// &::before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 1px;
+		// 	height: 100%;
+		// 	display: block;
+		// 	background: $border-line;
+		// }
 	}
 }
 
@@ -292,6 +376,29 @@
 			display: block;
 			padding: 4px 25px;
 			white-space: nowrap;
+
+			@media (max-width: $hide-menu) {
+				padding: 4px 0;
+				padding: 4px var(--container-padding) 4px calc(var(--container-padding) + 30px);
+			}
+		}
+	}
+
+	@media (max-width: $hide-menu) {
+		left: auto;
+		bottom: auto;
+		top: 0;
+		right: 0;
+		transform: translate(100%, 0);
+		width: 100%;
+		opacity: 1;
+		box-shadow: none;
+		padding: 37px 0;
+		opacity: 0;
+
+		&.is-show {
+			opacity: 1;
+			pointer-events: fill;
 		}
 	}
 }
