@@ -43,4 +43,6 @@ rangeElems.forEach(range => {
 			rangeSlider.set([ tfMin.value, tfMax.value ])
 		})
 	} )
+
+	range.RangeSlider = rangeSlider
 })

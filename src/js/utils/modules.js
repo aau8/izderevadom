@@ -52,9 +52,33 @@ export class Accordions {
         let _accArr = Array.from(selector != null ? typeof(selector) === 'string' ? document.querySelectorAll(selector) : selector : document.querySelectorAll(`[${this.attrs.container}]`))
         this.accArr = _accArr.map(e => Array.from(e.querySelectorAll(`[${this.attrs.acc}]`)))
         this._combAccArr = Array().concat(...this.accArr)
-        this._combAccArr.forEach(_acc => { if (!_acc.classList.contains('is-open')) this.close(_acc, false) })
         this._clickToggler()
         this._outsideOpener()
+
+		this.accArr.forEach( elem => {
+			// elem.querySelector('[data-acc-body]').style.transition = '.3s'
+		} )
+        // _body.style = `
+        //     max-height: 0;
+        //     opacity: 0;
+        //     visibility: hidden;
+		// 	transition: .3s;
+		// `
+		this._combAccArr.forEach(_acc => {
+			if (!_acc.classList.contains('is-open')) {
+				this.close(_acc, false)
+			}
+			else {
+				const body = _acc.querySelector('[data-acc-body]')
+				body.style.overflow = 'hidden'
+				// body.style.overflow = 'hidden'
+
+			}
+		})
+
+		// this._combAccArr.forEach( _acc => {
+
+		// } )
     }
 
     open(selector) {
@@ -81,6 +105,10 @@ export class Accordions {
             visibility: visible;
         `
 
+		setTimeout(() => {
+			this._currentAcc.body.style.overflow = 'initial'
+		}, 400)
+
 		const _eAccOpen = new Event('acc-open')
 		_eAccOpen.data = this
 
@@ -92,12 +120,11 @@ export class Accordions {
         const _body = selector === undefined ? this._currentAcc.body : _acc.querySelector(`[${this.attrs.body}]`)
         if (makeCurrent) this._setCurrentAcc(_acc)
 
-        _acc.classList.remove(this.classNames.open)
-        _body.style = `
-            max-height: 0;
-            opacity: 0;
-            visibility: hidden;
-        `
+		_acc.classList.remove(this.classNames.open)
+        _body.style.maxHeight = 0
+        _body.style.opacity = 0
+        _body.style.visibility = 'hidden'
+
 
 		const _eAccClose = new Event('acc-close')
 		_eAccClose.data = this

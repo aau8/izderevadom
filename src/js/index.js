@@ -29,7 +29,7 @@ const modals = new DismalModules.Modals()
 DismalModules.labelTextfield()
 
 // Списки выбора
-DismalModules.select()
+// DismalModules.select()
 
 // Кнопка "Наверх"
 // DismalModules.arrowUp()
@@ -49,7 +49,13 @@ import './sliders.js'
 
 
 // Ползунки в разделе фильтра опций
-import './rangesliders.js'
+import './filter/rangesliders.js'
+
+// Ползунки в разделе фильтра опций
+import './filter/select-checkbox.js'
+
+// Сброс настроек
+import './filter/filter-reset.js'
 
 
 // Открытие/закрытие моб. меню

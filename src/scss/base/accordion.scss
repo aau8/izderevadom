@@ -12,7 +12,9 @@
     transition: $tr;
 
     &.is-open {
+
         & > .acc__toggle {
+			border-bottom-color: $border-line;
 
             & .acc__toggle-icon {
 				background: $accent-second;
@@ -37,9 +39,10 @@
     align-items: center;
     padding: 10px 16px;
     text-align: left;
+	border-bottom: 1px solid transparent;
 	background: $frame-light;
-	border-bottom: 1px solid $border-line;
     cursor: pointer;
+	transition: border-color $tr;
 }
 
 .acc__toggle-title {
