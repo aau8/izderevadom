@@ -1,19 +1,45 @@
 .c-trust {
-	max-width: 390px;
+	// max-width: 390px;
+	background: $frame-light;
+
+	@media (max-width: $tablet) {
+		background: $light;
+		text-align: center;
+	}
 }
 
 .c-trust__img {
 	max-width: 200px;
+
+	@media (max-width: $tablet) {
+		max-width: 294px;
+		margin: 0 auto;
+	}
+
+	@media (max-width: $mobile-l) {
+		max-width: 192px;
+	}
 }
 
 .c-trust__content {
 	margin-top: 48px;
+
+	@media (max-width: $tablet) {
+		margin-top: 38px;
+	}
 }
 
 .c-trust__title {
 	font-size: 26px;
 	font-weight: 600;
 
+	@media (max-width: $tablet) {
+		font-size: 24px;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 20px;
+	}
 }
 
 .c-trust__text {
@@ -22,4 +48,58 @@
 	line-height: 1.4;
 	color: $text-second;
 	margin-top: 14px;
+
+	@media (max-width: $mobile-l) {
+		font-size: 15px;
+	}
+}
+
+// Форма
+.c-trust-callback {
+	padding: 27px 36px 36px;
+	background: $light;
+	border-radius: $radius-s;
+	box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
+
+	@media (max-width: 1000px) {
+		padding: 24px;
+	}
+}
+
+.c-trust-callback__title {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.3;
+	text-align: center;
+
+	& span {
+		color: $accent;
+	}
+}
+
+.c-trust-callback__form {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 7px;
+	margin-top: 25px;
+}
+
+.c-trust-callback__form-tf {
+
+	& .tf__field {
+		height: 50px;
+	}
+}
+
+.c-trust-callback__form-submit {
+	width: 100%;
+	height: 46px;
+}
+
+.c-trust-callback__form-correction {
+	font-size: 12px;
+	font-weight: 400;
+	color: $input-placeholder;
+	text-align: center;
+	margin-top: 10px;
 }

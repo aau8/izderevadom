@@ -154,6 +154,7 @@ body {
 @import "./components/banner-search";
 @import "./components/location";
 @import "./components/m-proj";
+@import "./components/tag";
 
 // Карточки
 @import "./components/cards/c-project";
@@ -161,6 +162,8 @@ body {
 @import "./components/cards/c-reviews";
 @import "./components/cards/c-gallery";
 @import "./components/cards/c-trust";
+@import "./components/cards/c-product";
+@import "./components/cards/c-nfp";
 
 // Модальные окна
 @import "./components/modals/video";
@@ -178,6 +181,7 @@ body {
 @import "./sections/reviews";
 @import "./sections/gallery";
 @import "./sections/trust";
+@import "./sections/catalog";
 @import "./sections/footer";
 
 

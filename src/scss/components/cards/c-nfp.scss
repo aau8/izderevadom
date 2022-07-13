@@ -1,0 +1,62 @@
+.c-nfp {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: $accent;
+	border-radius: $radius-s;
+	padding: 30px;
+	overflow: hidden;
+
+	@media (max-width: $mobile-l) {
+		aspect-ratio: .72;
+	}
+}
+
+.c-nfp__content {
+	position: relative;
+	z-index: 2;
+}
+
+.c-nfp__title {
+	font-size: 32px;
+	font-weight: 700;
+	color: $light;
+}
+
+.c-nfp__text {
+	font-size: 18px;
+	font-weight: 400;
+	color: $light;
+	margin-top: 24px;
+}
+
+.c-nfp__btn {
+	width: fit-content;
+	height: 60px;
+	font-size: 16px;
+	padding: 0 22px;
+	margin-top: 25px;
+}
+
+.c-nfp__ill {
+	position: absolute;
+	z-index: 1;
+	bottom: -75px;
+	right: -46px;
+	max-width: 350px;
+	width: 100%;
+	aspect-ratio: 1;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -30px;
+		right: -60px;
+		z-index: -1;
+		transform: rotate(12deg);
+		width: 330px;
+		aspect-ratio: 1;
+		background: rgba(255,255,255,.4);
+		border-radius: $radius-l;
+	}
+}

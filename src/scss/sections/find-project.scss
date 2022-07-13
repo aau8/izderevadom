@@ -1,3 +1,14 @@
+.find-project {
+
+	&.on-page-main {
+		margin-top: 42px;
+
+		@media (max-width: $laptop) {
+			margin-top: 20px;
+		}
+	}
+}
+
 .find-project__list {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);

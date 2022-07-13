@@ -1,0 +1,11 @@
+.tag {
+	display: inline-block;
+	font-size: 15px;
+	border: 1px solid $border-line;
+	border-radius: $radius-s;
+	padding: 8px 10px;
+
+	@media (max-width: $mobile-l) {
+		font-size: 13px;
+	}
+}
