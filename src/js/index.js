@@ -138,8 +138,13 @@ class Location {
 					if (this.locationIsOpen) this.close()
 				}
 			}
+		})
 
+		this.dropdown.addEventListener('mouseout', e => {
 
+			if (!e.relatedTarget.closest('.location')) {
+				this.close()
+			}
 		})
 	}
 
@@ -167,21 +172,25 @@ class MenuProjects {
 
 	constructor(selector) {
 		this.menu = document.querySelector(selector)
+		this.body = this.menu.querySelector('.menu-proj__body')
 		this.btnElems = this.menu.querySelectorAll('.mp-links__btn')
 		this.btnActive = Array.from(this.btnElems).find(e => e.classList.contains('is-active'))
+		this.btnBack = this.menu.querySelector('.menu-proj__back')
+		this.btnClose = this.menu.querySelector('.menu-proj__close')
 		this.menuIsOpen = false
+		this.isSecondScreen = false
 
 		this.init()
 	}
 
 	init() {
 
-		this.menu.style.height = `calc(100vh - ${document.querySelector('.header').clientHeight}px)`
+		if (window.innerWidth > 768) this.menu.style.height = `calc(100vh - ${document.querySelector('.header').clientHeight}px)`
 
 		for (let i = 0; i < this.btnElems.length; i++) {
 			const btn = this.btnElems[i];
 
-			btn.addEventListener('mouseover', e => {
+			btn.addEventListener(window.innerWidth > 768 ? 'mouseover' : 'click', e => {
 				this.catActivate(btn)
 			})
 		}
@@ -199,6 +208,14 @@ class MenuProjects {
 				}
 			}
 		})
+
+		this.btnBack.addEventListener('click', e => {
+			this.changeListMob()
+		})
+
+		this.btnClose.addEventListener('click', e => {
+			this.hide()
+		})
 	}
 
 	catActivate(btn) {
@@ -208,16 +225,32 @@ class MenuProjects {
 		this.btnActive = btn
 
 		this.showBody(btn.dataset.projectBtn)
+
+		this.changeListMob()
 	}
 
 	catDeactivate(btn) {
-		// const btnActive = this.menu.querySelector('.mp-links__btn.is-active')
 		this.btnActive.classList.remove('is-active')
 	}
 
+	changeListMob() {
+		if (window.innerWidth > 768) return
+
+		if (!this.isSecondScreen) {
+			this.body.style.transform = `translateX(-100vw)`
+			this.isSecondScreen = true
+			this.btnBack.classList.remove('is-hide')
+		}
+		else {
+			this.body.style.transform = `translateX(0)`
+			this.isSecondScreen = false
+			this.btnBack.classList.add('is-hide')
+		}
+	}
+
 	showBody(cat) {
-		const bodyShow = this.menu.querySelector('.mp-body.is-show')
-		const bodyCurrent = this.menu.querySelector(`.mp-body[data-project-block=${cat}]`)
+		const bodyShow = this.menu.querySelector('.mp-section.is-show')
+		const bodyCurrent = this.menu.querySelector(`.mp-section[data-project-block=${cat}]`)
 
 		bodyShow.classList.remove('is-show')
 		bodyCurrent.classList.add('is-show')
@@ -229,6 +262,11 @@ class MenuProjects {
 		bodyLock()
 
 		this.menuIsOpen = true
+
+		const _eMenuShow = new Event('show')
+		_eMenuShow.data = this
+
+		this.menu.dispatchEvent(_eMenuShow)
 	}
 
 	hide() {
@@ -237,10 +275,28 @@ class MenuProjects {
 		bodyUnlock()
 
 		this.menuIsOpen = false
+
+		const _eMenuHide = new Event('hide')
+		_eMenuHide.data = this
+
+		this.menu.dispatchEvent(_eMenuHide)
 	}
 }
 
-const menuProjects = new MenuProjects('.m-proj')
+const menuProjects = new MenuProjects('.menu-proj')
+
+menuProjects.menu.addEventListener('show', e => {
+	if (menu.menuIsOpen) {
+		menu.close()
+	}
+})
+
+// const menuProjectsBtnBack = document.querySelector('.menu-proj .menu-proj__back')
+
+// menuProjectsBtnBack.addEventListener('click', e => {
+// 	menuProjects.changeListMob()
+// })
+
 
 // Открытие видео при клике по карточкам с отзывами
 class LazyVideo {

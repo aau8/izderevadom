@@ -120,22 +120,40 @@
 
 	&.has-icon {
 
+		// &::before {
+		// 	display: inline-block;
+		// }
 		&::before {
+			content: '';
 			display: inline-block;
+			// display: none;
+			min-width: var(--icon-size);
+			width: var(--icon-size);
+			height: var(--icon-size);
+			-webkit-mask: center/contain no-repeat var(--icon);
+			mask: center/contain no-repeat var(--icon);
+			margin-right: 10px;
+			vertical-align: middle;
+			background: $light;
 		}
 	}
 
-	&::before {
-		content: '';
-		display: none;
-		min-width: var(--icon-size);
-		width: var(--icon-size);
-		height: var(--icon-size);
-		-webkit-mask: center/contain no-repeat var(--icon);
-		mask: center/contain no-repeat var(--icon);
-		margin-right: 10px;
-		vertical-align: middle;
-		background: $light;
+
+	&.is-back {
+		color: $accent;
+		padding: 0;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			-webkit-mask: center/contain no-repeat url('data:image/svg+xml,%3Csvg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M3.2903 5.80159C3.31808 5.7391 3.35671 5.6902 3.39557 5.6509L7.89351 0.903076L7.89344 0.903013L7.89822 0.898235C7.93797 0.858483 7.98766 0.818723 8.05157 0.790311C8.11657 0.761415 8.18331 0.75 8.25 0.75C8.38181 0.75 8.51108 0.795029 8.60803 0.891973C8.70497 0.988918 8.75 1.11819 8.75 1.25C8.75 1.31667 8.73859 1.3834 8.7097 1.44841C8.68195 1.51085 8.64336 1.55972 8.60453 1.599L4.44404 6L8.60454 10.401C8.64337 10.4403 8.68195 10.4892 8.7097 10.5516C8.73859 10.6166 8.75 10.6833 8.75 10.75C8.75 10.8818 8.70497 11.0111 8.60803 11.108C8.51108 11.205 8.38181 11.25 8.25 11.25C8.18331 11.25 8.11657 11.2386 8.05157 11.2097C7.98766 11.1813 7.93797 11.1415 7.89822 11.1018L7.89815 11.1018L7.89351 11.0969L3.39556 6.34909C3.3567 6.30979 3.31807 6.2609 3.2903 6.19841C3.26141 6.1334 3.25 6.06667 3.25 6C3.25 5.93333 3.26141 5.8666 3.2903 5.80159Z\" fill=\"%235BAA00\" stroke=\"%235BAA00\" stroke-width=\"0.5\"/%3E%3C/svg%3E');
+			mask: center/contain no-repeat url('data:image/svg+xml,%3Csvg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M3.2903 5.80159C3.31808 5.7391 3.35671 5.6902 3.39557 5.6509L7.89351 0.903076L7.89344 0.903013L7.89822 0.898235C7.93797 0.858483 7.98766 0.818723 8.05157 0.790311C8.11657 0.761415 8.18331 0.75 8.25 0.75C8.38181 0.75 8.51108 0.795029 8.60803 0.891973C8.70497 0.988918 8.75 1.11819 8.75 1.25C8.75 1.31667 8.73859 1.3834 8.7097 1.44841C8.68195 1.51085 8.64336 1.55972 8.60453 1.599L4.44404 6L8.60454 10.401C8.64337 10.4403 8.68195 10.4892 8.7097 10.5516C8.73859 10.6166 8.75 10.6833 8.75 10.75C8.75 10.8818 8.70497 11.0111 8.60803 11.108C8.51108 11.205 8.38181 11.25 8.25 11.25C8.18331 11.25 8.11657 11.2386 8.05157 11.2097C7.98766 11.1813 7.93797 11.1415 7.89822 11.1018L7.89815 11.1018L7.89351 11.0969L3.39556 6.34909C3.3567 6.30979 3.31807 6.2609 3.2903 6.19841C3.26141 6.1334 3.25 6.06667 3.25 6C3.25 5.93333 3.26141 5.8666 3.2903 5.80159Z\" fill=\"%235BAA00\" stroke=\"%235BAA00\" stroke-width=\"0.5\"/%3E%3C/svg%3E');
+			background-color: $accent;
+			vertical-align: middle;
+			margin-right: 8px;
+		}
 	}
 }
 
@@ -289,5 +307,5 @@
 }
 
 .project-btn__text {
-
+	transition: $tr;
 }

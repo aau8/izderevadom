@@ -444,11 +444,53 @@
 	margin-left: 26px;
 
 	@media (max-width: 1200px) {
+		position: relative;
 		padding: 0 22px;
 		margin-left: 22px;
 
 		& .project-btn__icon {
-			display: none;
+			// display: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(.5);
+			opacity: 0;
+			transition: $tr;
+
+			& span {
+
+				&:nth-child(1) {
+					left: 50%;
+					width: 100%;
+					transform: translate(-50%, -50%) rotate(45deg);
+				}
+
+				&:nth-child(2) {
+					width: 0;
+				}
+
+				&:nth-child(3) {
+					left: 50%;
+					width: 100%;
+					transform: translate(-50%, -50%) rotate(-45deg);
+				}
+			}
+		}
+
+		&.is-active {
+
+			@media (min-width: $tablet + 1px) {
+
+				& .project-btn__icon {
+					opacity: 1;
+					transform: translate(-50%, -50%) scale(1);
+				}
+
+				& .project-btn__text {
+					color: create-rgba($light, 0);
+					transform: scale(.5);
+				}
+			}
 		}
 	}
 
