@@ -1,0 +1,76 @@
+.m-acc__header {
+	display: none;
+
+	@media (max-width: 600px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 28px;
+	}
+}
+
+.m-acc__title {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.m-acc__modal-close.burger {
+	display: block;
+
+	& span {
+		background: $text-label;
+	}
+}
+
+// Опции
+.m-acc-options {
+	background: $frame-light;
+
+	@media (min-width: 601px) {
+		position: initial;
+		top: initial;
+		left: initial;
+		width: initial;
+		height: initial;
+		background: initial;
+		overflow: initial;
+		visibility: initial;
+		opacity: initial;
+		transition: initial;
+	}
+
+	@media (max-width: $mobile-m) {
+		background: $light;
+	}
+}
+
+.m-acc-options__wrap {
+	padding: 0;
+    transform: translate(100vh, 0);
+
+	@media (min-width: 601px) {
+		min-height: initial;
+		transform: initial;
+		display: initial;
+		justify-content: initial;
+		align-items: initial;
+		padding: initial;
+		transition: initial;
+	}
+}
+
+.m-acc-options__window {
+	background: $frame-light;
+
+	@media (min-width: 601px) {
+		position: initial;
+		max-width: initial;
+		width: initial;
+		background: initial;
+		padding: initial;
+	}
+
+	@media (max-width: $mobile-m) {
+		background: $light;
+	}
+}

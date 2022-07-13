@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220713141735">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220713190441">
 
 </head>
 <body>
@@ -615,7 +615,7 @@
 						<h2 class="s-header__title">Каркасные дома</h2>
 					</div>
 					<div class="filter__body is-pc" data-acc-container>
-						<div class="acc acc-category filter__acc" data-acc="category">
+						<div class="acc acc-category is-open filter__acc" data-acc="category">
 							<button class="acc__toggle" data-acc-toggler>
 								<span class="acc__toggle-icon"></span>
 								<span class="acc__toggle-title" data-acc-title-text='["Показать категории", "Скрыть категории"]'>Скрыть категории</span>
@@ -648,6 +648,7 @@
 											<li><a href="#" class="link">10 на 10</a></li>
 											<li><a href="#" class="link">12 на 8</a></li>
 										</ul>
+										<button class="acc-category__block-more">Показать еще</but>
 									</div>
 									<div class="acc-category__block">
 										<h3 class="acc-category__block-title">площадь</h3>
@@ -681,411 +682,422 @@
 								</div>
 							</div>
 						</div>
-						<div class="acc acc-options is-open filter__acc" data-acc="options">
-							<button class="acc__toggle" data-acc-toggler>
-								<span class="acc__toggle-icon"></span>
-								<span class="acc__toggle-title" data-acc-title-text='["Показать фильтр", "Скрыть фильтр"]'>Скрыть категории</span>
-							</button>
-							<div class="acc__body" data-acc-body>
-								<form action="#" class="acc__content acc-options__content">
-									<div class="acc-options__body">
-										<div class="acc-options__block is-range">
-											<h3 class="acc-options__block-title" data-prefix="руб">цена</h3>
-											<div class="acc-options__block-body">
-												<div class="acc-options__range" data-min="0" data-max="10000000" data-min-value="0" data-max-value="10000000">
-													<div class="acc-options__range-header">
-														<label class="acc-options__range-tf is-min">
-															<input type="text" name="price-min">
-														</label>
-														<label class="acc-options__range-tf is-max">
-															<input type="text" name="price-max">
-														</label>
+						<div class="modal m-acc-options" data-modal-id="options" data-close-on-bg>
+							<div class="modal__wrap m-acc-options__wrap">
+								<div class="modal__window m-acc-options__window">
+									<div class="m-acc__header">
+										<h2 class="m-acc__title">Фильтр</h2>
+										<button class="burger is-active modal-close m-acc__modal-close" data-modal-close><span></span><span></span><span></span></button>
+									</div>
+									<div class="acc acc-options is-open filter__acc" data-acc="options">
+										<button class="acc__toggle" data-acc-toggler>
+											<span class="acc__toggle-icon"></span>
+											<span class="acc__toggle-title" data-acc-title-text='["Показать фильтр", "Скрыть фильтр"]'>Скрыть фильтр</span>
+										</button>
+										<div class="acc__body" data-acc-body>
+											<form action="#" class="acc__content acc-options__content">
+												<div class="acc-options__body">
+													<div class="acc-options__block is-range">
+														<h3 class="acc-options__block-title" data-prefix="руб">цена</h3>
+														<div class="acc-options__block-body">
+															<div class="acc-options__range" data-min="0" data-max="10000000" data-min-value="0" data-max-value="10000000">
+																<div class="acc-options__range-header">
+																	<label class="acc-options__range-tf is-min">
+																		<input type="text" name="price-min">
+																	</label>
+																	<label class="acc-options__range-tf is-max">
+																		<input type="text" name="price-max">
+																	</label>
+																</div>
+																<div class="acc-options__range-body">
+																	<div class="acc-options__range-roller"></div>
+																</div>
+															</div>
+														</div>
 													</div>
-													<div class="acc-options__range-body">
-														<div class="acc-options__range-roller"></div>
+													<div class="acc-options__block is-range">
+														<h3 class="acc-options__block-title" data-prefix="м²">площадь</h3>
+														<div class="acc-options__block-body">
+															<div class="acc-options__range" data-min="0" data-max="1000" data-min-value="0" data-max-value="1000">
+																<div class="acc-options__range-header">
+																	<label class="acc-options__range-tf is-min">
+																		<input type="text" name="price-min">
+																	</label>
+																	<label class="acc-options__range-tf is-max">
+																		<input type="text" name="price-max">
+																	</label>
+																</div>
+																<div class="acc-options__range-body">
+																	<div class="acc-options__range-roller"></div>
+																</div>
+															</div>
+														</div>
 													</div>
-												</div>
-											</div>
-										</div>
-										<div class="acc-options__block is-range">
-											<h3 class="acc-options__block-title" data-prefix="м²">площадь</h3>
-											<div class="acc-options__block-body">
-												<div class="acc-options__range" data-min="0" data-max="1000" data-min-value="0" data-max-value="1000">
-													<div class="acc-options__range-header">
-														<label class="acc-options__range-tf is-min">
-															<input type="text" name="price-min">
-														</label>
-														<label class="acc-options__range-tf is-max">
-															<input type="text" name="price-max">
-														</label>
+													<div class="acc-options__block is-select-checkbox">
+														<h3 class="acc-options__block-title">размерность</h3>
+														<div class="acc-options__block-body">
+															<div class="select select-checkbox select-checkbox__size">
+																<button type="button" class="select-input">
+																	<span class="select-input__title">Выберите пункт</span>
+																	<input type="hidden" name="select">
+																	<span class="select-input__chevron"></span>
+																</button>
+																<div class="select-dropdown">
+																	<div class="select-dropdown__list">
+																		<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
+																			<input type="checkbox">
+																			<span>Все</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (22)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (20)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (30)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (18)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
-													<div class="acc-options__range-body">
-														<div class="acc-options__range-roller"></div>
+													<div class="acc-options__block is-select-checkbox">
+														<h3 class="acc-options__block-title">количество спален</h3>
+														<div class="acc-options__block-body">
+															<div class="select select-checkbox select-checkbox__size">
+																<button type="button" class="select-input">
+																	<span class="select-input__title">Выберите пункт</span>
+																	<input type="hidden" name="select">
+																	<span class="select-input__chevron"></span>
+																</button>
+																<div class="select-dropdown">
+																	<div class="select-dropdown__list">
+																		<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
+																			<input type="checkbox">
+																			<span>Все</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (22)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (20)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (30)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (18)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
-												</div>
-											</div>
-										</div>
-										<div class="acc-options__block is-select-checkbox">
-											<h3 class="acc-options__block-title">размерность</h3>
-											<div class="acc-options__block-body">
-												<div class="select select-checkbox select-checkbox__size">
-													<button type="button" class="select-input">
-														<span class="select-input__title">Выберите пункт</span>
-														<input type="hidden" name="select">
-														<span class="select-input__chevron"></span>
-													</button>
-													<div class="select-dropdown">
-														<div class="select-dropdown__list">
-															<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
-																<input type="checkbox">
-																<span>Все</span>
+													<div class="acc-options__block is-select-checkbox">
+														<h3 class="acc-options__block-title">дополнительно</h3>
+														<div class="acc-options__block-body">
+															<div class="select select-checkbox select-checkbox__size">
+																<button type="button" class="select-input">
+																	<span class="select-input__title">Выберите пункт</span>
+																	<input type="hidden" name="select">
+																	<span class="select-input__chevron"></span>
+																</button>
+																<div class="select-dropdown">
+																	<div class="select-dropdown__list">
+																		<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
+																			<input type="checkbox">
+																			<span>Все</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (22)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (20)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (30)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (18)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																	</div>
+																</div>
 															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (22)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (20)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (30)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (18)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
+														</div>
+													</div>
+													<div class="acc-options__block is-select-checkbox">
+														<h3 class="acc-options__block-title">назначение</h3>
+														<div class="acc-options__block-body">
+															<div class="select select-checkbox select-checkbox__size">
+																<button type="button" class="select-input">
+																	<span class="select-input__title">Выберите пункт</span>
+																	<input type="hidden" name="select">
+																	<span class="select-input__chevron"></span>
+																</button>
+																<div class="select-dropdown">
+																	<div class="select-dropdown__list">
+																		<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
+																			<input type="checkbox">
+																			<span>Все</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (22)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (20)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (30)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (18)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																	</div>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-										</div>
-										<div class="acc-options__block is-select-checkbox">
-											<h3 class="acc-options__block-title">количество спален</h3>
-											<div class="acc-options__block-body">
-												<div class="select select-checkbox select-checkbox__size">
-													<button type="button" class="select-input">
-														<span class="select-input__title">Выберите пункт</span>
-														<input type="hidden" name="select">
-														<span class="select-input__chevron"></span>
-													</button>
-													<div class="select-dropdown">
-														<div class="select-dropdown__list">
-															<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
-																<input type="checkbox">
-																<span>Все</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (22)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (20)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (30)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (18)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-														</div>
-													</div>
+												<div class="acc-options__footer">
+													<!-- <div class="acc-options__footer-left">
+													</div> -->
+													<button class="btn is-accent acc-options__apply">Применить</button>
+													<span class="acc-options__result">Найдено 24 проекта</span>
+													<button type="button" class="btn acc-options__reset">Сбросить</button>
 												</div>
-											</div>
-										</div>
-										<div class="acc-options__block is-select-checkbox">
-											<h3 class="acc-options__block-title">дополнительно</h3>
-											<div class="acc-options__block-body">
-												<div class="select select-checkbox select-checkbox__size">
-													<button type="button" class="select-input">
-														<span class="select-input__title">Выберите пункт</span>
-														<input type="hidden" name="select">
-														<span class="select-input__chevron"></span>
-													</button>
-													<div class="select-dropdown">
-														<div class="select-dropdown__list">
-															<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
-																<input type="checkbox">
-																<span>Все</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (22)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (20)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (30)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (18)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="acc-options__block is-select-checkbox">
-											<h3 class="acc-options__block-title">назначение</h3>
-											<div class="acc-options__block-body">
-												<div class="select select-checkbox select-checkbox__size">
-													<button type="button" class="select-input">
-														<span class="select-input__title">Выберите пункт</span>
-														<input type="hidden" name="select">
-														<span class="select-input__chevron"></span>
-													</button>
-													<div class="select-dropdown">
-														<div class="select-dropdown__list">
-															<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
-																<input type="checkbox">
-																<span>Все</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (22)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (20)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (30)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (18)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-															<div class="select-dropdown__checkbox">
-																<input type="checkbox">
-																<span>6х5 (10)</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+											</form>
 										</div>
 									</div>
-									<div class="acc-options__footer">
-										<div class="acc-options__footer-left">
-											<button class="btn is-accent acc-options__apply">Применить</button>
-											<span class="acc-options__result">Найдено 24 проекта</span>
-										</div>
-										<button type="button" class="btn acc-options__reset">Сбросить</button>
-									</div>
-								</form>
+								</div>
+								<div class="modal__bg"></div>
 							</div>
 						</div>
 					</div>
@@ -1098,7 +1110,25 @@
 				<div class="catalog__container">
 					<div class="catalog__header">
 						<span class="catalog__header-title">Сортировать проекты</span>
-						<div class="catalog-sort__list">
+						<button class="btn has-icon is-accent catalog__btn-filter">Фильтр</button>
+						<button class="btn is-light catalog__btn-cat" data-modal-open="options">Категории</button>
+						<div class="select is-select-items catalog__select">
+							<button class="select-input">
+								<span class="select-input__title">Сортировать проекты</span>
+								<input type="hidden" name="select">
+								<span class="select-input__chevron"></span>
+							</button>
+							<div class="select-dropdown">
+								<div class="select-dropdown__list">
+									<button class="select-dropdown__item is-selected">по популярности</button>
+									<button class="select-dropdown__item">по цене (возрастание)</button>
+									<button class="select-dropdown__item">по цене (убывание)</button>
+									<button class="select-dropdown__item">по площади (возрастание)</button>
+									<button class="select-dropdown__item">по площади (убывание)</button>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="catalog-sort__list">
 							<div class="catalog-sort has-icon">
 								<input type="radio" name="sort">
 								<span class="catalog-sort__text">по цене</span>
@@ -1111,7 +1141,7 @@
 								<input type="radio" name="sort">
 								<span class="catalog-sort__text">по популярности</span>
 							</div>
-						</div>
+						</div> -->
 
 						<!-- <div class="select">
 							<button class="select-input">
@@ -1881,10 +1911,10 @@
     </div>
 </div>
 
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js?_v=20220713141735"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lg-video.min.css?_v=20220713141735"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/video/lg-video.min.js?_v=20220713141735"></script> -->
-	<!-- <script src="https://cdn.skypack.dev/lightgallery@2.3.0-beta.4/plugins/video?_v=20220713141735"></script> -->
-    <script src="./js/bundle.min.js?_v=20220713141735"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js?_v=20220713190441"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lg-video.min.css?_v=20220713190441"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/video/lg-video.min.js?_v=20220713190441"></script> -->
+	<!-- <script src="https://cdn.skypack.dev/lightgallery@2.3.0-beta.4/plugins/video?_v=20220713190441"></script> -->
+    <script src="./js/bundle.min.js?_v=20220713190441"></script>
 </body>
 </html>

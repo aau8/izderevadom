@@ -5,10 +5,18 @@
 	align-items: center;
 
 	@media (max-width: $mobile-l) {
+		--size: 44px;
+	}
+
+	@media (max-width: 410px) {
 		--size: 40px;
 	}
 
 	@media (max-width: $mobile-m) {
+		--size: 36px;
+	}
+
+	@media (max-width: 330px) {
 		--size: 32px;
 	}
 }

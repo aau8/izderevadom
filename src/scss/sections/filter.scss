@@ -66,14 +66,70 @@
 	}
 }
 
+.acc-category__block-more {
+	font-size: 13px;
+	font-weight: 400;
+	color: $text-second;
+	margin-top: 16px;
+	transition: $tr;
+
+	&::after {
+		content: '';
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		-webkit-mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
+		mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
+		background: $accent-second;
+		vertical-align: middle;
+		margin-left: 6px;
+		transition: $tr;
+	}
+
+	&:active {
+		color: brig-color($accent-second, hover);
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			color: $accent-second;
+		}
+
+		&:active {
+			color: brig-color($accent-second, active);
+		}
+	}
+
+	&.is-active {
+
+		&::after {
+			transform: scale(-1, -1);
+		}
+	}
+}
+
 // Аккордеон с опциями
 .acc-options {
 
+	@media (max-width: 600px) {
+
+		& .acc__toggle {
+			display: none;
+		}
+	}
 }
 
 .acc-options__content {
+	background: $light;
 	border: 1px solid $border-line;
 	padding: 30px;
+
+	@media (max-width: $mobile-m) {
+		background: transparent;
+		border: none;
+		padding: 0;
+	}
 }
 
 .acc-options__body {
@@ -87,6 +143,10 @@
 
 	@media (max-width: $tablet) {
 		grid-template-columns: 1fr 1fr;
+	}
+
+	@media (max-width: 550px) {
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -171,12 +231,16 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 32px;
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+	}
 }
 
 .acc-options__footer-left {
-	width: 100%;
-	display: flex;
-	align-items: center;
+	// width: 100%;
+	// display: flex;
+	// align-items: center;
 }
 
 .acc-options__apply {
@@ -185,6 +249,12 @@
 	height: 50px;
 	font-size: 16px;
 	font-weight: 700;
+
+	@media (max-width: 600px) {
+		max-width: none;
+		height: 40px;
+		margin-bottom: 6px;
+	}
 }
 
 .acc-options__result {
@@ -192,8 +262,18 @@
 	font-weight: 300;
 	font-style: italic;
 	color: $input-placeholder;
-	margin-left: 22px;
+	margin: 0 auto 0 22px;
 	white-space: nowrap;
+
+	@media (max-width: $tablet) {
+		font-size: 14px;
+	}
+
+	@media (max-width: 600px) {
+		order: -1;
+		margin: 0 auto 12px;
+		text-align: center;
+	}
 }
 
 .acc-options__reset {
@@ -211,5 +291,21 @@
 		background: $text-label;
 		margin-right: 15px;
 		vertical-align: middle;
+	}
+
+	@media (max-width: 600px) {
+		height: 40px;
+		width: 100%;
+		color: $text-second;
+		background: #fff;
+		border: 1px solid $border-line;
+		border-radius: $radius-s;
+
+		&::before {
+			width: 12px;
+			height: 12px;
+			background-color: $text-second;
+			margin-right: 10px;
+		}
 	}
 }

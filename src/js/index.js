@@ -29,7 +29,7 @@ const modals = new DismalModules.Modals()
 DismalModules.labelTextfield()
 
 // Списки выбора
-// DismalModules.select()
+DismalModules.select()
 
 // Кнопка "Наверх"
 // DismalModules.arrowUp()

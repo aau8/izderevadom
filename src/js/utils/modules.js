@@ -55,36 +55,20 @@ export class Accordions {
         this._clickToggler()
         this._outsideOpener()
 
-		this.accArr.forEach( elem => {
-			// elem.querySelector('[data-acc-body]').style.transition = '.3s'
-		} )
-        // _body.style = `
-        //     max-height: 0;
-        //     opacity: 0;
-        //     visibility: hidden;
-		// 	transition: .3s;
-		// `
 		this._combAccArr.forEach(_acc => {
 			if (!_acc.classList.contains('is-open')) {
 				this.close(_acc, false)
 			}
 			else {
-				// const body = _acc.querySelector('[data-acc-body]')
-				// body.style.overflow = 'hidden'
-				// body.style.overflow = 'hidden'
-
+				this.open(_acc, false)
 			}
 		})
-
-		// this._combAccArr.forEach( _acc => {
-
-		// } )
     }
 
-    open(selector) {
+    open(selector, notOpen = true) {
         const _acc = selector === undefined ? this._currentAcc.acc : typeof(selector) === 'string' ? document.querySelector(selector) : selector
 
-        if (_acc.classList.contains(this.classNames.open)) return
+        if (_acc.classList.contains(this.classNames.open) && notOpen) return
 
         this._setCurrentAcc(_acc)
 
@@ -493,11 +477,11 @@ export function labelTextfield(container = document) {
 // Списки выбора
 export function select() {
     // Проверяем есть ли выбранные элементы при загрузке страницы. Если есть, то селект заполняется
-    const selectedItemElems = document.querySelectorAll('.select:not(.select[data-select-with-checkbox]) .select-dropdown__item.is-selected')
+    const selectedItemElems = document.querySelectorAll('.is-select-items .select-dropdown__item.is-selected')
 
     for (let i = 0; i < selectedItemElems.length; i++) {
         const selectedItem = selectedItemElems[i];
-        const select = selectedItem.closest('.select')
+        const select = selectedItem.closest('.is-select-items')
         const sTitle = select.querySelector('.select-input__title')
         const sInput = select.querySelector('input[type=hidden]')
 
@@ -511,21 +495,22 @@ export function select() {
         const target = e.target
 
         // Если пользователь кликнул вне зоны селекта
-        if (!target.classList.contains('select') && !target.closest('.select.is-open')) {
+        if (!target.classList.contains('is-select-items') && !target.closest('.is-select-items.is-open')) {
 
-            if (document.querySelector('.select.is-open')) {
-                document.querySelector('.select.is-open').classList.remove('is-open')
+            if (document.querySelector('.is-select-items.is-open')) {
+                document.querySelector('.is-select-items.is-open').classList.remove('is-open')
             }
         }
 
         // Если пользователь кликнул по шапке селекта
-        if (target.classList.contains('select-input')) {
+        if (target.classList.contains('select-input') && target.closest('.is-select-items')) {
             target.parentElement.classList.toggle('is-open')
+			console.log('ok')
         }
 
         // Если пользователь выбрал пункт из списка селекта
         if (target.classList.contains('select-dropdown__item')) {
-            const select = target.closest('.select')
+            const select = target.closest('.is-select-items')
             const sTitle = select.querySelector('.select-input__title')
             const sInput = select.querySelector('input[type=hidden]')
             const neighbourTargets = target.parentElement.querySelectorAll('.select-dropdown__item')
