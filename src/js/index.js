@@ -2,7 +2,22 @@ import { removeAllClasses, bodyLock, bodyUnlock } from "./utils/functions.js"
 import DismalModules, { acc } from "./utils/modules.js"
 
 // Аккордеон
-// const accordions = new DismalModules.Accordions()
+const accordions = new DismalModules.Accordions()
+
+const filterAccElems = document.querySelectorAll('.filter__acc')
+
+filterAccElems.forEach(filterAcc => {
+	const title = filterAcc.querySelector('.acc__toggle-title')
+	const titleText = JSON.parse(title.dataset.accTitleText)
+
+	filterAcc.addEventListener('acc-open', e => {
+		title.innerText = titleText[1]
+	})
+
+	filterAcc.addEventListener('acc-close', e => {
+		title.innerText = titleText[0]
+	})
+})
 
 // Модальные окна
 const modals = new DismalModules.Modals()
@@ -30,6 +45,12 @@ import './render.js'
 
 // Слайдеры
 import './sliders.js'
+
+
+
+// Ползунки в разделе фильтра опций
+import './rangesliders.js'
+
 
 // Открытие/закрытие моб. меню
 class Menu {
@@ -301,7 +322,7 @@ function activeSlide(slider, coordX) {
 		const currentActiveSlide = slider.querySelector('.c-product__slide.is-show')
 
 		if (currentActiveSlide) currentActiveSlide.classList.remove('is-show')
-		
+
 		slideElems[suitSlides[0]].classList.add('is-show')
 		slider.style.setProperty('--line-width', part * ( suitSlides[0] + 1 ) + 'px')
 	}

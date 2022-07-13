@@ -6,7 +6,7 @@
 	border-radius: $radius-s;
 	padding: 28px 24px;
 	overflow: hidden;
-	// transition: $tr;
+	transition: background-color $tr;
 
 	&:active {
 		// background: brig-color($frame-light, hover);
@@ -72,10 +72,10 @@
 	max-width: 68px;
 	width: 100%;
 	aspect-ratio: 1;
-	transition: $tr;
 
 	& svg {
 		fill: $accent-second;
+		transition: $tr;
 	}
 
 	@media (max-width: $laptop) {

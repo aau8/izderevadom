@@ -49,10 +49,10 @@ export class Accordions {
     }
 
     init(selector) {
-        let _accArr = Array.from( null !== selector ? typeof(selector) === 'string' ? document.querySelectorAll(selector) : selector : document.querySelectorAll(`[${this.attrs.container}]`))
+        let _accArr = Array.from(selector != null ? typeof(selector) === 'string' ? document.querySelectorAll(selector) : selector : document.querySelectorAll(`[${this.attrs.container}]`))
         this.accArr = _accArr.map(e => Array.from(e.querySelectorAll(`[${this.attrs.acc}]`)))
         this._combAccArr = Array().concat(...this.accArr)
-        this._combAccArr.forEach(_acc => this.close(_acc, false))
+        this._combAccArr.forEach(_acc => { if (!_acc.classList.contains('is-open')) this.close(_acc, false) })
         this._clickToggler()
         this._outsideOpener()
     }
@@ -80,6 +80,11 @@ export class Accordions {
             opacity: 1;
             visibility: visible;
         `
+
+		const _eAccOpen = new Event('acc-open')
+		_eAccOpen.data = this
+
+		_acc.dispatchEvent(_eAccOpen)
     }
 
     close(selector, makeCurrent = false) {
@@ -93,6 +98,11 @@ export class Accordions {
             opacity: 0;
             visibility: hidden;
         `
+
+		const _eAccClose = new Event('acc-close')
+		_eAccClose.data = this
+
+		_acc.dispatchEvent(_eAccClose)
     }
 
     _outsideOpener() {
@@ -126,7 +136,7 @@ export class Accordions {
 
     _setCurrentAcc(_acc) {
         this._currentAcc.container = _acc.closest(`[${this.attrs.container}]`)
-        this._curren,tAcc.acc = _acc
+        this._currentAcc.acc = _acc
         this._currentAcc.toggler = _acc.querySelector(`[${this.attrs.toggler}]`)
         this._currentAcc.body = _acc.querySelector(`[${this.attrs.body}]`)
     }
@@ -456,7 +466,7 @@ export function labelTextfield(container = document) {
 // Списки выбора
 export function select() {
     // Проверяем есть ли выбранные элементы при загрузке страницы. Если есть, то селект заполняется
-    const selectedItemElems = document.querySelectorAll('.select-dropdown__item.is-selected')
+    const selectedItemElems = document.querySelectorAll('.select:not(.select[data-select-with-checkbox]) .select-dropdown__item.is-selected')
 
     for (let i = 0; i < selectedItemElems.length; i++) {
         const selectedItem = selectedItemElems[i];

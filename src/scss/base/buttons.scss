@@ -145,12 +145,14 @@
     @media (any-hover: hover) {
 
         &:hover {
-            color: $accent;
+			--color: #{$accent};
+            color: var(--color);
         }
     }
 
     &:active {
-        color: brig-color($accent, active);
+		--color: #{brig-color($accent, active)};
+		color: var(--color);
     }
 
 	&.has-icon {

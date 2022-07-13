@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220713031141">
+    <link rel="stylesheet" href="./css/style.css?_v=20220713105156">
 
 </head>
 <body>
@@ -29,7 +29,7 @@
 	<div class="header-up">
 		<div class="header-up__container is-large">
 			<button class="burger header-up__burger" data-menu-open><span></span><span></span><span></span></button>
-			<a href="#" class="logo header__logo header-up__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
+			<a href="#" class="logo header__logo header-up__logo"><img src="./img/logo.png" alt=""></a>
 			<div class="location header__location">
 				<button class="location__toggle">
 					<span class="link has-icon location__btn">Москва</span>
@@ -120,7 +120,7 @@
 	</div>
 	<div class="header-down">
 		<div class="header-down__container is-large">
-			<a href="#" class="logo header__logo header-down__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
+			<a href="#" class="logo header__logo header-down__logo"><img src="./img/logo.png" alt=""></a>
 			<button class="btn is-second project-btn header__project-btn" data-project-open>
 				<span class="project-btn__icon">
 					<span></span>
@@ -609,6 +609,174 @@
 					</div>
 				</div>
 			</section>
+			<section class="section filter">
+				<div class="filter__container">
+					<div class="s-header">
+						<h2 class="s-header__title">Каркасные дома</h2>
+					</div>
+					<div class="filter__body is-pc" data-acc-container>
+						<div class="acc acc-category filter__acc" data-acc="category">
+							<button class="acc__toggle" data-acc-toggler>
+								<span class="acc__toggle-icon"></span>
+								<span class="acc__toggle-title" data-acc-title-text='["Показать категории", "Скрыть категории"]'>Скрыть категории</span>
+							</button>
+							<div class="acc__body" data-acc-body>
+								<div class="acc__content acc-category__content">
+									<div class="acc-category__block">
+										<h3 class="acc-category__block-title">этажность</h3>
+										<ul class="acc-category__block-list">
+											<li><a href="#" class="link">Одноэтажные</a></li>
+											<li><a href="#" class="link">С мансардой</a></li>
+											<li><a href="#" class="link">Полутораэтажные</a></li>
+											<li><a href="#" class="link">Двухэтажные</a></li>
+										</ul>
+									</div>
+									<div class="acc-category__block">
+										<h3 class="acc-category__block-title">цена</h3>
+										<ul class="acc-category__block-list">
+											<li><a href="#" class="link">Эконом</a></li>
+											<li><a href="#" class="link">До 2 млн. руб</a></li>
+										</ul>
+									</div>
+									<div class="acc-category__block">
+										<h3 class="acc-category__block-title">размерность</h3>
+										<ul class="acc-category__block-list">
+											<li><a href="#" class="link">10 на 10</a></li>
+											<li><a href="#" class="link">12 на 8</a></li>
+											<li><a href="#" class="link">12 на 9</a></li>
+											<li><a href="#" class="link">120 м²</a></li>
+											<li><a href="#" class="link">10 на 10</a></li>
+											<li><a href="#" class="link">12 на 8</a></li>
+										</ul>
+									</div>
+									<div class="acc-category__block">
+										<h3 class="acc-category__block-title">площадь</h3>
+										<ul class="acc-category__block-list">
+											<li><a href="#" class="link">до 100 м²</a></li>
+											<li><a href="#" class="link">до 120 м²</a></li>
+											<li><a href="#" class="link">до 140 м²</a></li>
+											<li><a href="#" class="link">до 160 м²</a></li>
+											<li><a href="#" class="link">до 180 м²</a></li>
+										</ul>
+									</div>
+									<div class="acc-category__block">
+										<h3 class="acc-category__block-title">дополнения</h3>
+										<ul class="acc-category__block-list">
+											<li><a href="#" class="link">С балконом</a></li>
+											<li><a href="#" class="link">С террасой</a></li>
+											<li><a href="#" class="link">С эркером</a></li>
+											<li><a href="#" class="link">С гаражом</a></li>
+										</ul>
+									</div>
+									<div class="acc-category__block">
+										<h3 class="acc-category__block-title">по назначению</h3>
+										<ul class="acc-category__block-list">
+											<li><a href="#" class="link">Гостевые</a></li>
+											<li><a href="#" class="link">Для дачи</a></li>
+											<li><a href="#" class="link">Для постоянного проживания</a></li>
+											<li><a href="#" class="link">Садовые</a></li>
+											<li><a href="#" class="link">Зимние</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="acc acc-options is-open filter__acc" data-acc="options">
+							<button class="acc__toggle" data-acc-toggler>
+								<span class="acc__toggle-icon"></span>
+								<span class="acc__toggle-title" data-acc-title-text='["Показать фильтр", "Скрыть фильтр"]'>Скрыть категории</span>
+							</button>
+							<div class="acc__body" data-acc-body>
+								<form action="#" class="acc__content acc-options__content">
+									<div class="acc-options__body">
+										<div class="acc-options__block is-range">
+											<h3 class="acc-options__block-title" data-prefix="руб">цена</h3>
+											<div class="acc-options__block-body">
+												<div class="acc-options__range" data-min="0" data-max="10000000" data-min-value="0" data-max-value="10000000">
+													<div class="acc-options__range-header">
+														<label class="acc-options__range-tf is-min">
+															<input type="text" name="price-min">
+														</label>
+														<label class="acc-options__range-tf is-max">
+															<input type="text" name="price-max">
+														</label>
+													</div>
+													<div class="acc-options__range-body">
+														<div class="acc-options__range-roller"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="acc-options__block is-range">
+											<h3 class="acc-options__block-title" data-prefix="м²">площадь</h3>
+											<div class="acc-options__block-body">
+												<div class="acc-options__range" data-min="0" data-max="1000" data-min-value="0" data-max-value="1000">
+													<div class="acc-options__range-header">
+														<label class="acc-options__range-tf is-min">
+															<input type="text" name="price-min">
+														</label>
+														<label class="acc-options__range-tf is-max">
+															<input type="text" name="price-max">
+														</label>
+													</div>
+													<div class="acc-options__range-body">
+														<div class="acc-options__range-roller"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="acc-options__block is-select">
+											<h3 class="acc-options__block-title" data-prefix="руб">размерность</h3>
+											<div class="acc-options__block-body">
+												<div class="select" data-select-with-checkbox>
+													<button type="button" class="select-input">
+														<span class="select-input__title"></span>
+														<input type="hidden" name="select">
+														<span class="select-input__chevron"></span>
+													</button>
+													<div class="select-dropdown">
+														<div class="select-dropdown__list">
+															<button class="select-dropdown__item is-selected">Все</button>
+															<button class="select-dropdown__item">Первый</button>
+															<button class="select-dropdown__item">Второй</button>
+															<button class="select-dropdown__item">Третий</button>
+														</div>
+													</div>
+												</div>
+												<div class="select">
+													<button type="button" class="select-input">
+														<span class="select-input__title"></span>
+														<input type="hidden" name="select">
+														<span class="select-input__chevron"></span>
+													</button>
+													<div class="select-dropdown">
+														<div class="select-dropdown__list">
+															<button class="select-dropdown__item is-selected">Все</button>
+															<button class="select-dropdown__item">Первый</button>
+															<button class="select-dropdown__item">Второй</button>
+															<button class="select-dropdown__item">Третий</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acc-options__footer">
+										<div class="acc-options__footer-left">
+											<button class="btn is-accent acc-options__apply">Применить</button>
+											<span class="acc-options__result">Найдено 24 проекта</span>
+										</div>
+										<button class="btn acc-options__reset">Сбросить</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="filter__body is-mob">
+
+					</div>
+				</div>
+			</section>
 			<section class="section catalog">
 				<div class="catalog__container">
 					<div class="catalog__header">
@@ -651,10 +819,10 @@
 						<div class="catalog__list">
 							<div class="c-product is-hit">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
@@ -683,10 +851,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
@@ -715,10 +883,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
@@ -747,10 +915,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
@@ -779,10 +947,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
@@ -811,10 +979,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
@@ -843,10 +1011,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
@@ -875,10 +1043,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
@@ -911,7 +1079,7 @@
 									<p class="c-nfp__text">Отправьте свой <b>эскиз, пожелания к изменению, проект с другого сайта</b></p>
 									<span class="btn is-light c-nfp__btn"><span>Рассчитать <b>бесплатно</b></span></span>
 								</div>
-								<div class="c-nfp__ill"><picture><source srcset="./img/products/not-founded-project.webp" type="image/webp"><img src="./img/products/not-founded-project.png" alt=""></picture></div>
+								<div class="c-nfp__ill"><img src="./img/products/not-founded-project.png" alt=""></div>
 							</a>
 						</div>
 						<div class="pagin catalog__pagin">
@@ -1133,7 +1301,7 @@
 						<div class="trust-visual">
 							<div class="trust-visual__wrap">
 								<div class="trust-visual__pagin-list"></div>
-								<div class="trust-visual__img"><picture><source srcset="./img/trust/visual.webp" type="image/webp"><img src="./img/trust/visual.jpg" alt=""></picture></div>
+								<div class="trust-visual__img"><img src="./img/trust/visual.jpg" alt=""></div>
 							</div>
 						</div>
 					</div>
@@ -1142,7 +1310,7 @@
 			<section class="order-estimate">
 				<div class="order-estimate__container">
 					<div class="order-estimate__wrap">
-						<div class="order-estimate__house"><picture><source srcset="./img/banners/house.webp" type="image/webp"><img src="./img/banners/house.png" alt=""></picture></div>
+						<div class="order-estimate__house"><img src="./img/banners/house.png" alt=""></div>
 						<div class="order-estimate__content">
 							<h2 class="order-estimate__title">Заказать смету дома <b>бесплатно!</b></h2>
 							<button class="btn is-light order-estimate__btn"><span>Оставить <b>заявку</b></span></button>
@@ -1257,10 +1425,10 @@
 					</div>
 					<div class="unique__wrap">
 						<div class="unique__img-block">
-							<div class="unique__img"><picture><source srcset="./img/unique/unique-1.webp" type="image/webp"><img src="./img/unique/unique-1.jpg" alt=""></picture></div>
-							<div class="unique__img"><picture><source srcset="./img/unique/unique-2.webp" type="image/webp"><img src="./img/unique/unique-2.jpg" alt=""></picture></div>
-							<div class="unique__img"><picture><source srcset="./img/unique/unique-3.webp" type="image/webp"><img src="./img/unique/unique-3.jpg" alt=""></picture></div>
-							<div class="unique__img"><picture><source srcset="./img/unique/unique-4.webp" type="image/webp"><img src="./img/unique/unique-4.jpg" alt=""></picture></div>
+							<div class="unique__img"><img src="./img/unique/unique-1.jpg" alt=""></div>
+							<div class="unique__img"><img src="./img/unique/unique-2.jpg" alt=""></div>
+							<div class="unique__img"><img src="./img/unique/unique-3.jpg" alt=""></div>
+							<div class="unique__img"><img src="./img/unique/unique-4.jpg" alt=""></div>
 						</div>
 						<div class="unique__content">
 							<div class="s-header unique__content-header is-pc">
@@ -1289,7 +1457,7 @@
 		<div class="footer-up__container is-large">
 			<div class="footer-up__wrap">
 				<div class="footer-info">
-					<a href="#" class="logo footer__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
+					<a href="#" class="logo footer__logo"><img src="./img/logo.png" alt=""></a>
 					<div class="footer-info__buttons">
 						<button class="btn has-icon is-accent footer__callback footer__callback_pc">Заказать звонок</button>
 						<button class="btn has-icon is-border is-light footer__btn-calc footer__btn-calc_main">Калькулятор проекта</button>
@@ -1396,10 +1564,10 @@
     </div>
 </div>
 
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js?_v=20220713031141"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lg-video.min.css?_v=20220713031141"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/video/lg-video.min.js?_v=20220713031141"></script> -->
-	<!-- <script src="https://cdn.skypack.dev/lightgallery@2.3.0-beta.4/plugins/video?_v=20220713031141"></script> -->
-    <script src="./js/bundle.min.js?_v=20220713031141"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js?_v=20220713105156"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lg-video.min.css?_v=20220713105156"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/video/lg-video.min.js?_v=20220713105156"></script> -->
+	<!-- <script src="https://cdn.skypack.dev/lightgallery@2.3.0-beta.4/plugins/video?_v=20220713105156"></script> -->
+    <script src="./js/bundle.min.js?_v=20220713105156"></script>
 </body>
 </html>

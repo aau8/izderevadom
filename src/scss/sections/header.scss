@@ -95,9 +95,7 @@
 .menu {
 	margin: 0 24px 0 108px;
 
-	@include resVal(margin-left, 24, 108, 1400, 1500);
-
-
+	@include resVal(margin-left, 16, 108, 1400, 1500);
 
 	@media (max-width: $hide-menu) {
 		position: absolute;
@@ -200,6 +198,10 @@
 
 		&:not(:last-child) {
 			margin-right: 24px;
+
+			@media (max-width: 1440px) {
+				margin-right: 16px;
+			}
 		}
 
 		& a {
