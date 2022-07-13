@@ -32,6 +32,11 @@
 	@media (max-width: $laptop) {
 		padding: 30px 24px;
 	}
+
+	@media (max-width: $tablet) {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 48px 12px;
+	}
 }
 
 .acc-category__block {
@@ -75,6 +80,14 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 32px 45px;
+
+	@media (max-width: 900px) {
+		gap: 24px
+	}
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 .acc-options__block {

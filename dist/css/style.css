@@ -5998,6 +5998,10 @@ strong {
         -ms-transform: translate(95%, 0);
             transform: translate(95%, 0);
   }
+
+  .acc-options__body {
+    gap: 24px;
+  }
 }
 
 @media (max-width: 850px) {
@@ -6280,6 +6284,17 @@ strong {
 
   .trust-visual__img {
     --padding: 50px;
+  }
+
+  .acc-category__content {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 12px;
+  }
+
+  .acc-options__body {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

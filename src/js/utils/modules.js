@@ -69,8 +69,8 @@ export class Accordions {
 				this.close(_acc, false)
 			}
 			else {
-				const body = _acc.querySelector('[data-acc-body]')
-				body.style.overflow = 'hidden'
+				// const body = _acc.querySelector('[data-acc-body]')
+				// body.style.overflow = 'hidden'
 				// body.style.overflow = 'hidden'
 
 			}
