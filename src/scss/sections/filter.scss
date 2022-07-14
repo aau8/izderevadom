@@ -405,6 +405,26 @@
 		background: $text-label;
 		margin-right: 15px;
 		vertical-align: middle;
+		transition: $tr;
+	}
+
+	&:active {
+		color: brig-color($text-primary, active);
+
+		&::before {
+			background-color: brig-color($accent, active);
+		}
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			color: $text-primary;
+
+			&::before {
+				background-color: $accent;
+			}
+		}
 	}
 
 	@media (max-width: 600px) {

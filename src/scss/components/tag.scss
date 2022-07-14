@@ -4,6 +4,25 @@
 	border: 1px solid $border-line;
 	border-radius: $radius-s;
 	padding: 8px 10px;
+	transition: $tr;
+
+	&:active {
+		color: $accent-second;
+		border-color: $accent-second;
+		background: create-rgba($accent-second, .1);
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			color: $accent-second;
+			border-color: $accent-second;
+		}
+
+		&:active {
+			background: create-rgba($accent-second, .08);
+		}
+	}
 
 	@media (max-width: $mobile-l) {
 		font-size: 13px;

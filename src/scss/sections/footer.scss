@@ -236,8 +236,24 @@
 
 .footer__company-info {
 
-	@media (max-width: $mobile-l) {
+	& .company-info__tel-container.has-few-tels {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: -2px -7px;
 
+		& .company-info__tel {
+			font-size: 20px;
+			color: $light;
+
+			@media (max-width: $tablet) {
+				font-size: 16px;
+			}
+		}
+
+		& > * {
+			margin: 2px 7px;
+		}
 	}
 }
 
@@ -265,6 +281,7 @@
 
 	@media (max-width: $mobile-l) {
 		font-size: 15px;
+		text-align: center;
 	}
 }
 

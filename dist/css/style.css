@@ -3047,11 +3047,19 @@ strong {
   width: fit-content;
 }
 
+.company-info__tel-container.has-few-tels .company-info__tel {
+  font-size: 16px;
+}
+
 .company-info__tel {
   display: block;
   font-size: 20px;
   font-weight: 700;
   white-space: nowrap;
+}
+
+.company-info__tel span {
+  color: #5BAA00;
 }
 
 .company-info__work-time {
@@ -3672,6 +3680,15 @@ strong {
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 4px;
   padding: 8px 10px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.tag:active {
+  color: #C8996B;
+  border-color: #C8996B;
+  background: rgba(200, 153, 107, 0.1);
 }
 
 .c-project {
@@ -4624,8 +4641,15 @@ strong {
 }
 
 .search-result__title {
+  width: 100%;
   font-size: 18px;
   font-weight: 500;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -5397,6 +5421,17 @@ strong {
   background: #BDBDBD;
   margin-right: 15px;
   vertical-align: middle;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.acc-options__reset:active {
+  color: #242424;
+}
+
+.acc-options__reset:active::before {
+  background-color: #4b8b00;
 }
 
 .footer {
@@ -5476,6 +5511,27 @@ strong {
 
 .footer-info__content > *:not(:last-child) {
   margin-bottom: 18px;
+}
+
+.footer__company-info .company-info__tel-container.has-few-tels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -2px -7px;
+}
+
+.footer__company-info .company-info__tel-container.has-few-tels .company-info__tel {
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer__company-info .company-info__tel-container.has-few-tels > * {
+  margin: 2px 7px;
 }
 
 .footer__tel {
@@ -6616,6 +6672,10 @@ strong {
     padding: 24px;
   }
 
+  .search-result__title {
+    -webkit-line-clamp: 2;
+  }
+
   .steps__body {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -6815,6 +6875,10 @@ strong {
 
   .acc-options__result {
     font-size: 14px;
+  }
+
+  .footer__company-info .company-info__tel-container.has-few-tels .company-info__tel {
+    font-size: 16px;
   }
 }
 
@@ -7617,6 +7681,7 @@ strong {
 
   .footer__work-time {
     font-size: 15px;
+    text-align: center;
   }
 
   .footer__email_pc {
@@ -7682,6 +7747,12 @@ strong {
 
   .breadcrumbs__item.is-home a:active {
     background: #c08a55;
+  }
+}
+
+@media (any-hover: hover) and (max-width: 450px) {
+  .search-result:hover .search-result__title {
+    text-decoration: none;
   }
 }
 
@@ -7955,6 +8026,15 @@ strong {
     background: #4b8b00;
   }
 
+  .tag:hover {
+    color: #C8996B;
+    border-color: #C8996B;
+  }
+
+  .tag:active {
+    background: rgba(200, 153, 107, 0.08);
+  }
+
   .c-project:hover {
     background: #C8996B;
   }
@@ -8014,6 +8094,7 @@ strong {
 
   .search-result:hover .search-result__title {
     color: #539b00;
+    text-decoration: underline;
   }
 
   .search-result:active .search-result__title {
@@ -8026,6 +8107,14 @@ strong {
 
   .acc-category__block-more:active {
     color: #c08a55;
+  }
+
+  .acc-options__reset:hover {
+    color: #333;
+  }
+
+  .acc-options__reset:hover::before {
+    background-color: #5BAA00;
   }
 }
 

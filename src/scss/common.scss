@@ -233,11 +233,25 @@
 	width: fit-content;
 }
 
+.company-info__tel-container {
+
+	&.has-few-tels {
+
+		& .company-info__tel {
+			font-size: 16px;
+		}
+	}
+}
+
 .company-info__tel {
 	display: block;
 	font-size: 20px;
 	font-weight: 700;
 	white-space: nowrap;
+
+	& span {
+		color: $accent;
+	}
 }
 
 .company-info__work-time {
