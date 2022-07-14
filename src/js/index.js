@@ -2,7 +2,12 @@ import { removeAllClasses, bodyLock, bodyUnlock } from "./utils/functions.js"
 import DismalModules, { acc } from "./utils/modules.js"
 
 // Аккордеон
-const accordions = new DismalModules.Accordions()
+if (window.innerWidth > 600) {
+	const accordions = new DismalModules.Accordions('.filter__body')
+}
+else {
+	const accordions = new DismalModules.Accordions('.acc-category__content')
+}
 
 const filterAccElems = document.querySelectorAll('.filter__acc')
 

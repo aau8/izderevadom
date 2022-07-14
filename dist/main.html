@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220713230954">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220714061827">
 
 </head>
 <body>
@@ -634,17 +634,116 @@
 							<div class="modal__wrap m-filter__wrap">
 								<div class="modal__window m-filter__window">
 									<div class="m-filter__header">
-										<h2 class="m-filter__title">Фильтр</h2>
+										<h2 class="m-filter__title">Категории</h2>
 										<button class="burger is-active modal-close m-filter__modal-close" data-modal-close><span></span><span></span><span></span></button>
 									</div>
 									<div class="acc acc-category is-open filter__acc" data-acc="category">
-										<button class="acc__toggle" data-acc-toggler>
+										<button class="acc__toggle acc-category__toggle" data-acc-toggler>
 											<span class="acc__toggle-icon"></span>
 											<span class="acc__toggle-title" data-acc-title-text='["Показать категории", "Скрыть категории"]'>Скрыть категории</span>
 										</button>
 										<div class="acc__body" data-acc-body>
-											<div class="acc__content acc-category__content">
-												<div class="acc-category__block">
+											<div class="acc__content acc-category__content" data-acc-container>
+												<div class="acc acc-category__block" data-acc>
+													<button class="acc__toggle" data-acc-toggler>
+														<span class="acc__toggle-title">этажность</span>
+														<span class="acc__toggle-icon"></span>
+													</button>
+													<div class="acc__body" data-acc-body>
+														<div class="acc__content">
+															<ul class="acc-category__block-list">
+																<li><a href="#" class="link">Одноэтажные</a></li>
+																<li><a href="#" class="link">С мансардой</a></li>
+																<li><a href="#" class="link">Полутораэтажные</a></li>
+																<li><a href="#" class="link">Двухэтажные</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="acc acc-category__block" data-acc>
+													<button class="acc__toggle" data-acc-toggler>
+														<span class="acc__toggle-title">цена</span>
+														<span class="acc__toggle-icon"></span>
+													</button>
+													<div class="acc__body" data-acc-body>
+														<div class="acc__content">
+															<ul class="acc-category__block-list">
+																<li><a href="#" class="link">Эконом</a></li>
+																<li><a href="#" class="link">До 2 млн. руб</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="acc acc-category__block" data-acc>
+													<button class="acc__toggle" data-acc-toggler>
+														<span class="acc__toggle-title">размерность</span>
+														<span class="acc__toggle-icon"></span>
+													</button>
+													<div class="acc__body" data-acc-body>
+														<div class="acc__content">
+															<ul class="acc-category__block-list">
+																<li><a href="#" class="link">10 на 10</a></li>
+																<li><a href="#" class="link">12 на 8</a></li>
+																<li><a href="#" class="link">12 на 9</a></li>
+																<li><a href="#" class="link">120 м²</a></li>
+																<li><a href="#" class="link">10 на 10</a></li>
+																<li><a href="#" class="link">12 на 8</a></li>
+															</ul>
+															<button class="acc-category__block-more">Показать еще</but>
+														</div>
+													</div>
+												</div>
+												<div class="acc acc-category__block" data-acc>
+													<button class="acc__toggle" data-acc-toggler>
+														<span class="acc__toggle-title">площадь</span>
+														<span class="acc__toggle-icon"></span>
+													</button>
+													<div class="acc__body" data-acc-body>
+														<div class="acc__content">
+															<ul class="acc-category__block-list">
+																<li><a href="#" class="link">до 100 м²</a></li>
+																<li><a href="#" class="link">до 120 м²</a></li>
+																<li><a href="#" class="link">до 140 м²</a></li>
+																<li><a href="#" class="link">до 160 м²</a></li>
+																<li><a href="#" class="link">до 180 м²</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="acc acc-category__block" data-acc>
+													<button class="acc__toggle" data-acc-toggler>
+														<span class="acc__toggle-title">дополнения</span>
+														<span class="acc__toggle-icon"></span>
+													</button>
+													<div class="acc__body" data-acc-body>
+														<div class="acc__content">
+															<ul class="acc-category__block-list">
+																<li><a href="#" class="link">С балконом</a></li>
+																<li><a href="#" class="link">С террасой</a></li>
+																<li><a href="#" class="link">С эркером</a></li>
+																<li><a href="#" class="link">С гаражом</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="acc acc-category__block" data-acc>
+													<button class="acc__toggle" data-acc-toggler>
+														<span class="acc__toggle-title">по назначению</span>
+														<span class="acc__toggle-icon"></span>
+													</button>
+													<div class="acc__body" data-acc-body>
+														<div class="acc__content">
+															<ul class="acc-category__block-list">
+																<li><a href="#" class="link">Гостевые</a></li>
+																<li><a href="#" class="link">Для дачи</a></li>
+																<li><a href="#" class="link">Для постоянного проживания</a></li>
+																<li><a href="#" class="link">Садовые</a></li>
+																<li><a href="#" class="link">Зимние</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<!-- <div class="acc-category__block">
 													<h3 class="acc-category__block-title">этажность</h3>
 													<ul class="acc-category__block-list">
 														<li><a href="#" class="link">Одноэтажные</a></li>
@@ -652,8 +751,8 @@
 														<li><a href="#" class="link">Полутораэтажные</a></li>
 														<li><a href="#" class="link">Двухэтажные</a></li>
 													</ul>
-												</div>
-												<div class="acc-category__block">
+												</div> -->
+												<!-- <div class="acc-category__block">
 													<h3 class="acc-category__block-title">цена</h3>
 													<ul class="acc-category__block-list">
 														<li><a href="#" class="link">Эконом</a></li>
@@ -700,7 +799,7 @@
 														<li><a href="#" class="link">Садовые</a></li>
 														<li><a href="#" class="link">Зимние</a></li>
 													</ul>
-												</div>
+												</div> -->
 											</div>
 										</div>
 									</div>
@@ -1135,7 +1234,7 @@
 						<span class="catalog__header-title">Сортировать проекты</span>
 						<button class="btn has-icon is-accent catalog__btn-filter" data-modal-open="options">Фильтр</button>
 						<button class="btn is-light catalog__btn-cat" data-modal-open="category">Категории</button>
-						<div class="select is-select-items catalog__select">
+						<div class="select select-items catalog__select">
 							<button class="select-input">
 								<span class="select-input__title">Сортировать проекты</span>
 								<input type="hidden" name="select">
@@ -1934,10 +2033,10 @@
     </div>
 </div>
 
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js?_v=20220713230954"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lg-video.min.css?_v=20220713230954"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/video/lg-video.min.js?_v=20220713230954"></script> -->
-	<!-- <script src="https://cdn.skypack.dev/lightgallery@2.3.0-beta.4/plugins/video?_v=20220713230954"></script> -->
-    <script src="./js/bundle.min.js?_v=20220713230954"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js?_v=20220714061827"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lg-video.min.css?_v=20220714061827"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/video/lg-video.min.js?_v=20220714061827"></script> -->
+	<!-- <script src="https://cdn.skypack.dev/lightgallery@2.3.0-beta.4/plugins/video?_v=20220714061827"></script> -->
+    <script src="./js/bundle.min.js?_v=20220714061827"></script>
 </body>
 </html>

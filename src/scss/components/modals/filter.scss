@@ -45,8 +45,8 @@
 }
 
 .m-filter__wrap {
-	padding: 0; 
-    transform: translate(100vh, 0);
+	padding: 0;
+    transform: translate(100vw, 0);
 
 	@media (min-width: 601px) {
 		min-height: initial;
