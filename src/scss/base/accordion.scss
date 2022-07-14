@@ -56,6 +56,8 @@
 
 .acc__toggle-icon {
 	--size: 28px;
+	--icon: url('@img/sprite-new.svg#arrow-triangle');
+
     position: relative;
     min-width: var(--size);
     width: var(--size);
@@ -74,8 +76,8 @@
 		width: 12px;
 		height: 12px;
 		display: block;
-		-webkit-mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
-		mask: center/contain no-repeat url('@img/sprite-new.svg#arrow-triangle');
+		-webkit-mask: center/contain no-repeat var(--icon);
+		mask: center/contain no-repeat var(--icon);
 		background-color: #fff;
 		transition: $tr;
 	}

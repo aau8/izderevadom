@@ -24,6 +24,10 @@
 
 	& .acc__body {
 		background: $frame-light;
+
+		@media (max-width: 600px) {
+			background: transparent;
+		}
 	}
 
 }
@@ -63,6 +67,16 @@
 
 .acc-category__block {
 
+	& .acc__toggle-icon {
+		--icon: url('data:image/svg+xml,%3Csvg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 3L8 9L14 3L16 5L8 13L0 5L2 3Z\" fill=\"%235BAA00\"/%3E%3C/svg%3E');
+
+		background: $frame-light;
+
+		&::before {
+			background-color: $accent;
+		}
+	}
+
 	& .acc__toggle-title {
 		font-size: 14px;
 		font-weight: 700;
@@ -75,6 +89,14 @@
 
 		& .acc__toggle {
 			border-bottom-color: transparent;
+		}
+
+		& .acc__toggle .acc__toggle-icon {
+			background: $accent;
+
+			&::before {
+				background-color: $light;
+			}
 		}
 	}
 
@@ -98,6 +120,8 @@
 			& li {
 
 				& a {
+					width: 100%;
+					display: inline-block;
 					box-shadow: none;
 				}
 			}

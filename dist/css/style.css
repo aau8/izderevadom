@@ -2651,6 +2651,7 @@ strong {
 
 .acc__toggle-icon {
   --size: 28px;
+  --icon: url("../img/sprite-new.svg#arrow-triangle");
   position: relative;
   min-width: var(--size);
   width: var(--size);
@@ -2676,8 +2677,8 @@ strong {
   width: 12px;
   height: 12px;
   display: block;
-  -webkit-mask: center/contain no-repeat url("../img/sprite-new.svg#arrow-triangle");
-  mask: center/contain no-repeat url("../img/sprite-new.svg#arrow-triangle");
+  -webkit-mask: center/contain no-repeat var(--icon);
+  mask: center/contain no-repeat var(--icon);
   background-color: #fff;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -4258,6 +4259,9 @@ strong {
 }
 
 .m-filter__wrap {
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
   padding: 0;
   -webkit-transform: translate(100vw, 0);
       -ms-transform: translate(100vw, 0);
@@ -5180,6 +5184,15 @@ strong {
   padding: 30px 50px 40px;
 }
 
+.acc-category__block .acc__toggle-icon {
+  --icon: url('data:image/svg+xml,%3Csvg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M2 3L8 9L14 3L16 5L8 13L0 5L2 3Z" fill="%235BAA00"/%3E%3C/svg%3E');
+  background: #FAFAFA;
+}
+
+.acc-category__block .acc__toggle-icon::before {
+  background-color: #5BAA00;
+}
+
 .acc-category__block .acc__toggle-title {
   font-size: 14px;
   font-weight: 700;
@@ -5190,6 +5203,14 @@ strong {
 
 .acc-category__block.is-open .acc__toggle {
   border-bottom-color: transparent;
+}
+
+.acc-category__block.is-open .acc__toggle .acc__toggle-icon {
+  background: #5BAA00;
+}
+
+.acc-category__block.is-open .acc__toggle .acc__toggle-icon::before {
+  background-color: #fff;
 }
 
 .acc-category__block-title {
@@ -7077,6 +7098,10 @@ strong {
     height: 46px;
   }
 
+  .acc-category .acc__body {
+    background: transparent;
+  }
+
   .acc-category__toggle {
     display: none;
   }
@@ -7110,6 +7135,8 @@ strong {
   }
 
   .acc-category__block .acc-category__block-list li a {
+    width: 100%;
+    display: inline-block;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
