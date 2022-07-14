@@ -28,6 +28,7 @@
         & > .acc__body {
             opacity: 1;
             visibility: visible;
+			pointer-events: fill;
         }
     }
 }
@@ -89,6 +90,7 @@
     // opacity: 0;
     // visibility: hidden;
     // overflow: hidden;
+	pointer-events: none;
     transition: $tr;
 }
 

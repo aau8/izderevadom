@@ -2619,6 +2619,7 @@ strong {
 .acc.is-open > .acc__body {
   opacity: 1;
   visibility: visible;
+  pointer-events: fill;
 }
 
 .acc__toggle {
@@ -2686,6 +2687,7 @@ strong {
 }
 
 .acc__body {
+  pointer-events: none;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -2954,6 +2956,7 @@ strong {
 
 .link-soc {
   --icon-size: 16px;
+  font-weight: 600;
   border-radius: 98px;
 }
 
