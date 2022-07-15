@@ -1,3 +1,27 @@
+.filter {
+	// margin-top: 70px;
+	margin: 70px 0 -30px 0;
+
+	@media (max-width: $mobile-l) {
+		margin: 40px 0 -30px 0;
+		// margin-top: 40px;
+	}
+}
+
+.filter__acc {
+
+	& .acc__body {
+		pointer-events: none;
+	}
+
+	&.is-open {
+
+		& .acc__body {
+			pointer-events: fill;
+		}
+	}
+}
+
 .filter__body {
 
 	&.is-pc {
@@ -5,10 +29,10 @@
 		& > * {
 
 			&:not(:last-child) {
-				margin-bottom: 60px;
+				// margin-bottom: 16px;
 
 				@media (max-width: $laptop) {
-					margin-bottom: 40px;
+					// margin-bottom: 40px;
 				}
 			}
 		}
@@ -21,6 +45,7 @@
 
 // Аккордеон категории
 .acc-category {
+	margin-bottom: 16px;
 
 	& .acc__body {
 		background: $frame-light;
@@ -30,6 +55,13 @@
 		}
 	}
 
+	&.is-open {
+		margin-bottom: 60px;
+
+		@media (max-width: $laptop) {
+			margin-bottom: 40px;
+		}
+	}
 }
 
 .acc-category__toggle {
@@ -164,13 +196,43 @@
 	text-transform: uppercase;
 }
 
-.acc-category__block-list {
+.acc-category__block-column {
 	padding-top: 16px;
+
+	&.has-many-items {
+
+		& .acc-category__block-list {
+			overflow: hidden;
+			transition: $tr;
+		}
+
+		& .acc-category__block-more {
+			margin-top: 0;
+
+			@media (max-width: 600px) {
+				display: none;
+			}
+		}
+
+		&.is-open {
+
+			& .acc-category__block-more {
+				margin-top: 16px;
+
+				&::after {
+					transform: scale(-1, -1);
+				}
+			}
+		}
+	}
+}
+
+.acc-category__block-list {
 
 	& li {
 
 		&:not(:last-child) {
-			margin-bottom: 16px;
+			padding-bottom: 16px;
 		}
 
 		& a {
@@ -287,8 +349,7 @@
 	letter-spacing: .04em;
 	text-transform: uppercase;
 
-	&::after {
-		content: attr(data-prefix);
+	& span {
 		display: inline-block;
 		font-size: 13px;
 		font-weight: 500;

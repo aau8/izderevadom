@@ -8,7 +8,8 @@
 	overflow: hidden;
 
 	@media (max-width: $mobile-l) {
-		aspect-ratio: .72;
+		// aspect-ratio: .72;
+		height: 520px;
 	}
 }
 

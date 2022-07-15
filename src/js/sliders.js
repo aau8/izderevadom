@@ -91,39 +91,7 @@ const trustSwiper = new Swiper(".trust-slider__slider", {
 	slidesPerView: 1,
 	effect: 'fade',
 	autoHeight: true,
-
-	breakpoints: {
-		// 950: {
-		// 	slidesPerView: 5,
-		// 	spaceBetween: 20,
-		// 	centeredSlides: false,
-		// 	loop: true,
-		// },
-		// 768: {
-		// 	slidesPerView: 4,
-		// 	centeredSlides: true,
-		// 	spaceBetween: 20,
-		// 	loop: true,
-		// },
-		// 600: {
-		// 	slidesPerView: 2,
-		// 	centeredSlides: true,
-		// 	spaceBetween: 20,
-		// 	loop: true,
-		// },
-		// 450: {
-		// 	slidesPerView: 1.6,
-		// 	centeredSlides: true,
-		// 	spaceBetween: 20,
-		// 	loop: true,
-		// },
-		// 0: {
-		// 	slidesPerView: 1.2,
-		// 	centeredSlides: true,
-		// 	spaceBetween: 10,
-		// 	loop: true,
-		// },
-	},
+	loop: true,
 
     navigation: {
         nextEl: ".trust-slider__arrow-next",
@@ -169,4 +137,49 @@ function distribInCircle( start, end, paginationEl ) {
 
 		counterPart += part
 	})
+}
+
+// Слайдер в карточке товара
+const productElems = document.querySelectorAll('.c-product')
+
+productElems.forEach(product => {
+	const slider = product.querySelector('.c-product__slider')
+
+	activeSlide(slider, 0)
+
+	slider.addEventListener('mousemove', e => {
+		const coordX = e.clientX - slider.getBoundingClientRect().left
+
+		activeSlide(slider, coordX)
+	})
+
+})
+
+function activeSlide(slider, coordX) {
+	const slideElems = slider.querySelectorAll('.c-product__slide')
+	const slidesLength = slideElems.length
+	const sliderWidth = slider.clientWidth
+	const part = sliderWidth / slidesLength
+
+	if ( coordX < 0 ) coordX = 0
+	if ( coordX > sliderWidth ) coordX = sliderWidth
+
+	let suitSlides = []
+	let counterPart = part
+
+	for (let i = 0; i < slidesLength; i++) {
+		if ( coordX <= counterPart ) suitSlides.push(i)
+
+		counterPart += part
+	}
+
+	if (!slideElems[suitSlides[0]].classList.contains('is-show')) {
+		const currentActiveSlide = slider.querySelector('.c-product__slide.is-show')
+
+		if (currentActiveSlide) currentActiveSlide.classList.remove('is-show')
+
+		slideElems[suitSlides[0]].classList.add('is-show')
+		slider.style.setProperty('--line-width', part + 'px')
+		slider.style.setProperty('--line-left', (part * ( suitSlides[0] + 1 )) - part + 'px')
+	}
 }

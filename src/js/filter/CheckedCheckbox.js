@@ -1,3 +1,4 @@
+// Ползунки в разделе фильтра опций
 import { removeAllClasses } from "../utils/functions.js";
 
 // Проверяем есть ли выбранные элементы при загрузке страницы. Если есть, то селект заполняется
@@ -15,7 +16,7 @@ import { removeAllClasses } from "../utils/functions.js";
 // }
 
 
-class SelectCheckbox {
+class CheckedCheckbox {
 	constructor(select) {
 		this.select = typeof select === 'string' ? document.querySelector(select) : select
 
@@ -37,34 +38,51 @@ class SelectCheckbox {
 			else this.open()
 		})
 
-		this._checkedInput()
-	}
 
-	_checkedInput() {
 		this.selectCheckboxElems = Array.from(this.select.querySelectorAll('.select-dropdown__checkbox input'))
 		this.selectedArr = []
 
-		this.selectCheckboxElems.forEach(selectCheckbox => {
+		// this._checkAfterLoadDOM()
 
-			selectCheckbox.addEventListener('change', e => {
-				const inputElemsExceptInputAll = this.selectCheckboxElems.filter( input => !input.parentElement.classList.contains('select-dropdown__checkbox-all') )
-				const checkboxAll = this.selectCheckboxElems.find( input => input.parentElement.classList.contains('select-dropdown__checkbox-all') )
 
-				if (selectCheckbox.parentElement.classList.contains('select-dropdown__checkbox-all')) {
-					this.selectCheckboxElems.map( input => input.checked = selectCheckbox.checked )
-				}
+		this.selectCheckboxElems.forEach(checkedCheckbox => {
 
-				if (inputElemsExceptInputAll.every( input => input.checked )) {
-					checkboxAll.checked = true
-				}
-				else {
-					checkboxAll.checked = false
-				}
+			this._checkedInputAfterLoadDOM(checkedCheckbox)
 
-				this.selectedArr = this.selectCheckboxElems.filter( input => input.checked )
-				this._setData()
+			checkedCheckbox.addEventListener('change', e => {
+				this._checkedInput(checkedCheckbox)
 			})
+
 		})
+
+		this.selectedArr = this.selectCheckboxElems.filter( input => input.checked )
+		this._setData()
+	}
+
+	_checkedInputAfterLoadDOM(checkedCheckbox) {
+
+		if (checkedCheckbox.parentElement.classList.contains('select-dropdown__checkbox-all') && checkedCheckbox.checked) {
+			this.selectCheckboxElems.map( input => input.checked = checkedCheckbox.checked )
+		}
+	}
+
+	_checkedInput(checkedCheckbox) {
+		const inputElemsExceptInputAll = this.selectCheckboxElems.filter( input => !input.parentElement.classList.contains('select-dropdown__checkbox-all') )
+		const checkboxAll = this.selectCheckboxElems.find( input => input.parentElement.classList.contains('select-dropdown__checkbox-all') )
+
+		if (checkedCheckbox.parentElement.classList.contains('select-dropdown__checkbox-all')) {
+			this.selectCheckboxElems.map( input => input.checked = checkedCheckbox.checked )
+		}
+
+		if (inputElemsExceptInputAll.every( input => input.checked )) {
+			checkboxAll.checked = true
+		}
+		else {
+			checkboxAll.checked = false
+		}
+
+		this.selectedArr = this.selectCheckboxElems.filter( input => input.checked )
+		this._setData()
 	}
 
 	_setData() {
@@ -78,7 +96,7 @@ class SelectCheckbox {
 			value = 'Выберите пункт'
 		}
 		else {
-			value = this.selectedArr.map( input => input.parentElement.querySelector('span').innerText ).join(', ')
+			value = this.selectedArr.map( input => input.parentElement.querySelector('span').textContent ).join(', ')
 		}
 
 		selectTitle.innerText = value
@@ -106,5 +124,5 @@ class SelectCheckbox {
 const selectCheckboxElems = document.querySelectorAll('.select-checkbox')
 
 selectCheckboxElems.forEach(elem => {
-	new SelectCheckbox(elem)
+	new CheckedCheckbox(elem)
 })

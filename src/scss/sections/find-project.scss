@@ -2,9 +2,14 @@
 
 	&.on-page-main {
 		margin-top: 42px;
+		margin: 42px 0 70px;
 
 		@media (max-width: $laptop) {
-			margin-top: 20px;
+			margin: 20px 0 70px;
+		}
+
+		@media (max-width: $mobile-l) {
+			margin: 20px 0 40px;
 		}
 	}
 }

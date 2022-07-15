@@ -12,7 +12,6 @@
 	<div class="wrapper">
         @@include('tpls/header.html',{})
 
-		<main class="main"></main>
 		<div class="content has-pb-null">
 			<div class="breadcrumbs">
 				<div class="breadcrumbs__container is-large">
@@ -53,7 +52,7 @@
 			<section class="section filter">
 				<div class="filter__container">
 					<div class="s-header">
-						<h2 class="s-header__title">Каркасные дома</h2>
+						<span class="s-header__title">Каркасные дома</span>
 					</div>
 					<div class="filter__body is-pc" data-acc-container>
 
@@ -61,7 +60,7 @@
 							<div class="modal__wrap m-filter__wrap">
 								<div class="modal__window m-filter__window">
 									<div class="m-filter__header">
-										<h2 class="m-filter__title">Категории</h2>
+										<span class="m-filter__title">Категории</span>
 										<button class="burger is-active modal-close m-filter__modal-close" data-modal-close><span></span><span></span><span></span></button>
 									</div>
 									<div class="acc acc-category is-open filter__acc" data-acc="category">
@@ -72,161 +71,160 @@
 										<div class="acc__body" data-acc-body>
 											<div class="acc__content acc-category__content" data-acc-container>
 												<div class="acc acc-category__block" data-acc>
-													<button class="acc__toggle" data-acc-toggler>
+													<div class="acc__toggle" data-acc-toggler>
 														<span class="acc__toggle-title">этажность</span>
 														<span class="acc__toggle-icon"></span>
-													</button>
+													</div>
 													<div class="acc__body" data-acc-body>
-														<div class="acc__content">
-															<ul class="acc-category__block-list">
-																<li><a href="#" class="link">Одноэтажные</a></li>
-																<li><a href="#" class="link">С мансардой</a></li>
-																<li><a href="#" class="link">Полутораэтажные</a></li>
-																<li><a href="#" class="link">Двухэтажные</a></li>
-															</ul>
+														<div class="acc__content ">
+															<div class="acc-category__block-column">
+																<ul class="acc-category__block-list">
+																	<li><a href="#" class="link">Одноэтажные</a></li>
+																	<li><a href="#" class="link">С мансардой</a></li>
+																	<li><a href="#" class="link">Полутораэтажные</a></li>
+																	<li><a href="#" class="link">Двухэтажные</a></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 												</div>
 												<div class="acc acc-category__block" data-acc>
-													<button class="acc__toggle" data-acc-toggler>
+													<div class="acc__toggle" data-acc-toggler>
 														<span class="acc__toggle-title">цена</span>
 														<span class="acc__toggle-icon"></span>
-													</button>
+													</div>
 													<div class="acc__body" data-acc-body>
 														<div class="acc__content">
-															<ul class="acc-category__block-list">
-																<li><a href="#" class="link">Эконом</a></li>
-																<li><a href="#" class="link">До 2 млн. руб</a></li>
-															</ul>
+															<div class="acc-category__block-column">
+																<ul class="acc-category__block-list">
+																	<li><a href="#" class="link">Эконом</a></li>
+																	<li><a href="#" class="link">До 2 млн. руб</a></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 												</div>
 												<div class="acc acc-category__block" data-acc>
-													<button class="acc__toggle" data-acc-toggler>
+													<div class="acc__toggle" data-acc-toggler>
 														<span class="acc__toggle-title">размерность</span>
 														<span class="acc__toggle-icon"></span>
-													</button>
+													</div>
 													<div class="acc__body" data-acc-body>
 														<div class="acc__content">
-															<ul class="acc-category__block-list">
-																<li><a href="#" class="link">10 на 10</a></li>
-																<li><a href="#" class="link">12 на 8</a></li>
-																<li><a href="#" class="link">12 на 9</a></li>
-																<li><a href="#" class="link">120 м²</a></li>
-																<li><a href="#" class="link">10 на 10</a></li>
-																<li><a href="#" class="link">12 на 8</a></li>
-															</ul>
-															<button class="acc-category__block-more">Показать еще</but>
+															<div class="acc-category__block-column has-many-items">
+																<ul class="acc-category__block-list">
+																	<li><a href="#" class="link">10 на 10</a></li>
+																	<li><a href="#" class="link">12 на 8</a></li>
+																	<li><a href="#" class="link">12 на 9</a></li>
+																	<li><a href="#" class="link">120 м²</a></li>
+																	<li><a href="#" class="link">10 на 10</a></li>
+																	<li><a href="#" class="link">12 на 8</a></li>
+																	<li><a href="#" class="link">12 на 8</a></li>
+																	<li><a href="#" class="link">12 на 8</a></li>
+																	<li><a href="#" class="link">12 на 8</a></li>
+																	<li><a href="#" class="link">12 на 8</a></li>
+																	<li><a href="#" class="link">12 на 8</a></li>
+																	<li><a href="#" class="link">12 на 8</a></li>
+																	<li><a href="#" class="link">12 на 8</a></li>
+																	<li><a href="#" class="link">12 на 8</a></li>
+																</ul>
+																<button class="acc-category__block-more">Показать еще</button>
+															</div>
 														</div>
 													</div>
 												</div>
 												<div class="acc acc-category__block" data-acc>
-													<button class="acc__toggle" data-acc-toggler>
+													<div class="acc__toggle" data-acc-toggler>
 														<span class="acc__toggle-title">площадь</span>
 														<span class="acc__toggle-icon"></span>
-													</button>
+													</div>
 													<div class="acc__body" data-acc-body>
 														<div class="acc__content">
-															<ul class="acc-category__block-list">
-																<li><a href="#" class="link">до 100 м²</a></li>
-																<li><a href="#" class="link">до 120 м²</a></li>
-																<li><a href="#" class="link">до 140 м²</a></li>
-																<li><a href="#" class="link">до 160 м²</a></li>
-																<li><a href="#" class="link">до 180 м²</a></li>
-															</ul>
+															<div class="acc-category__block-column has-many-items">
+																<ul class="acc-category__block-list">
+																	<li><a href="#" class="link">до 100 м²</a></li>
+																	<li><a href="#" class="link">до 120 м²</a></li>
+																	<li><a href="#" class="link">до 140 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 160 м²</a></li>
+																	<li><a href="#" class="link">до 180 м²</a></li>
+																</ul>
+																<button class="acc-category__block-more">Показать еще</button>
+															</div>
 														</div>
 													</div>
 												</div>
 												<div class="acc acc-category__block" data-acc>
-													<button class="acc__toggle" data-acc-toggler>
+													<div class="acc__toggle" data-acc-toggler>
 														<span class="acc__toggle-title">дополнения</span>
 														<span class="acc__toggle-icon"></span>
-													</button>
+													</div>
 													<div class="acc__body" data-acc-body>
 														<div class="acc__content">
-															<ul class="acc-category__block-list">
-																<li><a href="#" class="link">С балконом</a></li>
-																<li><a href="#" class="link">С террасой</a></li>
-																<li><a href="#" class="link">С эркером</a></li>
-																<li><a href="#" class="link">С гаражом</a></li>
-															</ul>
+															<div class="acc-category__block-column">
+																<ul class="acc-category__block-list">
+																	<li><a href="#" class="link">С балконом</a></li>
+																	<li><a href="#" class="link">С террасой</a></li>
+																	<li><a href="#" class="link">С эркером</a></li>
+																	<li><a href="#" class="link">С гаражом</a></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 												</div>
 												<div class="acc acc-category__block" data-acc>
-													<button class="acc__toggle" data-acc-toggler>
+													<div class="acc__toggle" data-acc-toggler>
 														<span class="acc__toggle-title">по назначению</span>
 														<span class="acc__toggle-icon"></span>
-													</button>
+													</div>
 													<div class="acc__body" data-acc-body>
 														<div class="acc__content">
-															<ul class="acc-category__block-list">
-																<li><a href="#" class="link">Гостевые</a></li>
-																<li><a href="#" class="link">Для дачи</a></li>
-																<li><a href="#" class="link">Для постоянного проживания</a></li>
-																<li><a href="#" class="link">Садовые</a></li>
-																<li><a href="#" class="link">Зимние</a></li>
-															</ul>
+															<div class="acc-category__block-column">
+																<ul class="acc-category__block-list">
+																	<li><a href="#" class="link">Гостевые</a></li>
+																	<li><a href="#" class="link">Для дачи</a></li>
+																	<li><a href="#" class="link">Для постоянного проживания</a></li>
+																	<li><a href="#" class="link">Садовые</a></li>
+																	<li><a href="#" class="link">Зимние</a></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 												</div>
-												<!-- <div class="acc-category__block">
-													<h3 class="acc-category__block-title">этажность</h3>
-													<ul class="acc-category__block-list">
-														<li><a href="#" class="link">Одноэтажные</a></li>
-														<li><a href="#" class="link">С мансардой</a></li>
-														<li><a href="#" class="link">Полутораэтажные</a></li>
-														<li><a href="#" class="link">Двухэтажные</a></li>
-													</ul>
-												</div> -->
-												<!-- <div class="acc-category__block">
-													<h3 class="acc-category__block-title">цена</h3>
-													<ul class="acc-category__block-list">
-														<li><a href="#" class="link">Эконом</a></li>
-														<li><a href="#" class="link">До 2 млн. руб</a></li>
-													</ul>
-												</div>
-												<div class="acc-category__block">
-													<h3 class="acc-category__block-title">размерность</h3>
-													<ul class="acc-category__block-list">
-														<li><a href="#" class="link">10 на 10</a></li>
-														<li><a href="#" class="link">12 на 8</a></li>
-														<li><a href="#" class="link">12 на 9</a></li>
-														<li><a href="#" class="link">120 м²</a></li>
-														<li><a href="#" class="link">10 на 10</a></li>
-														<li><a href="#" class="link">12 на 8</a></li>
-													</ul>
-													<button class="acc-category__block-more">Показать еще</but>
-												</div>
-												<div class="acc-category__block">
-													<h3 class="acc-category__block-title">площадь</h3>
-													<ul class="acc-category__block-list">
-														<li><a href="#" class="link">до 100 м²</a></li>
-														<li><a href="#" class="link">до 120 м²</a></li>
-														<li><a href="#" class="link">до 140 м²</a></li>
-														<li><a href="#" class="link">до 160 м²</a></li>
-														<li><a href="#" class="link">до 180 м²</a></li>
-													</ul>
-												</div>
-												<div class="acc-category__block">
-													<h3 class="acc-category__block-title">дополнения</h3>
-													<ul class="acc-category__block-list">
-														<li><a href="#" class="link">С балконом</a></li>
-														<li><a href="#" class="link">С террасой</a></li>
-														<li><a href="#" class="link">С эркером</a></li>
-														<li><a href="#" class="link">С гаражом</a></li>
-													</ul>
-												</div>
-												<div class="acc-category__block">
-													<h3 class="acc-category__block-title">по назначению</h3>
-													<ul class="acc-category__block-list">
-														<li><a href="#" class="link">Гостевые</a></li>
-														<li><a href="#" class="link">Для дачи</a></li>
-														<li><a href="#" class="link">Для постоянного проживания</a></li>
-														<li><a href="#" class="link">Садовые</a></li>
-														<li><a href="#" class="link">Зимние</a></li>
-													</ul>
-												</div> -->
 											</div>
 										</div>
 									</div>
@@ -238,7 +236,7 @@
 							<div class="modal__wrap m-filter__wrap">
 								<div class="modal__window m-filter__window">
 									<div class="m-filter__header">
-										<h2 class="m-filter__title">Фильтр</h2>
+										<span class="m-filter__title">Фильтр</span>
 										<button class="burger is-active modal-close m-filter__modal-close" data-modal-close><span></span><span></span><span></span></button>
 									</div>
 									<div class="acc acc-options is-open filter__acc" data-acc="options">
@@ -250,7 +248,7 @@
 											<form action="#" class="acc__content acc-options__content">
 												<div class="acc-options__body">
 													<div class="acc-options__block is-range">
-														<h3 class="acc-options__block-title" data-prefix="руб">цена</h3>
+														<span class="acc-options__block-title">цена <span>руб</span></span>
 														<div class="acc-options__block-body">
 															<div class="acc-options__range" data-min="0" data-max="10000000" data-min-value="0" data-max-value="10000000">
 																<div class="acc-options__range-header">
@@ -268,7 +266,7 @@
 														</div>
 													</div>
 													<div class="acc-options__block is-range">
-														<h3 class="acc-options__block-title" data-prefix="м²">площадь</h3>
+														<span class="acc-options__block-title">площадь <span>м²</span></span>
 														<div class="acc-options__block-body">
 															<div class="acc-options__range" data-min="0" data-max="1000" data-min-value="0" data-max-value="1000">
 																<div class="acc-options__range-header">
@@ -286,7 +284,183 @@
 														</div>
 													</div>
 													<div class="acc-options__block is-select-checkbox">
-														<h3 class="acc-options__block-title">размерность</h3>
+														<span class="acc-options__block-title">размерность</span>
+														<div class="acc-options__block-body">
+															<div class="select select-checkbox select-checkbox__size">
+																<button type="button" class="select-input">
+																	<span class="select-input__title">Выберите пункт</span>
+																	<input type="hidden" name="select">
+																	<span class="select-input__chevron"></span>
+																</button>
+																<div class="select-dropdown">
+																	<div class="select-dropdown__list">
+																		<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
+																			<input type="checkbox">
+																			<span>Все</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox" checked>
+																			<span>6х5 (22)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox" checked>
+																			<span>6х5 (20)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (30)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (18)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="acc-options__block is-select-checkbox">
+														<span class="acc-options__block-title">количество спален</span>
+														<div class="acc-options__block-body">
+															<div class="select select-checkbox select-checkbox__size">
+																<button type="button" class="select-input">
+																	<span class="select-input__title">Выберите пункт</span>
+																	<input type="hidden" name="select">
+																	<span class="select-input__chevron"></span>
+																</button>
+																<div class="select-dropdown">
+																	<div class="select-dropdown__list">
+																		<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
+																			<input type="checkbox" checked>
+																			<span>Все</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox" checked>
+																			<span>6х5 (22)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (20)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox" checked>
+																			<span>6х5 (30)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (18)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																		<div class="select-dropdown__checkbox">
+																			<input type="checkbox">
+																			<span>6х5 (10)</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="acc-options__block is-select-checkbox">
+														<span class="acc-options__block-title">дополнительно</span>
 														<div class="acc-options__block-body">
 															<div class="select select-checkbox select-checkbox__size">
 																<button type="button" class="select-input">
@@ -374,183 +548,7 @@
 														</div>
 													</div>
 													<div class="acc-options__block is-select-checkbox">
-														<h3 class="acc-options__block-title">количество спален</h3>
-														<div class="acc-options__block-body">
-															<div class="select select-checkbox select-checkbox__size">
-																<button type="button" class="select-input">
-																	<span class="select-input__title">Выберите пункт</span>
-																	<input type="hidden" name="select">
-																	<span class="select-input__chevron"></span>
-																</button>
-																<div class="select-dropdown">
-																	<div class="select-dropdown__list">
-																		<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
-																			<input type="checkbox">
-																			<span>Все</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (22)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (20)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (30)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (18)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="acc-options__block is-select-checkbox">
-														<h3 class="acc-options__block-title">дополнительно</h3>
-														<div class="acc-options__block-body">
-															<div class="select select-checkbox select-checkbox__size">
-																<button type="button" class="select-input">
-																	<span class="select-input__title">Выберите пункт</span>
-																	<input type="hidden" name="select">
-																	<span class="select-input__chevron"></span>
-																</button>
-																<div class="select-dropdown">
-																	<div class="select-dropdown__list">
-																		<div class="select-dropdown__checkbox select-dropdown__checkbox-all">
-																			<input type="checkbox">
-																			<span>Все</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (22)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (20)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (30)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (18)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																		<div class="select-dropdown__checkbox">
-																			<input type="checkbox">
-																			<span>6х5 (10)</span>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="acc-options__block is-select-checkbox">
-														<h3 class="acc-options__block-title">назначение</h3>
+														<span class="acc-options__block-title">назначение</span>
 														<div class="acc-options__block-body">
 															<div class="select select-checkbox select-checkbox__size">
 																<button type="button" class="select-input">
@@ -655,7 +653,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section catalog">
+			<section class="section catalog page-main">
 				<div class="catalog__container">
 					<div class="catalog__header">
 						<span class="catalog__header-title">Сортировать проекты</span>
@@ -677,39 +675,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- <div class="catalog-sort__list">
-							<div class="catalog-sort has-icon">
-								<input type="radio" name="sort">
-								<span class="catalog-sort__text">по цене</span>
-							</div>
-							<div class="catalog-sort has-icon">
-								<input type="radio" name="sort">
-								<span class="catalog-sort__text">по площади</span>
-							</div>
-							<div class="catalog-sort">
-								<input type="radio" name="sort">
-								<span class="catalog-sort__text">по популярности</span>
-							</div>
-						</div> -->
-
-						<!-- <div class="select">
-							<button class="select-input">
-								<span class="select-input__title">Не выбрано</span>
-								<input type="hidden" name="select">
-								<span class="select-input__chevron">
-									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M6 9L12.0001 15L18 9" stroke="#6C6C6C" stroke-width="2"/>
-									</svg>
-								</span>
-							</button>
-							<div class="select-dropdown">
-								<div class="select-dropdown__list">
-									<button class="select-dropdown__item">по цене</button>
-									<button class="select-dropdown__item">по площади</button>
-									<button class="select-dropdown__item">по популярности</button>
-								</div>
-							</div>
-						</div> -->
 					</div>
 					<div class="catalog__body">
 						<div class="catalog__list">
@@ -721,7 +686,7 @@
 									<div class="c-product__slide"><img src="@img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
-									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
+									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
 									<div class="c-product__info-list">
 										<div class="cp-info">
 											<div class="cp-info__icon"><svg><use href='./img/sprite-new.svg#square-sym'></use></svg></div>
@@ -753,7 +718,7 @@
 									<div class="c-product__slide"><img src="@img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
-									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
+									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
 									<div class="c-product__info-list">
 										<div class="cp-info">
 											<div class="cp-info__icon"><svg><use href='./img/sprite-new.svg#square-sym'></use></svg></div>
@@ -785,7 +750,7 @@
 									<div class="c-product__slide"><img src="@img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
-									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
+									<span class="c-product__title">Каркасный дом «Тундра 53»</span>
 									<div class="c-product__info-list">
 										<div class="cp-info">
 											<div class="cp-info__icon"><svg><use href='./img/sprite-new.svg#square-sym'></use></svg></div>
@@ -817,7 +782,7 @@
 									<div class="c-product__slide"><img src="@img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
-									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
+									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
 									<div class="c-product__info-list">
 										<div class="cp-info">
 											<div class="cp-info__icon"><svg><use href='./img/sprite-new.svg#square-sym'></use></svg></div>
@@ -849,7 +814,7 @@
 									<div class="c-product__slide"><img src="@img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
-									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
+									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
 									<div class="c-product__info-list">
 										<div class="cp-info">
 											<div class="cp-info__icon"><svg><use href='./img/sprite-new.svg#square-sym'></use></svg></div>
@@ -881,7 +846,7 @@
 									<div class="c-product__slide"><img src="@img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
-									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
+									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
 									<div class="c-product__info-list">
 										<div class="cp-info">
 											<div class="cp-info__icon"><svg><use href='./img/sprite-new.svg#square-sym'></use></svg></div>
@@ -913,7 +878,7 @@
 									<div class="c-product__slide"><img src="@img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
-									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
+									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
 									<div class="c-product__info-list">
 										<div class="cp-info">
 											<div class="cp-info__icon"><svg><use href='./img/sprite-new.svg#square-sym'></use></svg></div>
@@ -945,7 +910,7 @@
 									<div class="c-product__slide"><img src="@img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
-									<h3 class="c-product__title">Каркасный дом «Тундра 53»</h3>
+									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
 									<div class="c-product__info-list">
 										<div class="cp-info">
 											<div class="cp-info__icon"><svg><use href='./img/sprite-new.svg#square-sym'></use></svg></div>
@@ -969,14 +934,14 @@
 									</div>
 								</div>
 							</div>
-							<a href="#" class="c-nfp">
+							<div class="c-nfp">
 								<div class="c-nfp__content">
-									<h3 class="c-nfp__title">Не нашли подходящий проект?</h3>
+									<span class="c-nfp__title">Не нашли подходящий проект?</span>
 									<p class="c-nfp__text">Отправьте свой <b>эскиз, пожелания к изменению, проект с другого сайта</b></p>
-									<span class="btn is-light c-nfp__btn"><span>Рассчитать <b>бесплатно</b></span></span>
+									<a href="#" class="btn is-light c-nfp__btn"><span>Рассчитать <b>бесплатно</b></span></a>
 								</div>
 								<div class="c-nfp__ill"><img src="@img/products/not-founded-project.png" alt=""></div>
-							</a>
+							</div>
 						</div>
 						<div class="pagin catalog__pagin">
 							<button class="pagin__btn pagin__btn_prev" disabled><svg style="transform: rotate(180deg);"><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
@@ -1006,7 +971,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section s-content">
+			<section class="section s-content page-main">
 				<div class="s-content__container">
 					<div class="s-content__body text">
 						<h2>Строительная компания «ИзДереваДом» </h2>
@@ -1065,52 +1030,52 @@
 			<section class="section steps">
 				<div class="steps__container">
 					<div class="s-header">
-						<h2 class="s-header__title">Этапы работы с нами</h2>
+						<span class="s-header__title">Этапы работы с нами</span>
 					</div>
 					<div class="steps__body">
-						<a href="#" class="c-steps" style="background-image: url('@img/steps/step-1.jpg');">
+						<div class="c-steps" style="background-image: url('@img/steps/step-1.jpg');">
 							<div class="c-steps__wrap">
 								<span class="c-steps__title">Согласование проекта</span>
 								<p class="c-steps__text">Бригада строителей с большим опытом возводит объект. Вы же можете лично контролировать строительство на участке или оперативно получать фотоотчет в WhatsApp</p>
 							</div>
-						</a>
-						<a href="#" class="c-steps" style="background-image: url('@img/steps/step-2.jpg');">
+						</div>
+						<div class="c-steps" style="background-image: url('@img/steps/step-2.jpg');">
 							<div class="c-steps__wrap">
 								<span class="c-steps__title">Заключение договора</span>
 								<p class="c-steps__text">Договор можно заключить дистанционно или же при личной встрече с нашим менеджером на участке </p>
 							</div>
-						</a>
-						<a href="#" class="c-steps" style="background-image: url('@img/steps/step-3.jpg');">
+						</div>
+						<div class="c-steps" style="background-image: url('@img/steps/step-3.jpg');">
 							<div class="c-steps__wrap">
 								<span class="c-steps__title">Доставка материалов и часть оплаты </span>
 								<p class="c-steps__text">С доставкой материалов на ваш участок производится первый этап оплаты — вы вносите 70% от итоговой стоимости дома </p>
 							</div>
-						</a>
-						<a href="#" class="c-steps" style="background-image: url('@img/steps/step-4.jpg');">
+						</div>
+						<div class="c-steps" style="background-image: url('@img/steps/step-4.jpg');">
 							<div class="c-steps__wrap">
 								<span class="c-steps__title">Строительство</span>
 								<p class="c-steps__text">Бригада строителей с большим опытом возводит объект. Вы же можете лично контролировать строительство на участке или оперативно получать фотоотчет в WhatsApp </p>
 							</div>
-						</a>
-						<a href="#" class="c-steps" style="background-image: url('@img/steps/step-5.jpg');">
+						</div>
+						<div class="c-steps" style="background-image: url('@img/steps/step-5.jpg');">
 							<div class="c-steps__wrap">
 								<span class="c-steps__title">Сдача объекта</span>
 								<p class="c-steps__text">С доставкой материалов на ваш участок производится первый этап оплаты — вы вносите 70% от итоговой стоимости дома </p>
 							</div>
-						</a>
-						<a href="#" class="c-steps" style="background-image: url('@img/steps/step-6.jpg');">
+						</div>
+						<div class="c-steps" style="background-image: url('@img/steps/step-6.jpg');">
 							<div class="c-steps__wrap">
 								<span class="c-steps__title">Оплата оставшейся части</span>
 								<p class="c-steps__text">Оставшиеся 30% от стоимости дома переводятся на расчетный счет компании или же выплачиваются наличными прорабу бригады, строившей ваш объект </p>
 							</div>
-						</a>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section trust">
+			<section class="section has-margin-s trust page-main">
 				<div class="trust__container">
 					<div class="s-header trust__header">
-						<h2 class="s-header__title">Почему строительство дома нужно <span>доверить именно нам</span></h2>
+						<span class="s-header__title">Почему строительство дома нужно <span>доверить именно нам</span></span>
 					</div>
 					<div class="trust__body">
 						<div class="trust-slider">
@@ -1121,59 +1086,59 @@
 											<div class="c-trust">
 												<div class="c-trust__img"><img src="@img/trust/trust-1.svg" alt=""></div>
 												<div class="c-trust__content">
-													<h3 class="c-trust__title">Собственное производство 1</h3>
+													<span class="c-trust__title">Собственное производство</span>
 													<p class="c-trust__text">Мы самостоятельно заготавливаем материалы для строительства. Это позволяет поддерживать высокое качество, при этом не завышая цену на объект</p>
 												</div>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="c-trust">
-												<div class="c-trust__img"><img src="@img/trust/trust-1.svg" alt=""></div>
+												<div class="c-trust__img"><img src="@img/trust/trust-2.svg" alt=""></div>
 												<div class="c-trust__content">
-													<h3 class="c-trust__title">Собственное производство 2</h3>
-													<p class="c-trust__text">Мы самостоятельно. Это позволяет поддерживать высокое качество, при этом не завышая цену на объект</p>
+													<span class="c-trust__title">Гарантия</span>
+													<p class="c-trust__text">В течение 3 лет после постройки любые возможные недостатки строительства по нашей вине устраняются за наш счет</p>
 												</div>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="c-trust">
-												<div class="c-trust__img"><img src="@img/trust/trust-1.svg" alt=""></div>
+												<div class="c-trust__img"><img src="@img/trust/trust-3.svg" alt=""></div>
 												<div class="c-trust__content">
-													<h3 class="c-trust__title">Собственное производство 3</h3>
-													<p class="c-trust__text">Мы самостоятельно заготавливаем материалы для строительства. Это позволяет поддерживать высокое качество, при этом не завышая цену на объект</p>
+													<span class="c-trust__title">Фотоотчет</span>
+													<p class="c-trust__text">Вы будете в курсе прогресса строительства на всем его протяжении — наш прораб будет присылать вам ежедневный отчет в WhatsApp</p>
 												</div>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="c-trust">
-												<div class="c-trust__img"><img src="@img/trust/trust-1.svg" alt=""></div>
+												<div class="c-trust__img"><img src="@img/trust/trust-4.svg" alt=""></div>
 												<div class="c-trust__content">
-													<h3 class="c-trust__title">Собственное производство 4</h3>
-													<p class="c-trust__text">Мы самостоятельно заготавливаем материалы для строительства. Это позволяет поддерживать высокое качество, при этом не завышая цену на объект</p>
+													<span class="c-trust__title">Дистанционное заключение договора</span>
+													<p class="c-trust__text">В таком случае вы существенно экономите собственное время. При этом, если у вас есть желание, с вами лично встретится наш менеджер на участке строительства или в нашем офисе</p>
 												</div>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="c-trust">
-												<div class="c-trust__img"><img src="@img/trust/trust-1.svg" alt=""></div>
+												<div class="c-trust__img"><img src="@img/trust/trust-5.svg" alt=""></div>
 												<div class="c-trust__content">
-													<h3 class="c-trust__title">Собственное производство 5</h3>
-													<p class="c-trust__text">Мы самостоятельно заготавливаем материалы для строительства. Это позволяет поддерживать высокое качество, при этом не завышая цену на объект</p>
+													<span class="c-trust__title">Предоплата</span>
+													<p class="c-trust__text">Первый этап оплаты производится непосредственно при завозе материала на ваш участок. Это позволяет вам быть уверенными в нашей надежности и не переводить средства на счета фирмы, с которой вы сотрудничаете впервые.</p>
 												</div>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="c-trust">
-												<div class="c-trust__img"><img src="@img/trust/trust-1.svg" alt=""></div>
+												<div class="c-trust__img"><img src="@img/trust/trust-6.svg" alt=""></div>
 												<div class="c-trust__content">
-													<h3 class="c-trust__title">Собственное производство 6</h3>
-													<p class="c-trust__text">Мы самостоятельно заготавливаем материалы для строительства. Это позволяет поддерживать высокое качество, при этом не завышая цену на объект</p>
+													<span class="c-trust__title">Связь с директором</span>
+													<p class="c-trust__text">Наш технический директор лично контролирует работу по всем строящимся объектам, у вас есть возможность обратиться к нему напрямую</p>
 												</div>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="c-trust-callback">
-												<h3 class="c-trust-callback__title"><span>Бесплатно</span> <br>консультируем по любым вопросам строительства</h3>
+												<span class="c-trust-callback__title"><span>Бесплатно</span> <br>консультируем по любым вопросам строительства</span>
 												<form action="#" class="c-trust-callback__form">
 													<label class="tf has-icon is-tel c-trust-callback__form-tf">
 														<div class="tf__field">
@@ -1189,7 +1154,7 @@
 									</div>
 								</div>
 								<div class="swiper__arrows trust-slider__arrows">
-									<button class="swiper-arrow is-prev trust-slider__arrow-prev swiper-button-disabled"><svg style="transform: rotate(180deg);"><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
+									<button class="swiper-arrow is-prev trust-slider__arrow-prev"><svg style="transform: rotate(180deg);"><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
 									<button class="swiper-arrow is-next trust-slider__arrow-next"><svg><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
 								</div>
 							</div>
@@ -1203,22 +1168,22 @@
 					</div>
 				</div>
 			</section>
-			<section class="order-estimate">
+			<div class="section has-margin-s order-estimate">
 				<div class="order-estimate__container">
 					<div class="order-estimate__wrap">
 						<div class="order-estimate__house"><img src="@img/banners/house.png" alt=""></div>
 						<div class="order-estimate__content">
-							<h2 class="order-estimate__title">Заказать смету дома <b>бесплатно!</b></h2>
+							<span class="order-estimate__title">Заказать смету дома <b>бесплатно!</b></span>
 							<button class="btn is-light order-estimate__btn"><span>Оставить <b>заявку</b></span></button>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="section map">
+			</div>
+			<section class="section has-margin-s map page-main">
 				<div class="map__container">
 					<div class="map__wrap">
 						<div class="s-header">
-							<h2 class="s-header__title"><span>Бесплатная доставка в пределах 500 км</span> от нашей производственной базы, далее - 96 руб./километр</h2>
+							<span class="s-header__title"><span>Бесплатная доставка в пределах 500 км</span> от нашей производственной базы, далее - 96 руб./километр</span>
 							<p class="s-header__subtitle">Рассчитать стоимость доставки</p>
 						</div>
 						<div class="map__body">
@@ -1227,10 +1192,10 @@
 					</div>
 				</div>
 			</section>
-			<section class="section slider reviews">
+			<section class="section has-margin-s slider reviews">
 				<div class="slider__container">
 					<div class="s-header has-link slider__header">
-						<h2 class="s-header__title">Отзывы клиентов</h2>
+						<span class="s-header__title">Отзывы клиентов</span>
 						<a href="#" class="btn is-accent slider__more-btn is-pc">Смотреть все отзывы</a>
 					</div>
 					<div class="slider__body">
@@ -1240,7 +1205,7 @@
 									<div class="c-reviews__content">
 										<div class="c-reviews__play"></div>
 										<div class="c-reviews__info">
-											<h3 class="c-reviews__title">Баня из бруса 9 на 6,5 м </h3>
+											<span class="c-reviews__title">Баня из бруса 9 на 6,5 м </span>
 											<p class="c-reviews__text">Смотреть видеоотзыв 1:45 мин</p>
 										</div>
 									</div>
@@ -1249,7 +1214,7 @@
 									<div class="c-reviews__content">
 										<div class="c-reviews__play"></div>
 										<div class="c-reviews__info">
-											<h3 class="c-reviews__title">Каркасная баня 4 на 6 м</h3>
+											<span class="c-reviews__title">Каркасная баня 4 на 6 м</span>
 											<p class="c-reviews__text">Смотреть видеоотзыв 1:45 мин</p>
 										</div>
 									</div>
@@ -1258,7 +1223,7 @@
 									<div class="c-reviews__content">
 										<div class="c-reviews__play"></div>
 										<div class="c-reviews__info">
-											<h3 class="c-reviews__title">Дом из бруса 6 на 8 м</h3>
+											<span class="c-reviews__title">Дом из бруса 6 на 8 м</span>
 											<p class="c-reviews__text">Смотреть видеоотзыв 1:45 мин</p>
 										</div>
 									</div>
@@ -1267,7 +1232,7 @@
 									<div class="c-reviews__content">
 										<div class="c-reviews__play"></div>
 										<div class="c-reviews__info">
-											<h3 class="c-reviews__title">Баня из бруса 9 на 6,5 м (2)</h3>
+											<span class="c-reviews__title">Баня из бруса 9 на 6,5 м (2)</span>
 											<p class="c-reviews__text">Смотреть видеоотзыв 1:45 мин</p>
 										</div>
 									</div>
@@ -1278,18 +1243,18 @@
 							<a href="#" class="btn is-accent slider__more-btn is-mob">Смотреть все отзывы</a>
 
 							<div class="swiper__arrows">
-								<button class="swiper-arrow is-prev reviews__arrow-prev swiper-button-disabled"><svg style="transform: rotate(180deg);"><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
+								<button class="swiper-arrow is-prev reviews__arrow-prev"><svg style="transform: rotate(180deg);"><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
 								<button class="swiper-arrow is-next reviews__arrow-next"><svg><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section slider gallery">
+			<section class="section has-margin-s slider gallery">
 				<div class="slider__container">
 					<div class="s-header has-link slider__header">
-						<h2 class="s-header__title">Галерея</h2>
-						<a href="#" class="btn is-accent slider__more-btn is-pc">Смотреть все отзывы</a>
+						<span class="s-header__title">Галерея</span>
+						<a href="#" class="btn is-accent slider__more-btn is-pc">Смотреть все фотоотчеты</a>
 					</div>
 					<div class="slider__body">
 						<div class="swiper is-crop gallery__slider">
@@ -1306,7 +1271,7 @@
 							<a href="#" class="btn is-accent slider__more-btn is-mob">Смотреть все отзывы</a>
 
 							<div class="swiper__arrows">
-								<button class="swiper-arrow is-prev gallery__arrow-prev swiper-button-disabled"><svg style="transform: rotate(180deg);"><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
+								<button class="swiper-arrow is-prev gallery__arrow-prev"><svg style="transform: rotate(180deg);"><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
 								<button class="swiper-arrow is-next gallery__arrow-next"><svg><use href='./img/sprite-new.svg#arrow-linear-sym'></use></svg></button>
 							</div>
 						</div>
@@ -1316,7 +1281,7 @@
 			<section class="section unique">
 				<div class="unique__container">
 					<div class="s-header unique__content-header is-mob">
-						<h2 class="s-header__title">Не понравились проекты?</h2>
+						<span class="s-header__title">Не понравились проекты?</span>
 						<p class="s-header__text">Поможем подобрать что-то уникальное для вас!</p>
 					</div>
 					<div class="unique__wrap">
@@ -1328,7 +1293,7 @@
 						</div>
 						<div class="unique__content">
 							<div class="s-header unique__content-header is-pc">
-								<h2 class="s-header__title">Не понравились проекты?</h2>
+								<span class="s-header__title">Не понравились проекты?</span>
 								<p class="s-header__text">Поможем подобрать что-то уникальное для вас!</p>
 								<p class="unigue__content-title-mob">Оставьте свой номер телефона, и наши менеджеры свяжутся с Вами в течение 15 минут!</p>
 							</div>
@@ -1353,10 +1318,6 @@
 
     @@include('tpls/modals.html', {})
 
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lg-video.min.css"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/video/lg-video.min.js"></script> -->
-	<!-- <script src="https://cdn.skypack.dev/lightgallery@2.3.0-beta.4/plugins/video"></script> -->
     <script src="./js/bundle.min.js"></script>
 </body>
 </html>

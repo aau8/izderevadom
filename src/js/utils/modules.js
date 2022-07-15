@@ -55,7 +55,15 @@ export class Accordions {
         this._clickToggler()
         this._outsideOpener()
 
+
+		// this._combAccArr._Accordions = this
+
+
+		// console.log(this._combAccArr)
+
 		this._combAccArr.forEach(_acc => {
+			_acc.Accordions = this
+
 			if (!_acc.classList.contains('is-open')) {
 				this.close(_acc, false)
 			}
@@ -63,11 +71,9 @@ export class Accordions {
 				this.open(_acc, false)
 			}
 		})
-
-		console.log(_accArr)
     }
 
-    open(selector, notOpen = true) {
+    open(selector, notOpen = true, maxHeight = null) {
         const _acc = selector === undefined ? this._currentAcc.acc : typeof(selector) === 'string' ? document.querySelector(selector) : selector
 
         if (_acc.classList.contains(this.classNames.open) && notOpen) return
@@ -84,9 +90,11 @@ export class Accordions {
             })
         }
 
+		console.log(maxHeight)
+
         this._currentAcc.acc.classList.add(this.classNames.open)
         this._currentAcc.body.style = `
-            max-height: ${this._currentAcc.body.scrollHeight}px;
+            max-height: ${maxHeight === null ? this._currentAcc.body.scrollHeight : maxHeight}px;
             opacity: 1;
             visibility: visible;
         `
@@ -277,8 +285,24 @@ export class Modals {
     }
 
 	// Получить модальное окно
-	get(modalName) {
-		return modalName ? this.modalList.find(e => e.getAttribute(`${this.attrs.modalId}`) === modalName) || null : this.modalList
+	get(modalNames) {
+		// const arr = modalNames.split(',').map(e => e.trim())
+
+		// console.log(typeof modalNames)
+
+		if (typeof modalNames === 'string') {
+			return this.modalList.find(e => e.getAttribute(`${this.attrs.modalId}`) === modalNames) || null
+		}
+		else if (typeof modalNames === 'object') {
+			return modalNames.map( modalName => {
+				return this.modalList.find(e => e.getAttribute(`${this.attrs.modalId}`) === modalName) || null
+			} )
+		}
+		else {
+			return this.modalList
+		}
+
+
 	}
 
     // Обновляет список модалок и кнопок
