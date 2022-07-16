@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220715170734">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220716195819">
 
 </head>
 <body>
 	<div class="wrapper">
         <header class="header-area">
-	<div class="header" data-lp>
+	<div class="header">
 		<div class="header-die">
 			<div class="header-die__container is-large">
 				<div class="header-die__tels">
@@ -28,7 +28,7 @@
 		<div class="header-up">
 			<div class="header-up__container is-large">
 				<button class="burger header-up__burger" data-menu-open><span></span><span></span><span></span></button>
-				<a href="#" class="logo header__logo header-up__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
+				<a href="#" class="logo header__logo header-up__logo"><img src="./img/logo.png" alt=""></a>
 				<div class="location header__location">
 					<button class="location__toggle">
 						<span class="link has-icon location__btn">Москва</span>
@@ -127,7 +127,7 @@
 		</div>
 		<div class="header-down">
 			<div class="header-down__container is-large">
-				<a href="#" class="logo header__logo header-down__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
+				<a href="#" class="logo header__logo header-down__logo"><img src="./img/logo.png" alt=""></a>
 				<button class="btn is-second project-btn header__project-btn" data-project-open>
 					<span class="project-btn__icon">
 						<span></span>
@@ -615,7 +615,14 @@
 								<span class="c-project__title">Дома из&nbsp;бруса</span>
 							</a>
 							<a href="#" class="c-project">
-								<div class="c-project__img"><svg><use href='./img/sprite-new.svg#project-3-sym'></use></svg></div>
+								<div class="c-project__img">
+									<!-- <svg><use href='./img/sprite-new.svg#project-3-sym'></use></svg> -->
+									<svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M25.8229 48.0859H23.6294V53.5698H25.8229V48.0859Z" fill="#C8996B"/>
+										<path d="M60.8496 38.8246L60.7904 38.7619L34.9714 11.4165C34.466 10.8816 33.5199 10.8816 33.0145 11.4165L7.19397 38.7619L7.13477 38.8246H7.04855H5.99871C4.67465 38.8616 3.64272 38.0253 3.17 36.9604C2.69727 35.8955 2.76925 34.5693 3.68537 33.612L29.8255 4.71502L60.8496 38.8246ZM60.8496 38.8246H60.9358M60.8496 38.8246H60.9358M60.9358 38.8246H61.9871M60.9358 38.8246H61.9871M61.9871 38.8246C63.3176 38.864 64.3466 38.0263 64.8163 36.9599C65.2859 35.894 65.2111 34.567 64.3023 33.6123C64.3017 33.6116 64.301 33.6109 64.3004 33.6103L38.1618 4.71491C37.0975 3.53811 35.5782 2.8649 33.993 2.8649C32.4078 2.8649 30.8885 3.53805 29.8256 4.7149L61.9871 38.8246ZM40.1532 2.9052L40.1532 2.90523L40.156 2.90841L66.2982 31.8076L66.2984 31.8079C67.268 32.8763 67.8 34.2615 67.8 35.7056C67.8 38.91 65.1937 41.5167 61.99 41.5167C60.898 41.5167 60.1089 41.2898 59.5969 41.0672C59.3406 40.9557 59.1531 40.8451 59.0313 40.7638C58.9704 40.7231 58.9259 40.6898 58.8975 40.6674C58.8833 40.6562 58.8731 40.6478 58.8668 40.6425L58.8605 40.637L58.86 40.6366L58.8599 40.6365L58.8598 40.6364L58.8596 40.6362L58.8595 40.6361L58.5253 40.3317V40.7845V63.3618C58.5253 65.8086 56.5342 67.8 54.088 67.8H13.8979C11.4517 67.8 9.46056 65.8086 9.46056 63.3618V40.786V40.1832L9.10157 40.6647L9.1014 40.6649L9.10134 40.665L9.10093 40.6655L9.10061 40.6659L9.09882 40.668C9.09559 40.6719 9.08947 40.679 9.0802 40.6888C9.06168 40.7084 9.03047 40.7392 8.98429 40.7775C8.89204 40.854 8.73925 40.9612 8.5071 41.0704C8.04315 41.2885 7.25689 41.5167 5.99588 41.5167C3.54403 41.5167 1.62171 39.9785 0.733572 37.9854C-0.154393 35.9928 0.00272845 33.572 1.68256 31.8115L1.68262 31.8116L1.68619 31.8076L27.8283 2.90841L27.8284 2.90844L27.8312 2.90511C30.9542 -0.703888 37.03 -0.699548 40.1532 2.9052ZM27.4812 21.348L27.3677 21.3196L27.2873 21.4047L21.3747 27.6648L21.0561 28.0021H21.5201H46.4658H46.9297L46.6112 27.6648L40.7002 21.4047L40.6201 21.3199L40.5068 21.3479C40.4627 21.3588 40.4251 21.3691 40.3916 21.3784C40.3077 21.4016 40.249 21.4178 40.1761 21.4178H27.8099C27.7365 21.4178 27.6772 21.4013 27.5928 21.3778C27.5601 21.3687 27.5237 21.3586 27.4812 21.348ZM30.1346 18.3883L29.816 18.7256H30.28H37.7059H38.1699L37.8513 18.3883L34.1384 14.4567L33.993 14.3027L33.8475 14.4567L30.1346 18.3883ZM18.6001 30.6942H18.5139L18.4547 30.7569L12.6148 36.9412L12.2962 37.2785H12.7602H55.2257H55.6897L55.3711 36.9412L49.5312 30.7569L49.472 30.6942H49.3858H18.6001ZM12.1521 55.6314V55.8314H12.3521H16.9894H17.1894V55.6314V49.4471V49.2471H16.9894H12.3521H12.1521V49.4471V55.6314ZM20.081 46.155H19.881V46.355V55.6314V55.8314H20.081H29.3556H29.5556V55.6314V46.355V46.155H29.3556H20.081ZM32.4472 49.2471H32.2472V49.4471V55.6314V55.8314H32.4472H35.5387H35.7387V55.6314V49.4471V49.2471H35.5387H32.4472ZM35.5387 46.555H35.7387V46.355V44.8089C35.7387 44.0658 36.3403 43.4628 37.0845 43.4628H49.4507C50.1949 43.4628 50.7965 44.0658 50.7965 44.8089V46.355V46.555H50.9965H55.6338H55.8338V46.355V40.1707V39.9707H55.6338H12.3521H12.1521V40.1707V46.355V46.555H12.3521H16.9894H17.1894V46.355V44.8089C17.1894 44.0659 17.7924 43.4628 18.5352 43.4628H30.9014C31.6442 43.4628 32.2472 44.0659 32.2472 44.8089V46.355V46.555H32.4472H35.5387ZM50.9965 49.2471H50.7965V49.4471V55.6314V55.8314H50.9965H55.6338H55.8338V55.6314V49.4471V49.2471H55.6338H50.9965ZM12.3521 58.5236H12.1521V58.7236V63.3618C12.1521 64.3241 12.9357 65.1078 13.8979 65.1078H35.5387H35.7387V64.9079V58.7236V58.5236H35.5387H12.3521ZM38.4303 64.9079V65.1078H38.6303H47.9049H48.1049V64.9079V46.355V46.155H47.9049H38.6303H38.4303V46.355V64.9079ZM50.7965 64.9079V65.1078H50.9965H54.088C55.0519 65.1078 55.8338 64.324 55.8338 63.3618V58.7236V58.5236H55.6338H50.9965H50.7965V58.7236V64.9079Z" fill="#C8996B" stroke="#FAFAFA" stroke-width="0.4"/>
+										</svg>
+
+								</div>
 								<span class="c-project__title">Каркасные бани</span>
 							</a>
 							<a href="#" class="c-project">
@@ -633,7 +640,7 @@
 			<section class="section filter">
 				<div class="filter__container">
 					<div class="s-header">
-						<span class="s-header__title">Каркасные дома</span>
+						<h1 class="s-header__title">Каркасные дома</h1>
 					</div>
 					<div class="filter__body is-pc" data-acc-container>
 
@@ -1225,10 +1232,10 @@
 						<div class="catalog__list">
 							<div class="c-product is-hit">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
@@ -1257,10 +1264,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
@@ -1289,10 +1296,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<span class="c-product__title">Каркасный дом «Тундра 53»</span>
@@ -1321,10 +1328,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
@@ -1353,10 +1360,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
@@ -1385,10 +1392,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
@@ -1417,10 +1424,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
@@ -1449,10 +1456,10 @@
 							</div>
 							<div class="c-product">
 								<div class="c-product__slider">
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-1.webp" type="image/webp"><img src="./img/products/product-1.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-2.webp" type="image/webp"><img src="./img/products/product-2.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-3.webp" type="image/webp"><img src="./img/products/product-3.jpg" alt=""></picture></div>
-									<div class="c-product__slide"><picture><source srcset="./img/products/product-4.webp" type="image/webp"><img src="./img/products/product-4.jpg" alt=""></picture></div>
+									<div class="c-product__slide"><img src="./img/products/product-1.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-2.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-3.jpg" alt=""></div>
+									<div class="c-product__slide"><img src="./img/products/product-4.jpg" alt=""></div>
 								</div>
 								<div class="c-product__content">
 									<a href="#" class="link c-product__title">Каркасный дом «Тундра 53»</a>
@@ -1485,7 +1492,7 @@
 									<p class="c-nfp__text">Отправьте свой <b>эскиз, пожелания к изменению, проект с другого сайта</b></p>
 									<a href="#" class="btn is-light c-nfp__btn"><span>Рассчитать <b>бесплатно</b></span></a>
 								</div>
-								<div class="c-nfp__ill"><picture><source srcset="./img/products/not-founded-project.webp" type="image/webp"><img src="./img/products/not-founded-project.png" alt=""></picture></div>
+								<div class="c-nfp__ill"><img src="./img/products/not-founded-project.png" alt=""></div>
 							</div>
 						</div>
 						<div class="pagin catalog__pagin">
@@ -1707,7 +1714,7 @@
 						<div class="trust-visual">
 							<div class="trust-visual__wrap">
 								<div class="trust-visual__pagin-list"></div>
-								<div class="trust-visual__img"><picture><source srcset="./img/trust/visual.webp" type="image/webp"><img src="./img/trust/visual.jpg" alt=""></picture></div>
+								<div class="trust-visual__img"><img src="./img/trust/visual.jpg" alt=""></div>
 							</div>
 						</div>
 					</div>
@@ -1716,7 +1723,7 @@
 			<div class="section has-margin-s order-estimate">
 				<div class="order-estimate__container">
 					<div class="order-estimate__wrap">
-						<div class="order-estimate__house"><picture><source srcset="./img/banners/house.webp" type="image/webp"><img src="./img/banners/house.png" alt=""></picture></div>
+						<div class="order-estimate__house"><img src="./img/banners/house.png" alt=""></div>
 						<div class="order-estimate__content">
 							<span class="order-estimate__title">Заказать смету дома <b>бесплатно!</b></span>
 							<button class="btn is-light order-estimate__btn"><span>Оставить <b>заявку</b></span></button>
@@ -1831,10 +1838,10 @@
 					</div>
 					<div class="unique__wrap">
 						<div class="unique__img-block">
-							<div class="unique__img"><picture><source srcset="./img/unique/unique-1.webp" type="image/webp"><img src="./img/unique/unique-1.jpg" alt=""></picture></div>
-							<div class="unique__img"><picture><source srcset="./img/unique/unique-2.webp" type="image/webp"><img src="./img/unique/unique-2.jpg" alt=""></picture></div>
-							<div class="unique__img"><picture><source srcset="./img/unique/unique-3.webp" type="image/webp"><img src="./img/unique/unique-3.jpg" alt=""></picture></div>
-							<div class="unique__img"><picture><source srcset="./img/unique/unique-4.webp" type="image/webp"><img src="./img/unique/unique-4.jpg" alt=""></picture></div>
+							<div class="unique__img"><img src="./img/unique/unique-1.jpg" alt=""></div>
+							<div class="unique__img"><img src="./img/unique/unique-2.jpg" alt=""></div>
+							<div class="unique__img"><img src="./img/unique/unique-3.jpg" alt=""></div>
+							<div class="unique__img"><img src="./img/unique/unique-4.jpg" alt=""></div>
 						</div>
 						<div class="unique__content">
 							<div class="s-header unique__content-header is-pc">
@@ -1863,7 +1870,7 @@
 		<div class="footer-up__container is-large">
 			<div class="footer-up__wrap">
 				<div class="footer-info">
-					<a href="#" class="logo footer__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
+					<a href="#" class="logo footer__logo"><img src="./img/logo.png" alt=""></a>
 					<div class="footer-info__buttons">
 						<button class="btn has-icon is-accent footer__callback footer__callback_pc">Заказать звонок</button>
 						<button class="btn has-icon is-border is-light footer__btn-calc footer__btn-calc_main">Калькулятор проекта</button>
@@ -1972,6 +1979,6 @@
     </div>
 </div>
 
-    <script src="./js/bundle.min.js?_v=20220715170734"></script>
+    <script src="./js/bundle.min.js?_v=20220716195819"></script>
 </body>
 </html>

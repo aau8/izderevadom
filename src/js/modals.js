@@ -6,6 +6,8 @@ export const modals = new DismalModules.Modals()
 modals.get(['category', 'options']).forEach( modal => {
 	const header = document.querySelector('.header')
 
+	if (modal === null) return
+
 	modal.addEventListener('modal-open', () => {
 		header.classList.add('is-hide')
 	})

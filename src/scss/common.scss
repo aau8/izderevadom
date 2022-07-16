@@ -58,14 +58,14 @@
 
 // Раздел
 .section {
-    margin: 100px 0;
+    margin: 70px 0;
 
     @media (max-width: $tablet) {
-        margin: 80px 0;
+        margin: 60px 0;
     }
 
 	@media (max-width: $mobile-l) {
-		margin: 60px 0;
+		margin: 40px 0;
 	}
 }
 

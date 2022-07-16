@@ -5,17 +5,17 @@ import browserSync from 'browser-sync';
 import fileinclude from 'gulp-file-include';
 import replace from 'gulp-replace';
 import versionNumber from 'gulp-version-number'
-import webpHtmlNosvg from 'gulp-webp-html-nosvg'
+// import webpHtmlNosvg from 'gulp-webp-html-nosvg'
 
 export default function htmlBuild () {
     del("./dist/*.html");
     return gulp.src(app.path.src.html)
         .pipe(fileinclude())
         .pipe(replace(/@img\//g, './img/'))
-        .pipe(app.plugins.if(
-            app.isProd,
-            webpHtmlNosvg()
-        ))
+        // .pipe(app.plugins.if(
+        //     app.isProd,
+        //     webpHtmlNosvg()
+        // ))
         .pipe(app.plugins.if(
             app.isProd,
             replace('style.css', 'style.min.css')

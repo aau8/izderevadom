@@ -80,7 +80,7 @@
 
 .unique__content-header {
 	max-width: 440px;
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
 
 	&.is-mob {
 		display: none;

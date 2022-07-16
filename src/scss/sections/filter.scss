@@ -236,6 +236,7 @@
 		}
 
 		& a {
+			font-size: 15px;
 			color: $text-second;
 			box-shadow: inset 0 -1px var(--color, $text-second);
 		}
@@ -243,7 +244,7 @@
 }
 
 .acc-category__block-more {
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 400;
 	color: $text-second;
 	margin-top: 16px;

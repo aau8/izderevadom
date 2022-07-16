@@ -1,6 +1,9 @@
 
 .slider__container {
-	padding: 0;
+
+	@media (max-width: 950px) {
+		padding: 0;
+	}
 }
 
 .slider__header {

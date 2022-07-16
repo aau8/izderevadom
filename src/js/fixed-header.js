@@ -28,6 +28,7 @@ function fixedMenu() {
 	if (window.scrollY > 400) {
 		if (!header.classList.contains('is-fixed')) {
 			header.classList.add('is-fixed')
+			header.setAttribute('data-lp', '')
 			header.style.top = -header.clientHeight + 'px'
 			header.classList.add('is-show')
 		}
@@ -35,6 +36,7 @@ function fixedMenu() {
 	else {
 
 		if (header.classList.contains('is-fixed')) {
+			header.removeAttribute('data-lp')
 			header.classList.remove('is-show')
 
 			setTimeout(e => {

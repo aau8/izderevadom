@@ -4,7 +4,7 @@ import browserSync from 'browser-sync';
 import newer from 'gulp-newer'
 
 import imagemin from 'gulp-imagemin';
-import webp from 'gulp-webp'
+// import webp from 'gulp-webp'
 
 export function imagesBuild () {
     return gulp.src(app.path.src.images)
@@ -19,11 +19,11 @@ export function imagesBuild () {
             })
         ))
         .pipe(gulp.dest(app.path.build.images))
-        .pipe(app.plugins.if(
-            app.isProd,
-            webp()
-        ))
-        .pipe(gulp.dest(app.path.build.images))
+        // .pipe(app.plugins.if(
+        //     app.isProd,
+        //     webp()
+        // ))
+        // .pipe(gulp.dest(app.path.build.images))
 
         .pipe(gulp.src(app.path.src.svg))
         .pipe(gulp.dest(app.path.build.images))
@@ -48,8 +48,8 @@ export function convertImages() {
             })
         )
         .pipe(gulp.dest(app.path.build.convertImages))
-        .pipe(webp())
-        .pipe(gulp.dest(app.path.build.convertImages))
+        // .pipe(webp())
+        // .pipe(gulp.dest(app.path.build.convertImages))
 
         .pipe(gulp.src(app.path.src.svg))
         .pipe(gulp.dest(app.path.build.convertImages))
